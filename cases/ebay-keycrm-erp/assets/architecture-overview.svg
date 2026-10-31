@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title desc">
+<title id="title">eBay, Cloudflare Runtime, KeyCRM and Yellow Client</title>
+<desc id="desc">Commercial architecture boundary view. Retained source and state snapshot, not runtime telemetry. Yellow installed identity unknown.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#397367"/></marker></defs>
+<rect width="1200" height="920" fill="#f1f5f2"/>
+<style>text{font-family:Arial,sans-serif;fill:#193e34}.title{font-size:24px;font-weight:700}.sub{font-size:13px;fill:#59796c}.row{font-size:16px}.edge{font-size:13px;fill:#306a5e}.tag{font-size:12px;fill:#88602c}</style>
+<rect x="30" y="30" width="510" height="215" rx="14" fill="#fff" stroke="#b5ccbd"/>
+<text class="title" x="54" y="67">eBay</text><text class="sub" x="54" y="91">Marketplace source authority</text>
+<rect x="50" y="114" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="62" y="135">Orders / selected lines / payment / refund</text>
+<text class="row" x="62" y="154">Fulfillment / shipping / tracking</text>
+<rect x="660" y="30" width="510" height="470" rx="14" fill="#fff" stroke="#b5ccbd"/>
+<text class="title" x="684" y="67">Cloudflare Runtime</text><text class="sub" x="684" y="91">Execution, coordination and derived services</text>
+<rect x="680" y="114" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="135">Scheduling / discovery / import / status</text>
+<rect x="680" y="176" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="197">Durable journals / fences / tasks / epochs</text>
+<rect x="680" y="238" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="259">KV progress / active rules / thresholds</text>
+<rect x="680" y="300" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="321">Recovery and reconciliation</text>
+<rect x="680" y="362" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="383">Catalog Snapshot Worker</text>
+<rect x="680" y="424" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="445">Replenishment / notification outbox</text>
+<rect x="30" y="370" width="510" height="310" rx="14" fill="#fff" stroke="#b5ccbd"/>
+<text class="title" x="54" y="407">KeyCRM</text><text class="sub" x="54" y="431">Fresh business and warehouse observations</text>
+<rect x="50" y="454" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="62" y="475">Order identity / status / tracking</text>
+<rect x="50" y="516" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="62" y="537">Offers / product catalog</text>
+<rect x="50" y="578" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="62" y="599">Warehouse / reserve / fulfilled stock</text>
+<rect x="660" y="555" width="510" height="360" rx="14" fill="#fff" stroke="#b5ccbd"/>
+<text class="title" x="684" y="592">Yellow Client</text><text class="sub" x="684" y="616">Separate local application — reviewed source</text>
+<rect x="680" y="639" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="660">Catalog refresh / local reference</text>
+<rect x="680" y="701" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="722">XLSX / OOXML workbook processing</text>
+<rect x="680" y="763" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="784">Staging / validation / hashes / CURRENT_RUN</text>
+<rect x="680" y="825" width="470" height="50" rx="6" fill="#eaf2ec"/>
+<text class="row" x="692" y="846">Bundle / threshold proposals and pending intent</text>
+<text class="tag" x="684" y="897">Installed version UNKNOWN; guarded APPLY / reconciliation</text>
+<path d="M540 145 H660" fill="none" stroke="#397367" stroke-width="2" marker-end="url(#arrow)"/><text class="edge" x="552" y="126">source reads</text>
+<path d="M660 350 C590 350 600 440 540 440" fill="none" stroke="#397367" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/><text class="edge" x="554" y="370">guarded writes</text><text class="edge" x="554" y="388">exact readback</text>
+<path d="M800 500 V555" fill="none" stroke="#397367" stroke-width="2" marker-end="url(#arrow)"/><text class="edge" x="808" y="529">complete catalog observation</text>
+<path d="M1130 555 V500" fill="none" stroke="#397367" stroke-width="2" marker-end="url(#arrow)"/><text class="edge" x="912" y="549">guarded commands / ACK</text>
+<text x="50" y="756" class="sub">Authority boundaries:</text><text x="50" y="786" class="row">Accepted request ≠ confirmed business effect</text><text x="50" y="818" class="row">Task ownership ≠ mutation permission</text><text x="50" y="850" class="row">Local proposal/cache ≠ remote commit</text>
+</svg>

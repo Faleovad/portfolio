@@ -1,0 +1,1209 @@
+id,source,target,relationship_type,path_class,evidence_record,scope,operation
+r0001,n0139,n0142,depends_on/invokes,normal,DG075,retained+RC,admin/device/nonce command
+r0002,n0139,n0197,owns/persists,normal,DO04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,post-KV bundle command receipt
+r0003,n0139,n0193,depends_on/invokes,normal,DG077,retained+RC,bundle-sync/fixed nonce actor
+r0004,n0139,n0153,depends_on/invokes,normal,DG076,retained+RC,validated bundle proposal
+r0005,n0139,n0231,fails_as,failure,DG011,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost legacy KV ACK remains unknown.
+r0006,n0139,n0289,fails_as,failure,DG069,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost ACK retains pending; equal hash is not receipt.
+r0007,n0139,n0646,depends_on/invokes,normal,DG078,retained+RC,expected version/hash -> effective map
+r0008,n0762,n0200,owns/persists,normal,DO07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,fixed patch nonce/rollback
+r0009,n0140,n0232,fails_as,failure,DG012,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No receipt fabricated from equal current hash.
+r0010,n0140,n0291,fails_as,failure,DG071,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Legacy unknown cannot replay even same ID.
+r0011,n0140,n0302,fails_as,failure,DG082,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Stale/missing policy follows explicit authority rules.
+r0012,n0140,n0646,depends_on/invokes,normal,DG079,serving legacy,threshold settings/version/hash
+r0013,n0763,n0198,owns/persists,normal,DO05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,serving KV serialization; staged R3 authority/journals
+r0014,n0141,n0193,depends_on/invokes,normal,DG080,RC-only,migration/authority/command/receipt
+r0015,n0141,n0233,fails_as,failure,DG013,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No migration/flag fallback authorized.
+r0016,n0141,n0292,fails_as,failure,DG072,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Not authorization to migrate or replay old KV command.
+r0017,n0141,n0339,fails_as,failure,DG119,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No R3 activation implied by PASS.
+r0018,n0141,n0646,depends_on/invokes,normal,DG081,RC-only,legacy candidate read / immutable version mirror
+r0019,n0142,n0199,owns/persists,normal,DO06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,generic one-time grant
+r0020,n0142,n0201,owns/persists,normal,DO08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,enrollment claim/target/consumption
+r0021,n0142,n0202,owns/persists,normal,DO09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,registration/usage/revocation
+r0022,n0142,n0217,external_operation,normal,API06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,create/lock/unlock/typed recovery/admin/outbox/authority methods
+r0023,n0142,n0230,fails_as,failure,DG010,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown one-time claim remains held; no permissive fallback.
+r0024,n0142,n0290,fails_as,failure,DG070,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown grant/command never automatically reopened.
+r0025,n0142,n0295,fails_as,failure,DG075,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,CAS and unknown claims preserved.
+r0026,n0001,n0025,defines_authority_for,normal,AT01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,eBay order identity
+r0027,n0002,n0026,defines_authority_for,normal,AT02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Selected SKU/variation and quantity
+r0028,n0003,n0027,defines_authority_for,normal,AT03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Payment/refund
+r0029,n0004,n0028,defines_authority_for,normal,AT04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Fulfillment
+r0030,n0005,n0029,defines_authority_for,normal,AT05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Tracking
+r0031,n0006,n0030,defines_authority_for,normal,AT06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Current CRM order state
+r0032,n0007,n0031,defines_authority_for,normal,AT07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Warehouse assignment
+r0033,n0008,n0032,defines_authority_for,normal,AT08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,stock_status
+r0034,n0009,n0033,defines_authority_for,normal,AT09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Reserve
+r0035,n0010,n0034,defines_authority_for,normal,AT10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Physical quantity/movement
+r0036,n0011,n0035,defines_authority_for,normal,AT11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle meaning
+r0037,n0012,n0036,defines_authority_for,normal,AT12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Catalog identity/current product
+r0038,n0013,n0037,defines_authority_for,normal,AT13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Replenishment min/target
+r0039,n0014,n0038,defines_authority_for,normal,AT14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Successful Yellow preparation
+r0040,n0015,n0039,defines_authority_for,normal,AT15,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Remote bundle APPLY outcome
+r0041,n0016,n0040,defines_authority_for,normal,AT16,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Remote settings APPLY outcome
+r0042,n0017,n0041,defines_authority_for,normal,AT17,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,CREATE idempotency
+r0043,n0018,n0042,defines_authority_for,normal,AT18,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,PUT idempotency
+r0044,n0019,n0043,defines_authority_for,normal,AT19,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Recovery task ownership
+r0045,n0020,n0044,defines_authority_for,normal,AT20,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Manual review/hold
+r0046,n0021,n0045,defines_authority_for,normal,AT21,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Release/deployment truth
+r0047,n0022,n0046,defines_authority_for,normal,AT22,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Notification delivery
+r0048,n0023,n0047,defines_authority_for,normal,AT23,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Catalog snapshot integrity
+r0049,n0024,n0048,defines_authority_for,normal,AT24,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Credential epoch/ownership
+r0050,n0143,n0145,depends_on/invokes,normal,DG043,serving bridge,immediate dispatch hook and outcome
+r0051,n0143,n0150,depends_on/invokes,normal,DG044,serving bridge,statusLegacyKeycrmPut/raw transport
+r0052,n0143,n0155,depends_on/invokes,normal,DG045,retained+RC,fresh pre/post identity/quantity/stock
+r0053,n0143,n0215,external_operation,normal,API04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET exact/list; guarded single POST/PUT
+r0054,n0143,n0262,fails_as,failure,DG042,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,STOP/revocation does not cancel preaccepted provider effects.
+r0055,n0143,n0318,fails_as,failure,DG098,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Wrong revision/layout fails transformation.
+r0056,n0144,n0160,depends_on/invokes,normal,DG039,serving bridge,claimed task/latest source
+r0057,n0144,n0162,depends_on/invokes,normal,DG038,serving bridge+current factories,existing_status task/revision/lease
+r0058,n0144,n0257,fails_as,failure,DG037,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Lost finish ACK read-reconciles own lease, not business replay."
+r0059,n0144,n0319,fails_as,failure,DG099,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Do not remove capture/finish tail.
+r0060,n0145,n0143,depends_on/invokes,normal,DG042,serving bridge,admitted PUT callback
+r0061,n0145,n0162,depends_on/invokes,normal,DG048,retained+RC,begin/dispatch/settle/quarantine/control
+r0062,n0145,n0217,external_operation,normal,API06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,create/lock/unlock/typed recovery/admin/outbox/authority methods
+r0063,n0145,n0261,fails_as,failure,DG041,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Full current RC refuses established bridge writes.
+r0064,n0145,n0263,fails_as,failure,DG043,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost dispatch/settle reply retains conservative unknown.
+r0065,n0145,n0320,fails_as,failure,DG100,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Null certificate cannot RUN.
+r0066,n0145,n0325,fails_as,failure,DG105,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Forward-compatible recovery only after new states.
+r0067,n0146,n0143,depends_on/invokes,normal,DG098,support,factory source serialization
+r0068,n0146,n0144,depends_on/invokes,normal,DG099,support,handoff source serialization
+r0069,n0146,n0145,depends_on/invokes,normal,DG100,support,cutover source/certificate
+r0070,n0146,n0162,depends_on/invokes,normal,DG101,support,recovery source serialized
+r0071,n0146,n0317,fails_as,failure,DG097,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Hash/anchor/baseline refusal must not be bypassed.
+r0072,n0146,n0330,fails_as,failure,DG110,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Instrumented/native target not unchanged release proof.
+r0073,n0146,n0208,depends_on/invokes,normal,DG103,support,code/diff/manifest
+r0074,n0146,n0172,depends_on/invokes,normal,DG102,support,exact pinned artifact+recipe
+r0075,n0204,n0148,depends_on/invokes,normal,DG002,retained+RC,method/path/body/headers
+r0076,n0205,n0147,depends_on/invokes,normal,DG001,retained+RC,cron event/scheduledTime
+r0077,n0206,n0192,depends_on/invokes,normal,DG003,snapshot,hourly event
+r0078,n0049,n0050,transitions_to,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Normalize selected source lines using one active rule version; resolve exact SKU/offer/catalog IDs.
+r0079,n0050,n0051,transitions_to,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Outer exact source_uuid lookup, then source-UUID actor serialized duplicate check."
+r0080,n0051,n0052,transitions_to,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Durable preparing/pending before one POST; current RC independently GET-verifies positive CREATE identity.
+r0081,n0052,n0053,transitions_to,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Write created_pending_validation; fresh exact lines/warehouse/stock GET -> genuine reserved checkpoint.
+r0082,n0053,n0054,transitions_to,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Serving bridge additionally wraps importer/raw POST with cutover admission. Full RC itself cannot write across current epoch.
+r0083,n0055,n0056,transitions_to,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Refresh source and CRM; paid+fulfilled+tracking with exact NEW/reserved lines is a sufficient example, not a new AND-only policy."
+r0084,n0056,n0057,transitions_to,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing status plan -> root RUN begin -> fresh CRM-ID guard/hold check.
+r0085,n0057,n0058,transitions_to,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Persist per-order pending, then immediate epoch dispatch marker before exactly one PUT."
+r0086,n0058,n0059,transitions_to,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,200/202 is candidate acceptance; bounded fresh GET polls confirm identity/status/shipping/exact fulfilled warehouse quantities.
+r0087,n0059,n0060,transitions_to,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Retain completion tombstone -> epoch receipt -> own-lease finish/read reconciliation. Configured KeyCRM status12 performs warehouse effect, not manual stock PUT."
+r0088,n0061,n0062,transitions_to,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Response/body/actor RPC may be lost after provider commits.
+r0089,n0062,n0063,transitions_to,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Actor/caller preserve ambiguous and possible mutation flags; bounded read-only exact identity search may recover a positive match.
+r0090,n0063,n0064,transitions_to,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Positive exact match reconciles identity without another POST; warehouse validation remains separate.
+r0091,n0064,n0065,transitions_to,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Negative lookup or missing KV/expired lease cannot reset the journal.
+r0092,n0066,n0067,transitions_to,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost transport/response can leave CRM changed while Worker lacks confirmation.
+r0093,n0067,n0068,transitions_to,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"If ordinary accepted-response confirmation proves exact effect, retain completion tombstone; lost unlock/finish is separate metadata uncertainty."
+r0094,n0068,n0069,transitions_to,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Otherwise preserve sent/unknown/fence and root hold/task review; read-only inspection is evidence, not generic release."
+r0095,n0069,n0070,transitions_to,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Reconcile own finish receipt only when protocol permits; never repeat PUT to obtain ACK.
+r0096,n0071,n0072,transitions_to,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Freeze/save range/admission turn before work; capture page or acknowledge contiguous receipt prefix.
+r0097,n0072,n0073,transitions_to,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"If next page/API/capture/save fails, do not advance beyond acknowledged work."
+r0098,n0073,n0074,transitions_to,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget deferral preserves task/range and differs from failed external attempt.
+r0099,n0074,n0075,transitions_to,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Next invocation reads durable window/task/due/lease receipt; metadata finish reconciliation does not redispatch external mutation.
+r0100,n0076,n0077,transitions_to,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Task review removes automatic due scheduling; root/actor holds remain independently enforced.
+r0101,n0077,n0078,transitions_to,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New source revision or current DONE does not clear an unknown request.
+r0102,n0078,n0079,transitions_to,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Narrow legacy_unknown release is possible only through existing authenticated server-proof procedure: STOP/active0, fresh eligible source/reserved CRM, safe receipt, absent mutation state, proof <=60s."
+r0103,n0079,n0080,transitions_to,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Actual sent/unknown, missing historical receipt/ledger and protected IDs stay held; no per-ID bypass."
+r0104,n0081,n0082,transitions_to,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Pin effective active KV rules/version/hash; compiled56 is not active96 authority.
+r0105,n0082,n0083,transitions_to,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Validate whole rule/canonical identity and expand safe-integer component quantities.
+r0106,n0083,n0084,transitions_to,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Aggregate repeated components/source lines while preserving pricing/count semantics.
+r0107,n0084,n0085,transitions_to,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Resolve every component catalog ID; any missing/ambiguous component blocks whole order.
+r0108,n0085,n0086,transitions_to,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Fresh warehouse validation compares exact aggregate expected lines, not a parent SKU guess."
+r0109,n0087,n0088,transitions_to,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Run child workbook processor into fresh staging; preserve original/current/desired lineage and all row invariants.
+r0110,n0088,n0089,transitions_to,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Generate XLSX/JSON/CSV/proposals; PRODUCT_BLOCKED selects diagnostic pointer, not successful CURRENT_RUN."
+r0111,n0089,n0090,transitions_to,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Validate required outputs/ZIP/XML/hash chain and SUCCESS.
+r0112,n0090,n0091,transitions_to,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Publish run directory and proposal, then atomically replace CURRENT_RUN."
+r0113,n0091,n0092,transitions_to,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Launcher presentation is a separate distribution transaction and installed launcher is unknown.
+r0114,n0093,n0094,transitions_to,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Authorize device/capability and obtain expected active version/hash.
+r0115,n0094,n0095,transitions_to,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"After existing operator confirmation, revalidate publication and exclusively save exact command/ID/fingerprint."
+r0116,n0095,n0096,transitions_to,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Send one SYNC through existing guard/CAS; server writes effective KV then separate actor result receipt.
+r0117,n0096,n0097,transitions_to,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Require positive version/hash ACK before local result/retirement.
+r0118,n0098,n0099,transitions_to,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"For new approved plan, preview and exclusively save exact request/CAS/body identity."
+r0119,n0099,n0100,transitions_to,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Live serving writes legacy KV thresholds; full RC staged R3 is not a compatible fallback and is not activated.
+r0120,n0100,n0101,transitions_to,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Positive request/version/hash ACK creates cache-recovery receipt; reconcile matching surviving intent only.
+r0121,n0101,n0102,transitions_to,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Apply confirmed settings to local reference/cache, retire evidence and exit without another APPLY."
+r0122,n0102,n0103,transitions_to,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Genuine durable same-command receipt retrieval is only a future already-approved authority branch.
+r0123,n0104,n0105,transitions_to,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Compute attention/target-minus-available report, not a stock transfer."
+r0124,n0105,n0106,transitions_to,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Enqueue full meaning/items; only acknowledged enqueue/direct send can advance last_alert_at.
+r0125,n0106,n0107,transitions_to,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Claim bounded due outbox row, build/validate XLSX, acquire distinct report delivery dedupe."
+r0126,n0107,n0108,transitions_to,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Send Telegram document/message and perform configured provider/file verification.
+r0127,n0108,n0109,transitions_to,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Finish only matching claim; failures retain bounded exponential scheduling and retained evidence.
+r0128,n0110,n0111,transitions_to,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Sanitize/sort/min-count-check and hash complete wire catalog; one KV put after all pages succeed.
+r0129,n0111,n0112,transitions_to,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Authenticated/rate-limited GET serves valid cache; missing cache may trigger refresh even on GET. Health never refreshes.
+r0130,n0112,n0113,transitions_to,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Client pins destination/no redirects and verifies exact envelope/decoded wire SHA/schema/count/time.
+r0131,n0113,n0114,transitions_to,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Transform to local offer names and atomically save; consumers apply their own freshness/uniqueness constraints.
+r0132,n0115,n0116,transitions_to,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Transform exact parent with matched helper/certificate revisions; reverse-diff and verify scope/config/state contracts.
+r0133,n0116,n0117,transitions_to,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Fresh encrypted checkpoint plus independent decrypt/hash/dry-package and critical continuity/forward recovery review precede STOP.
+r0134,n0117,n0118,transitions_to,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Selective STOP/origin boundary where required; reconcile unknowns without replay, retain holds."
+r0135,n0118,n0119,transitions_to,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exclusive intent Upload -> exact resources/bindings/version proof -> separate Deploy/traffic proof.
+r0136,n0119,n0120,transitions_to,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Controller attest DRAINED -> matching activate RUN -> read-only/natural business verification.
+r0137,n0121,n0122,transitions_to,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Read old primitive/object/pre-epoch processing receipts as revalidation evidence, not CREATE permission."
+r0138,n0122,n0123,transitions_to,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Preserve pending+phase/ambiguous/completed CREATE, PUT tombstones, finish ownership and root hold/epoch."
+r0139,n0123,n0124,transitions_to,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,One-way completed import to status handoff exists only in current local B6 implementation; old serving behavior differs.
+r0140,n0124,n0125,transitions_to,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Staged repair observes linked ledger/predecessor; does not release unrelated root/task/mutation hold.
+r0141,n0125,n0126,transitions_to,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Use only compatible guarded forward recovery; native in-place continuity is not catastrophic export or rewind of provider effects.
+r0142,n0207,n0185,depends_on/invokes,normal,DG057,selected client source,workbook/package-relative CLI
+r0143,n0193,n0266,fails_as,failure,DG046,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Restart preserves intent; ordinary lease expiry does not erase pending.
+r0144,n0193,n0267,fails_as,failure,DG047,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown/manual task never reset by source revision.
+r0145,n0193,n0297,fails_as,failure,DG077,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost receipt is not permission for another effect.
+r0146,n0193,n0300,fails_as,failure,DG080,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failed transition records review; no silent legacy fallback.
+r0147,n0193,n0305,fails_as,failure,DG085,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown Telegram delivery not exactly-once certified.
+r0148,n0147,n0149,depends_on/invokes,normal,DG009,retained+RC,shared invocation context
+r0149,n0147,n0159,depends_on/invokes,normal,DG004,retained+RC,create stage/context
+r0150,n0147,n0160,depends_on/invokes,normal,DG005,retained+RC,maintenance status stage
+r0151,n0147,n0161,depends_on/invokes,normal,DG006,retained+RC,maintenance reconcile stage
+r0152,n0147,n0221,fails_as,failure,DG001,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Watchdog/deadline stops new admission; unknown remote effects remain.
+r0153,n0147,n0175,depends_on/invokes,normal,DG007,retained+RC,replenishment stage
+r0154,n0147,n0176,depends_on/invokes,normal,DG008,retained+RC,notification stage
+r0155,n0148,n0139,depends_on/invokes,normal,DG011,retained+RC,approved bundle command
+r0156,n0148,n0140,depends_on/invokes,normal,DG012,serving legacy,settings preview/APPLY
+r0157,n0148,n0141,depends_on/invokes,normal,DG013,RC-only,authority preview/migration adapter
+r0158,n0148,n0142,depends_on/invokes,normal,DG010,retained+RC,admin/client credentials
+r0159,n0148,n0156,depends_on/invokes,normal,DG015,retained+RC,explicit importer invocation
+r0160,n0148,n0160,depends_on/invokes,normal,DG016,retained+RC,explicit sync invocation
+r0161,n0148,n0161,depends_on/invokes,normal,DG017,retained+RC,explicit reconcile invocation
+r0162,n0148,n0222,fails_as,failure,DG002,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Deny/4xx/410 preserves distinct branch contract.
+r0163,n0148,n0177,depends_on/invokes,normal,DG014,retained+RC,diagnostic/operator request
+r0164,n0148,n0380,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0165,n0148,n0381,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0166,n0148,n0382,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0167,n0148,n0383,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0168,n0148,n0384,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0169,n0148,n0385,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0170,n0148,n0386,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0171,n0148,n0387,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0172,n0148,n0388,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0173,n0148,n0389,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0174,n0148,n0390,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0175,n0148,n0391,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0176,n0148,n0392,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0177,n0148,n0393,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0178,n0148,n0394,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0179,n0148,n0395,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0180,n0148,n0396,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0181,n0148,n0397,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0182,n0148,n0398,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0183,n0148,n0399,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0184,n0148,n0400,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0185,n0148,n0401,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0186,n0148,n0402,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0187,n0148,n0403,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0188,n0148,n0404,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0189,n0148,n0405,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0190,n0148,n0406,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0191,n0148,n0407,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0192,n0148,n0408,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0193,n0148,n0409,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0194,n0148,n0410,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0195,n0148,n0411,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0196,n0148,n0412,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0197,n0148,n0413,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0198,n0148,n0414,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0199,n0148,n0415,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0200,n0148,n0416,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0201,n0148,n0417,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0202,n0148,n0418,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0203,n0148,n0419,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0204,n0148,n0420,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0205,n0148,n0421,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0206,n0148,n0422,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0207,n0148,n0423,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0208,n0148,n0424,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0209,n0148,n0425,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0210,n0148,n0426,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0211,n0148,n0427,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0212,n0148,n0428,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0213,n0148,n0429,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0214,n0148,n0430,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0215,n0148,n0431,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0216,n0148,n0432,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0217,n0148,n0433,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0218,n0148,n0434,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0219,n0148,n0435,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0220,n0148,n0436,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0221,n0148,n0437,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0222,n0148,n0438,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0223,n0148,n0439,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0224,n0148,n0440,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0225,n0148,n0441,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0226,n0148,n0442,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0227,n0148,n0443,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0228,n0148,n0444,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0229,n0148,n0445,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0230,n0148,n0446,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0231,n0148,n0447,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0232,n0148,n0448,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0233,n0148,n0449,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0234,n0148,n0450,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0235,n0148,n0451,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0236,n0148,n0452,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0237,n0148,n0453,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0238,n0148,n0454,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0239,n0148,n0455,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0240,n0148,n0456,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0241,n0148,n0457,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0242,n0148,n0458,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0243,n0148,n0459,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0244,n0148,n0460,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0245,n0148,n0461,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0246,n0148,n0462,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0247,n0148,n0463,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0248,n0148,n0464,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0249,n0148,n0465,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0250,n0148,n0466,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0251,n0148,n0467,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0252,n0148,n0468,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0253,n0148,n0469,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0254,n0148,n0470,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0255,n0148,n0471,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0256,n0148,n0472,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0257,n0148,n0473,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0258,n0148,n0474,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0259,n0148,n0475,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0260,n0148,n0476,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0261,n0148,n0477,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0262,n0148,n0478,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0263,n0148,n0479,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0264,n0148,n0480,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0265,n0148,n0481,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0266,n0148,n0482,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0267,n0148,n0483,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0268,n0148,n0484,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0269,n0148,n0485,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0270,n0148,n0486,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0271,n0148,n0487,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0272,n0148,n0488,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0273,n0148,n0489,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0274,n0148,n0490,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0275,n0148,n0491,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0276,n0148,n0492,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0277,n0148,n0493,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0278,n0148,n0494,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0279,n0148,n0495,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0280,n0148,n0496,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0281,n0148,n0497,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0282,n0148,n0498,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0283,n0148,n0499,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0284,n0148,n0500,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0285,n0148,n0501,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0286,n0148,n0502,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0287,n0148,n0503,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0288,n0148,n0504,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0289,n0148,n0505,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0290,n0148,n0506,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0291,n0148,n0507,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0292,n0148,n0508,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0293,n0148,n0509,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0294,n0148,n0510,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0295,n0148,n0511,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0296,n0148,n0512,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0297,n0148,n0513,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0298,n0148,n0514,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0299,n0148,n0515,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0300,n0148,n0516,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0301,n0148,n0517,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0302,n0148,n0518,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0303,n0148,n0519,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0304,n0148,n0520,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0305,n0148,n0521,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0306,n0148,n0522,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0307,n0148,n0523,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0308,n0148,n0524,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0309,n0148,n0525,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0310,n0148,n0526,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0311,n0148,n0527,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0312,n0148,n0528,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0313,n0148,n0529,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0314,n0148,n0530,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0315,n0148,n0531,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0316,n0148,n0532,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0317,n0148,n0533,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0318,n0148,n0534,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0319,n0148,n0535,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0320,n0148,n0536,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0321,n0148,n0537,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0322,n0148,n0538,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0323,n0148,n0539,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0324,n0148,n0540,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0325,n0148,n0541,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0326,n0148,n0542,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0327,n0148,n0543,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0328,n0148,n0544,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0329,n0148,n0545,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0330,n0148,n0546,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0331,n0148,n0547,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0332,n0148,n0548,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0333,n0148,n0549,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0334,n0148,n0550,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0335,n0148,n0551,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0336,n0148,n0552,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0337,n0148,n0553,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0338,n0148,n0554,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0339,n0148,n0555,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0340,n0148,n0556,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0341,n0148,n0557,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0342,n0148,n0558,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0343,n0148,n0559,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0344,n0148,n0560,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0345,n0148,n0561,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0346,n0148,n0562,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0347,n0148,n0563,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0348,n0148,n0564,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0349,n0148,n0565,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0350,n0148,n0566,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0351,n0148,n0567,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0352,n0148,n0568,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0353,n0148,n0569,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0354,n0148,n0570,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0355,n0148,n0571,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0356,n0148,n0572,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0357,n0148,n0573,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0358,n0148,n0574,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0359,n0148,n0575,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0360,n0148,n0576,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0361,n0148,n0577,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0362,n0148,n0578,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0363,n0148,n0579,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0364,n0148,n0580,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0365,n0148,n0581,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0366,n0148,n0582,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0367,n0148,n0583,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0368,n0148,n0584,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0369,n0148,n0585,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0370,n0148,n0586,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0371,n0148,n0587,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0372,n0148,n0588,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0373,n0148,n0589,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0374,n0148,n0590,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0375,n0148,n0591,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0376,n0148,n0592,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0377,n0148,n0593,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0378,n0148,n0594,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0379,n0148,n0595,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0380,n0148,n0596,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0381,n0148,n0597,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0382,n0148,n0598,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0383,n0148,n0599,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0384,n0148,n0600,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0385,n0148,n0601,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0386,n0148,n0602,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0387,n0148,n0603,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0388,n0148,n0604,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0389,n0148,n0605,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0390,n0148,n0606,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0391,n0148,n0607,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0392,n0148,n0608,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0393,n0148,n0609,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0394,n0148,n0610,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0395,n0148,n0611,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0396,n0148,n0612,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0397,n0148,n0613,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0398,n0148,n0614,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0399,n0148,n0615,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0400,n0148,n0616,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0401,n0148,n0617,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0402,n0148,n0618,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0403,n0148,n0619,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0404,n0148,n0620,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0405,n0148,n0621,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0406,n0148,n0622,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0407,n0148,n0623,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0408,n0148,n0624,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0409,n0148,n0625,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0410,n0148,n0626,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0411,n0148,n0627,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0412,n0148,n0628,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0413,n0148,n0629,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0414,n0148,n0630,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0415,n0148,n0631,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0416,n0148,n0632,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0417,n0148,n0633,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0418,n0148,n0634,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0419,n0148,n0635,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0420,n0148,n0636,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0421,n0148,n0637,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0422,n0148,n0638,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0423,n0148,n0639,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0424,n0148,n0640,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0425,n0148,n0641,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0426,n0148,n0642,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0427,n0148,n0643,routes_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0428,n0149,n0229,fails_as,failure,DG009,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Preserve critical tail; never refund possible dispatch blindly.
+r0429,n0149,n0209,depends_on/invokes,normal,DG087,retained+RC,cost/deadline/cache/pacing
+r0430,n0150,n0145,depends_on/invokes,normal,DG041,serving generated interception,guarded PUT wrapper begin
+r0431,n0150,n0214,external_operation,normal,API03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET sources/offers/products/detailed stocks
+r0432,n0150,n0215,external_operation,normal,API04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET exact/list; guarded single POST/PUT
+r0433,n0150,n0681,depends_on/invokes,normal,DG032,retained+RC,"catalog/order GET, order POST/PUT"
+r0434,n0150,n0247,fails_as,failure,DG027,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No page1 absence assumption; preserve API error.
+r0435,n0150,n0251,fails_as,failure,DG031,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No-send can retry; sent/unknown cannot.
+r0436,n0150,n0254,fails_as,failure,DG034,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown/mismatch is not manual stock repair.
+r0437,n0150,n0260,fails_as,failure,DG040,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost response keeps mutation_sent/unknown.
+r0438,n0150,n0264,fails_as,failure,DG044,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Confirmed effect/lost unlock is settlement uncertainty, not another PUT."
+r0439,n0150,n0273,fails_as,failure,DG053,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing intent observes only; unknown never resent.
+r0440,n0150,n0275,fails_as,failure,DG055,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unavailable diagnostics preserve UNKNOWN.
+r0441,n0150,n0303,fails_as,failure,DG083,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown stock not inferred from thresholds.
+r0442,n0151,n0212,external_operation,normal,API01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,OAuth refresh POST
+r0443,n0151,n0213,external_operation,normal,API02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET list/detail/shipping fulfillments
+r0444,n0151,n0678,depends_on/invokes,normal,DG018,retained+RC,refresh grant
+r0445,n0151,n0679,depends_on/invokes,normal,DG019,retained+RC,"modified/creation page, exact order/shipping"
+r0446,n0151,n0240,fails_as,failure,DG020,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Local prefix fix retains successful pages on later error.
+r0447,n0151,n0255,fails_as,failure,DG035,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Uncertain source/refund plan holds.
+r0448,n0151,n0271,fails_as,failure,DG051,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget exhaustion retains cursor.
+r0449,n0152,n0153,depends_on/invokes,normal,DG024,retained+RC,source SKU/quantity
+r0450,n0152,n0220,external_operation,normal,API09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,bounded HEAD/metadata reads
+r0451,n0152,n0680,depends_on/invokes,normal,DG088,retained+RC,bounded validated image URL
+r0452,n0152,n0243,fails_as,failure,DG023,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Any unknown/conflicting required line blocks whole order.
+r0453,n0153,n0244,fails_as,failure,DG024,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Malformed/ambiguous map fails closed locally.
+r0454,n0153,n0296,fails_as,failure,DG076,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No partial component acceptance locally.
+r0455,n0153,n0646,depends_on/invokes,normal,DG025,retained+RC,active rule document/version/hash
+r0456,n0154,n0150,depends_on/invokes,normal,DG027,retained+RC,targeted catalog/source query
+r0457,n0154,n0214,external_operation,normal,API03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET sources/offers/products/detailed stocks
+r0458,n0154,n0246,fails_as,failure,DG026,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lookup error/unknown SKU blocks CREATE.
+r0459,n0155,n0150,depends_on/invokes,normal,DG034,retained+RC,fresh order detail query
+r0460,n0155,n0214,external_operation,normal,API03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET sources/offers/products/detailed stocks
+r0461,n0155,n0253,fails_as,failure,DG033,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Partial/null/mixed stock keeps validation pending/review.
+r0462,n0155,n0265,fails_as,failure,DG045,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Mixed/null/unbound remains fenced.
+r0463,n0156,n0152,depends_on/invokes,normal,DG023,retained+RC,raw source and pinned rules
+r0464,n0156,n0154,depends_on/invokes,normal,DG026,retained+RC,component SKUs and identity
+r0465,n0156,n0155,depends_on/invokes,normal,DG033,retained+RC,created/current exact order lines
+r0466,n0156,n0157,depends_on/invokes,normal,DG030,retained+RC,exact source UUID/payload
+r0467,n0156,n0158,depends_on/invokes,normal,DG028,retained+RC,source UUID/revision/result
+r0468,n0156,n0215,external_operation,normal,API04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET exact/list; guarded single POST/PUT
+r0469,n0156,n0235,fails_as,failure,DG015,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Direct HTTP lacks scheduled envelope; guards remain.
+r0470,n0156,n0242,fails_as,failure,DG022,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Due retries keep safe eligibility and mutation fences.
+r0471,n0156,n0269,fails_as,failure,DG049,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact lookup failure/multiple matches never absence.
+r0472,n0156,n0329,fails_as,failure,DG109,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Discovery mocks CREATE; cannot claim ledger proof.
+r0473,n0157,n0194,owns/persists,normal,DO01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,create_state
+r0474,n0157,n0195,owns/persists,normal,DO02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,invocation_lock
+r0475,n0157,n0193,depends_on/invokes,normal,DG046,retained+RC,source actor/create journal or mutation actor
+r0476,n0157,n0150,depends_on/invokes,normal,DG031,retained+RC,CREATE direct transport adapter
+r0477,n0157,n0215,external_operation,normal,API04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET exact/list; guarded single POST/PUT
+r0478,n0157,n0217,external_operation,normal,API06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,create/lock/unlock/typed recovery/admin/outbox/authority methods
+r0479,n0157,n0250,fails_as,failure,DG030,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Possible send retains ambiguous journal; no negative-GET re-POST.
+r0480,n0158,n0248,fails_as,failure,DG028,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Critical state persistence must be acknowledged.
+r0481,n0158,n0645,depends_on/invokes,normal,DG029,retained+RC,structured progress/history/cursors
+r0482,n0159,n0151,depends_on/invokes,normal,DG020,retained+RC,frozen window and page offset
+r0483,n0159,n0156,depends_on/invokes,normal,DG022,retained+RC,bounded admitted prefetched candidates
+r0484,n0159,n0162,depends_on/invokes,normal,DG021,retained+RC variants,candidate IDs/revisions
+r0485,n0159,n0213,external_operation,normal,API02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET list/detail/shipping fulfillments
+r0486,n0159,n0224,fails_as,failure,DG004,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Frozen range remains readable on capture/save failure.
+r0487,n0160,n0144,depends_on/invokes,normal,DG037,serving bridge,selected pages/hot-tail
+r0488,n0160,n0150,depends_on/invokes,normal,DG040,retained+RC,approved status/shipping PUT plan
+r0489,n0160,n0151,depends_on/invokes,normal,DG035,retained+RC,source UUID/revision
+r0490,n0160,n0163,depends_on/invokes,normal,DG036,retained+RC,source/current order
+r0491,n0160,n0213,external_operation,normal,API02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET list/detail/shipping fulfillments
+r0492,n0160,n0215,external_operation,normal,API04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET exact/list; guarded single POST/PUT
+r0493,n0160,n0225,fails_as,failure,DG005,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Drain retained tasks after discovery failure.
+r0494,n0160,n0236,fails_as,failure,DG016,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Possible-send never becomes another PUT.
+r0495,n0160,n0259,fails_as,failure,DG039,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No-op/review/unknown retains independent fence.
+r0496,n0160,n0270,fails_as,failure,DG050,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No old product replacement/stock correction.
+r0497,n0161,n0156,depends_on/invokes,normal,DG049,retained+RC,"proved missing source order, create allowed"
+r0498,n0161,n0160,depends_on/invokes,normal,DG050,retained+RC,existing exact order
+r0499,n0161,n0213,external_operation,normal,API02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET list/detail/shipping fulfillments
+r0500,n0161,n0226,fails_as,failure,DG006,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No absent-order conclusion from failed lookup.
+r0501,n0161,n0237,fails_as,failure,DG017,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Report is not mutation receipt.
+r0502,n0162,n0196,owns/persists,normal,DO03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,recovery tasks/due/pauses/cutover root
+r0503,n0162,n0193,depends_on/invokes,normal,DG047,retained+RC,tasks/due/pauses/root commands
+r0504,n0162,n0217,external_operation,normal,API06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,create/lock/unlock/typed recovery/admin/outbox/authority methods
+r0505,n0162,n0241,fails_as,failure,DG021,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failed ACK cannot advance past uncaptured work.
+r0506,n0162,n0258,fails_as,failure,DG038,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Attempts bounded; newer revision does not reopen review.
+r0507,n0162,n0268,fails_as,failure,DG048,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Only unsent expiry; sent unknown quarantine preserves hold.
+r0508,n0162,n0272,fails_as,failure,DG052,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No direct warehouse repair.
+r0509,n0162,n0276,fails_as,failure,DG056,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Health0/retry0 does not clear held cases.
+r0510,n0162,n0321,fails_as,failure,DG101,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Current helper is not automatically deployed code.
+r0511,n0163,n0256,fails_as,failure,DG036,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Do not guess cancellation/refund or strengthen policy silently.
+r0512,n0164,n0274,fails_as,failure,DG054,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No full raw payload or privacy guarantee for arbitrary free text.
+r0513,n0764,n0139,invokes,normal,EP01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,default.fetch
+r0514,n0764,n0142,invokes,normal,EP01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,default.fetch
+r0515,n0764,n0148,invokes,normal,EP01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,default.fetch
+r0516,n0764,n0177,invokes,normal,EP01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,default.fetch
+r0517,n0765,n0147,invokes,normal,EP02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,default.scheduled
+r0518,n0766,n0143,invokes,normal,EP03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,OrderCreateCoordinator.fetch / generated authority-safe-cutover subclass
+r0519,n0766,n0144,invokes,normal,EP03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,OrderCreateCoordinator.fetch / generated authority-safe-cutover subclass
+r0520,n0766,n0145,invokes,normal,EP03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,OrderCreateCoordinator.fetch / generated authority-safe-cutover subclass
+r0521,n0766,n0157,invokes,normal,EP03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,OrderCreateCoordinator.fetch / generated authority-safe-cutover subclass
+r0522,n0766,n0162,invokes,normal,EP03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,OrderCreateCoordinator.fetch / generated authority-safe-cutover subclass
+r0523,n0767,n0192,invokes,normal,EP04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,default.fetch
+r0524,n0768,n0192,invokes,normal,EP05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,default.scheduled
+r0525,n0769,n0185,invokes,normal,EP06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,seven PowerShell top-level scripts; workbook explicit migration/probe/self-test modes
+r0526,n0769,n0186,invokes,normal,EP06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,seven PowerShell top-level scripts; workbook explicit migration/probe/self-test modes
+r0527,n0769,n0187,invokes,normal,EP06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,seven PowerShell top-level scripts; workbook explicit migration/probe/self-test modes
+r0528,n0769,n0188,invokes,normal,EP06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,seven PowerShell top-level scripts; workbook explicit migration/probe/self-test modes
+r0529,n0769,n0189,invokes,normal,EP06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,seven PowerShell top-level scripts; workbook explicit migration/probe/self-test modes
+r0530,n0769,n0190,invokes,normal,EP06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,seven PowerShell top-level scripts; workbook explicit migration/probe/self-test modes
+r0531,n0769,n0191,invokes,normal,EP06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,seven PowerShell top-level scripts; workbook explicit migration/probe/self-test modes
+r0532,n0770,n0168,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0533,n0770,n0169,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0534,n0770,n0170,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0535,n0770,n0173,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0536,n0770,n0174,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0537,n0770,n0178,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0538,n0770,n0179,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0539,n0770,n0180,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0540,n0770,n0181,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0541,n0770,n0182,invokes,normal,EP07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,baseline/demo fetch/scheduled/coordinator; package CLI/task installers; explicit operational/test CLIs
+r0542,n0677,n0310,fails_as,failure,DG090,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Drift/gaps prevent fresh release claim.
+r0543,n0677,n0313,fails_as,failure,DG093,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost update response requires journal reconciliation.
+r0544,n0677,n0324,fails_as,failure,DG104,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Single-operator assumption, no atomic platform CAS."
+r0545,n0678,n0238,fails_as,failure,DG018,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,OAuth failure defers; never logs credential.
+r0546,n0679,n0239,fails_as,failure,DG019,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Page/timeout does not imply no order; preserve accepted prefix.
+r0547,n0680,n0308,fails_as,failure,DG088,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failure does not guess bundle/product identity.
+r0548,n0681,n0252,fails_as,failure,DG032,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Single mutation attempt; bounded fresh confirmation GET.
+r0549,n0681,n0285,fails_as,failure,DG065,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Partial page error retains old complete cache.
+r0550,n0681,n0314,fails_as,failure,DG094,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"HTTP0 is unknown transport, not revocation."
+r0551,n0682,n0306,fails_as,failure,DG086,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bounded retry/dedupe; no stock effect.
+r0552,n0221,n0683,recovers/contains,recovery,DG001,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Watchdog/deadline stops new admission; unknown remote effects remain.
+r0553,n0222,n0684,recovers/contains,recovery,DG002,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Deny/4xx/410 preserves distinct branch contract.
+r0554,n0223,n0685,recovers/contains,recovery,DG003,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failed page keeps prior complete snapshot.
+r0555,n0229,n0686,recovers/contains,recovery,DG009,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Preserve critical tail; never refund possible dispatch blindly.
+r0556,n0230,n0687,recovers/contains,recovery,DG010,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown one-time claim remains held; no permissive fallback.
+r0557,n0231,n0688,recovers/contains,recovery,DG011,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost legacy KV ACK remains unknown.
+r0558,n0232,n0689,recovers/contains,recovery,DG012,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No receipt fabricated from equal current hash.
+r0559,n0237,n0690,recovers/contains,recovery,DG017,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Report is not mutation receipt.
+r0560,n0239,n0691,recovers/contains,recovery,DG019,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Page/timeout does not imply no order; preserve accepted prefix.
+r0561,n0242,n0692,recovers/contains,recovery,DG022,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Due retries keep safe eligibility and mutation fences.
+r0562,n0243,n0693,recovers/contains,recovery,DG023,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Any unknown/conflicting required line blocks whole order.
+r0563,n0246,n0694,recovers/contains,recovery,DG026,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lookup error/unknown SKU blocks CREATE.
+r0564,n0247,n0695,recovers/contains,recovery,DG027,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No page1 absence assumption; preserve API error.
+r0565,n0251,n0696,recovers/contains,recovery,DG031,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No-send can retry; sent/unknown cannot.
+r0566,n0253,n0697,recovers/contains,recovery,DG033,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Partial/null/mixed stock keeps validation pending/review.
+r0567,n0254,n0698,recovers/contains,recovery,DG034,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown/mismatch is not manual stock repair.
+r0568,n0255,n0699,recovers/contains,recovery,DG035,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Uncertain source/refund plan holds.
+r0569,n0257,n0700,recovers/contains,recovery,DG037,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Lost finish ACK read-reconciles own lease, not business replay."
+r0570,n0258,n0701,recovers/contains,recovery,DG038,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Attempts bounded; newer revision does not reopen review.
+r0571,n0259,n0702,recovers/contains,recovery,DG039,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No-op/review/unknown retains independent fence.
+r0572,n0260,n0703,recovers/contains,recovery,DG040,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost response keeps mutation_sent/unknown.
+r0573,n0262,n0704,recovers/contains,recovery,DG042,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,STOP/revocation does not cancel preaccepted provider effects.
+r0574,n0263,n0705,recovers/contains,recovery,DG043,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost dispatch/settle reply retains conservative unknown.
+r0575,n0264,n0706,recovers/contains,recovery,DG044,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Confirmed effect/lost unlock is settlement uncertainty, not another PUT."
+r0576,n0265,n0707,recovers/contains,recovery,DG045,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Mixed/null/unbound remains fenced.
+r0577,n0266,n0708,recovers/contains,recovery,DG046,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Restart preserves intent; ordinary lease expiry does not erase pending.
+r0578,n0267,n0709,recovers/contains,recovery,DG047,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown/manual task never reset by source revision.
+r0579,n0268,n0710,recovers/contains,recovery,DG048,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Only unsent expiry; sent unknown quarantine preserves hold.
+r0580,n0273,n0711,recovers/contains,recovery,DG053,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing intent observes only; unknown never resent.
+r0581,n0275,n0712,recovers/contains,recovery,DG055,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unavailable diagnostics preserve UNKNOWN.
+r0582,n0276,n0713,recovers/contains,recovery,DG056,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Health0/retry0 does not clear held cases.
+r0583,n0289,n0714,recovers/contains,recovery,DG069,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost ACK retains pending; equal hash is not receipt.
+r0584,n0290,n0715,recovers/contains,recovery,DG070,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown grant/command never automatically reopened.
+r0585,n0291,n0716,recovers/contains,recovery,DG071,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Legacy unknown cannot replay even same ID.
+r0586,n0294,n0717,recovers/contains,recovery,DG074,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Local failure retains positive remote receipt.
+r0587,n0295,n0718,recovers/contains,recovery,DG075,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,CAS and unknown claims preserved.
+r0588,n0297,n0719,recovers/contains,recovery,DG077,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost receipt is not permission for another effect.
+r0589,n0300,n0720,recovers/contains,recovery,DG080,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failed transition records review; no silent legacy fallback.
+r0590,n0301,n0721,recovers/contains,recovery,DG081,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Mirror retry does not re-APPLY business command.
+r0591,n0303,n0722,recovers/contains,recovery,DG083,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown stock not inferred from thresholds.
+r0592,n0305,n0723,recovers/contains,recovery,DG085,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown Telegram delivery not exactly-once certified.
+r0593,n0306,n0724,recovers/contains,recovery,DG086,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bounded retry/dedupe; no stock effect.
+r0594,n0307,n0725,recovers/contains,recovery,DG087,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Abort stops admission, cannot undo remote commit."
+r0595,n0311,n0726,recovers/contains,recovery,DG091,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Never rewind newer fences/TTL/authority.
+r0596,n0313,n0727,recovers/contains,recovery,DG093,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost update response requires journal reconciliation.
+r0597,n0314,n0728,recovers/contains,recovery,DG094,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"HTTP0 is unknown transport, not revocation."
+r0598,n0315,n0729,recovers/contains,recovery,DG095,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No blind retry after unknown management mutation.
+r0599,n0325,n0730,recovers/contains,recovery,DG105,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Forward-compatible recovery only after new states.
+r0600,n0326,n0731,recovers/contains,recovery,DG106,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Do not rerun completed plan; current recovery/worktree excluded.
+r0601,n0337,n0732,recovers/contains,recovery,DG117,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Preserve immutable exact fixture until consumer retired.
+r0602,n0343,n0733,recovers/contains,recovery,DG123,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Missing caller/result link stays UNKNOWN.
+r0603,n0378,n0311,fails_as,failure,DG091,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Never rewind newer fences/TTL/authority.
+r0604,n0378,n0327,fails_as,failure,DG107,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,F availability and absolute dependencies remain.
+r0605,n0379,n0282,fails_as,failure,DG062,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Crash may leave orphan; no remote rollback implied.
+r0606,n0379,n0283,fails_as,failure,DG063,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Mismatch blocks successful publication.
+r0607,n0379,n0287,fails_as,failure,DG067,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Age/structure failure retains uncertainty, not fake freshness."
+r0608,n0379,n0288,fails_as,failure,DG068,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Ambiguity/pending retained; no product API writer.
+r0609,n0379,n0294,fails_as,failure,DG074,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Local failure retains positive remote receipt.
+r0610,n0208,n0323,fails_as,failure,DG103,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Same code cannot certify config/commit identity.
+r0611,n0208,n0343,fails_as,failure,DG123,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Missing caller/result link stays UNKNOWN.
+r0612,n0165,n0333,fails_as,failure,DG113,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Physical595 assertion is cleanup-sensitive debt.
+r0613,n0166,n0334,fails_as,failure,DG114,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No disabled stock correction execution.
+r0614,n0167,n0335,fails_as,failure,DG115,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Caller/package/source-anchor closure before cleanup.
+r0615,n0168,n0331,fails_as,failure,DG111,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No automatic baseline substitution.
+r0616,n0169,n0332,fails_as,failure,DG112,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Never supply production bindings to establish isolation.
+r0617,n0170,n0186,depends_on/invokes,normal,DG120,history,distinct historical implementations
+r0618,n0171,n0336,fails_as,failure,DG116,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical copies not removable runtime LOC.
+r0619,n0172,n0322,fails_as,failure,DG102,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Filename/mtime cannot select correct parent.
+r0620,n0172,n0337,fails_as,failure,DG117,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Preserve immutable exact fixture until consumer retired.
+r0621,n0173,n0341,fails_as,failure,DG121,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,One absent task lookup is not global writer closure.
+r0622,n0174,n0342,fails_as,failure,DG122,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Do not execute to prove reachability.
+r0623,n0174,n0208,depends_on/invokes,normal,DG123,history/unknown,retained source/profile evidence
+r0624,n0209,n0307,fails_as,failure,DG087,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Abort stops admission, cannot undo remote commit."
+r0625,n0644,n0286,fails_as,failure,DG066,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No partially built snapshot commit.
+r0626,n0645,n0249,fails_as,failure,DG029,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Expired/malformed record revalidates; never permits replay alone.
+r0627,n0646,n0245,fails_as,failure,DG025,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,KV error is not fallback permission; deleted rule not resurrection locally.
+r0628,n0646,n0298,fails_as,failure,DG078,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Compiled fallback/cache do not supersede valid active doc.
+r0629,n0646,n0299,fails_as,failure,DG079,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No transactional legacy command ledger.
+r0630,n0646,n0301,fails_as,failure,DG081,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Mirror retry does not re-APPLY business command.
+r0631,n0175,n0140,depends_on/invokes,normal,DG082,retained+RC,active settings/version
+r0632,n0175,n0150,depends_on/invokes,normal,DG083,retained+RC,warehouse-specific offers/stocks
+r0633,n0175,n0214,external_operation,normal,API03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET sources/offers/products/detailed stocks
+r0634,n0175,n0227,fails_as,failure,DG007,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failed enqueue does not mark alerted.
+r0635,n0175,n0176,depends_on/invokes,normal,DG084,retained+RC,full report/attention/settings identity
+r0636,n0176,n0203,owns/persists,normal,DO10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,outbox and distinct delivery dedupe
+r0637,n0176,n0193,depends_on/invokes,normal,DG085,retained+RC,outbox and distinct dedupe identities
+r0638,n0176,n0217,external_operation,normal,API06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,create/lock/unlock/typed recovery/admin/outbox/authority methods
+r0639,n0176,n0219,external_operation,normal,API08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,sendMessage/sendDocument/getFile/download verification
+r0640,n0176,n0682,depends_on/invokes,normal,DG086,retained+RC,message/XLSX/provider verification
+r0641,n0176,n0228,fails_as,failure,DG008,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost Telegram response is not exactly-once proof.
+r0642,n0176,n0304,fails_as,failure,DG084,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failure cannot mark report delivered.
+r0643,n0177,n0150,depends_on/invokes,normal,DG055,retained+RC,bounded order/catalog/stock diagnostic read
+r0644,n0177,n0162,depends_on/invokes,normal,DG056,retained+RC,typed task/control state query
+r0645,n0177,n0164,depends_on/invokes,normal,DG054,retained serving+RC,source diagnostic object
+r0646,n0177,n0234,fails_as,failure,DG014,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Method/auth/effect contract remains branch-specific.
+r0647,n0178,n0216,external_operation,normal,API05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,versions/deploy/settings/schedules/KV/DO inventory/query; explicit technical mutations only in approved operator modes
+r0648,n0178,n0677,depends_on/invokes,normal,DG090,support,version/resources/KV/DO inventory
+r0649,n0178,n0309,fails_as,failure,DG089,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Native continuity != full catastrophic export.
+r0650,n0178,n0316,fails_as,failure,DG096,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Numeric-proof defect remains OPEN, not release GO."
+r0651,n0178,n0378,depends_on/invokes,normal,DG091,support,cipher/plain hashes/reference receipts
+r0652,n0179,n0216,external_operation,normal,API05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,versions/deploy/settings/schedules/KV/DO inventory/query; explicit technical mutations only in approved operator modes
+r0653,n0179,n0677,depends_on/invokes,normal,DG093,support,target secret binding/version
+r0654,n0179,n0681,depends_on/invokes,normal,DG094,support,old/new/actual credential GET proof
+r0655,n0179,n0312,fails_as,failure,DG092,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Completed credential epoch never replayed as cleanup.
+r0656,n0180,n0145,depends_on/invokes,normal,DG105,support,STOP/attest/activate request
+r0657,n0180,n0146,depends_on/invokes,normal,DG097,support,exact serving bytes+helper revisions
+r0658,n0180,n0216,external_operation,normal,API05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,versions/deploy/settings/schedules/KV/DO inventory/query; explicit technical mutations only in approved operator modes
+r0659,n0180,n0677,depends_on/invokes,normal,DG104,support,sealed artifact/bindings/runtime/schedules
+r0660,n0180,n0315,fails_as,failure,DG095,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No blind retry after unknown management mutation.
+r0661,n0180,n0178,depends_on/invokes,normal,DG096,support,fresh recovery evidence
+r0662,n0181,n0326,fails_as,failure,DG106,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Do not rerun completed plan; current recovery/worktree excluded.
+r0663,n0181,n0378,depends_on/invokes,normal,DG107,support,archive/proof paths and junctions
+r0664,n0182,n0141,depends_on/invokes,normal,DG119,tests,synthetic R3 migration/receipts
+r0665,n0182,n0146,depends_on/invokes,normal,DG110,tests,pinned exact parent+build/native fixtures
+r0666,n0182,n0156,depends_on/invokes,normal,DG109,tests,current/mocked importer declarations
+r0667,n0182,n0328,fails_as,failure,DG108,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Baseline nested409 remains failure; no universal runner.
+r0668,n0182,n0165,depends_on/invokes,normal,DG113,tests,AST/VM deny/source contract
+r0669,n0182,n0166,depends_on/invokes,normal,DG114,tests,AST/VM deny/source contract
+r0670,n0182,n0167,depends_on/invokes,normal,DG115,tests,helper reference closure
+r0671,n0182,n0168,depends_on/invokes,normal,DG111,tests,baseline own sibling imports
+r0672,n0182,n0169,depends_on/invokes,normal,DG112,tests,demo own sibling imports/package
+r0673,n0182,n0171,depends_on/invokes,normal,DG116,tests,SHA/duplicate metadata
+r0674,n0182,n0172,depends_on/invokes,normal,DG117,tests,fixed old R3 native lab artifact
+r0675,n0182,n0184,depends_on/invokes,normal,DG118,tests,synthetic adapter/journal
+r0676,n0210,n0173,depends_on/invokes,normal,DG121,history/unknown,explicit historical CLI/task installer
+r0677,n0210,n0174,depends_on/invokes,normal,DG122,history/unknown,explicit repro/mock/ZIP/red-team roots
+r0678,n0210,n0178,depends_on/invokes,normal,DG089,support,approved checkpoint request
+r0679,n0210,n0179,depends_on/invokes,normal,DG092,support historical operation,approved consumer epoch evidence
+r0680,n0210,n0180,depends_on/invokes,normal,DG095,support,approved scope+baseline+certificate
+r0681,n0210,n0181,depends_on/invokes,normal,DG106,support,approved completed archival plan
+r0682,n0183,n0151,depends_on/invokes,normal,DG051,RC-only,historical frozen creation window
+r0683,n0183,n0162,depends_on/invokes,normal,DG052,RC-only,historical IDs/revisions
+r0684,n0183,n0213,external_operation,normal,API02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET list/detail/shipping fulfillments
+r0685,n0184,n0150,depends_on/invokes,normal,DG053,local lab/staged only,supplied attested repair adapter/transport
+r0686,n0184,n0338,fails_as,failure,DG118,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No live repair endpoint contract claimed.
+r0687,n0380,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0688,n0381,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0689,n0382,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0690,n0383,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0691,n0384,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0692,n0385,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0693,n0386,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0694,n0387,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0695,n0388,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0696,n0389,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0697,n0390,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0698,n0391,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0699,n0392,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0700,n0393,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0701,n0394,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0702,n0395,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0703,n0396,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0704,n0397,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0705,n0398,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0706,n0399,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0707,n0400,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0708,n0401,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0709,n0402,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0710,n0403,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0711,n0404,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0712,n0405,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0713,n0406,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0714,n0407,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0715,n0408,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0716,n0409,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0717,n0410,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0718,n0411,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0719,n0412,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0720,n0413,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0721,n0414,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0722,n0415,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0723,n0416,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0724,n0417,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0725,n0418,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0726,n0419,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0727,n0420,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0728,n0421,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0729,n0422,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0730,n0423,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0731,n0424,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0732,n0425,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0733,n0426,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0734,n0427,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0735,n0428,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0736,n0429,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0737,n0430,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0738,n0431,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0739,n0432,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0740,n0433,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0741,n0434,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0742,n0435,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0743,n0436,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0744,n0437,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0745,n0438,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0746,n0439,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0747,n0440,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0748,n0441,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0749,n0442,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0750,n0443,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0751,n0444,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0752,n0445,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0753,n0446,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0754,n0447,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0755,n0448,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0756,n0449,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0757,n0450,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0758,n0451,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0759,n0452,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0760,n0453,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0761,n0454,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0762,n0455,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0763,n0456,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0764,n0457,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0765,n0458,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0766,n0459,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0767,n0460,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0768,n0461,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0769,n0462,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0770,n0463,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0771,n0464,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0772,n0465,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0773,n0466,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0774,n0467,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0775,n0468,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0776,n0469,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0777,n0470,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0778,n0471,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0779,n0472,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0780,n0473,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0781,n0474,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0782,n0475,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0783,n0476,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0784,n0477,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0785,n0478,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0786,n0479,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0787,n0480,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0788,n0481,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0789,n0482,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0790,n0483,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0791,n0484,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0792,n0485,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0793,n0486,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0794,n0487,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0795,n0488,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0796,n0489,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0797,n0490,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0798,n0491,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0799,n0492,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0800,n0493,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0801,n0494,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0802,n0495,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0803,n0496,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0804,n0497,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0805,n0498,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0806,n0499,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0807,n0500,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0808,n0501,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0809,n0502,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0810,n0503,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0811,n0504,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0812,n0505,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0813,n0506,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0814,n0507,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0815,n0508,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0816,n0509,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0817,n0510,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0818,n0511,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0819,n0512,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0820,n0513,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0821,n0514,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0822,n0515,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0823,n0516,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0824,n0517,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0825,n0518,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0826,n0519,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0827,n0520,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0828,n0521,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0829,n0522,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0830,n0523,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0831,n0524,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0832,n0525,n0131,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0833,n0526,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0834,n0527,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0835,n0528,n0129,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0836,n0529,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0837,n0530,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0838,n0531,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0839,n0532,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0840,n0533,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0841,n0534,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0842,n0535,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0843,n0536,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0844,n0537,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0845,n0538,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0846,n0539,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0847,n0540,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0848,n0541,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0849,n0542,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0850,n0543,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0851,n0544,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0852,n0545,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0853,n0546,n0138,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0854,n0547,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0855,n0548,n0138,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0856,n0549,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0857,n0550,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0858,n0551,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0859,n0552,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0860,n0553,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0861,n0554,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0862,n0555,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0863,n0556,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0864,n0557,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0865,n0558,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0866,n0559,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0867,n0560,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0868,n0561,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0869,n0562,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0870,n0563,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0871,n0564,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0872,n0565,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0873,n0566,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0874,n0567,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0875,n0568,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0876,n0569,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0877,n0570,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0878,n0571,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0879,n0572,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0880,n0573,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0881,n0574,n0131,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0882,n0575,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0883,n0576,n0137,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0884,n0577,n0136,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0885,n0578,n0133,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0886,n0579,n0133,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0887,n0580,n0133,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0888,n0581,n0136,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0889,n0582,n0133,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0890,n0583,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0891,n0584,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0892,n0585,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0893,n0586,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0894,n0587,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0895,n0588,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0896,n0589,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0897,n0590,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0898,n0591,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0899,n0592,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0900,n0593,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0901,n0594,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0902,n0595,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0903,n0596,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0904,n0597,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0905,n0598,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0906,n0599,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0907,n0600,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0908,n0601,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0909,n0602,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0910,n0603,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0911,n0604,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0912,n0605,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0913,n0606,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0914,n0607,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0915,n0608,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0916,n0609,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0917,n0610,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0918,n0611,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0919,n0612,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0920,n0613,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0921,n0614,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0922,n0615,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0923,n0616,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0924,n0617,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0925,n0618,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0926,n0619,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0927,n0620,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0928,n0621,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0929,n0622,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0930,n0623,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0931,n0624,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0932,n0625,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0933,n0626,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0934,n0627,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0935,n0628,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0936,n0629,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0937,n0630,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0938,n0631,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0939,n0632,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0940,n0633,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0941,n0634,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0942,n0635,n0135,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0943,n0636,n0138,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0944,n0637,n0127,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0945,n0638,n0128,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0946,n0639,n0132,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0947,n0640,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0948,n0641,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0949,n0642,n0130,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0950,n0643,n0134,dispatches_to,normal,surface.routes,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Withheld routing declaration
+r0951,n0799,n0147,schedules,normal,CR01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> runScheduledTask -> runCronCycle(create)
+r0952,n0799,n0156,schedules,normal,CR01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> runScheduledTask -> runCronCycle(create)
+r0953,n0799,n0159,schedules,normal,CR01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> runScheduledTask -> runCronCycle(create)
+r0954,n0799,n0804,schedules,release/operations,CR01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> runScheduledTask -> runCronCycle(create)
+r0955,n0800,n0147,schedules,normal,CR02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> runScheduledReplenishmentCheck
+r0956,n0800,n0175,schedules,normal,CR02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> runScheduledReplenishmentCheck
+r0957,n0800,n0804,schedules,release/operations,CR02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> runScheduledReplenishmentCheck
+r0958,n0801,n0147,schedules,normal,CR03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> alternating status/reconcile
+r0959,n0801,n0160,schedules,normal,CR03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> alternating status/reconcile
+r0960,n0801,n0161,schedules,normal,CR03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> alternating status/reconcile
+r0961,n0801,n0804,schedules,release/operations,CR03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> alternating status/reconcile
+r0962,n0802,n0147,schedules,normal,CR04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> dispatchNotificationOutbox
+r0963,n0802,n0176,schedules,normal,CR04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> dispatchNotificationOutbox
+r0964,n0802,n0804,schedules,release/operations,CR04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> dispatchNotificationOutbox
+r0965,n0803,n0805,schedules,release/operations,CR05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> refreshSnapshot
+r0966,n0803,n0192,schedules,normal,CR05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,scheduled -> refreshSnapshot
+r0967,n0771,n0650,blocks/protects,normal,SG01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Durable discovery capture before cursor advance
+r0968,n0771,n0653,blocks/protects,normal,SG01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Durable discovery capture before cursor advance
+r0969,n0772,n0650,blocks/protects,normal,SG02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bounded page continuation and fixed cutoff
+r0970,n0773,n0651,blocks/protects,normal,SG03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact source UUID plus serialized CREATE actor duplicate check
+r0971,n0774,n0651,blocks/protects,normal,SG04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Possible-send journal persisted before CREATE dispatch
+r0972,n0775,n0651,blocks/protects,normal,SG05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Positive CREATE identity readback
+r0973,n0776,n0648,blocks/protects,normal,SG06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Fresh warehouse-specific reserve proof
+r0974,n0777,n0652,blocks/protects,normal,SG07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Typed existing_status task
+r0975,n0777,n0653,blocks/protects,normal,SG07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Typed existing_status task
+r0976,n0778,n0655,blocks/protects,normal,SG08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Root STOP/DRAINED/RUN epoch and receipt
+r0977,n0779,n0652,blocks/protects,normal,SG09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Per-CRM mutation fence and invocation lock
+r0978,n0780,n0652,blocks/protects,normal,SG10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Persisted pending state and immediate dispatch marker
+r0979,n0780,n0655,blocks/protects,normal,SG10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Persisted pending state and immediate dispatch marker
+r0980,n0781,n0648,blocks/protects,normal,SG11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bounded fresh GET readback
+r0981,n0781,n0652,blocks/protects,normal,SG11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bounded fresh GET readback
+r0982,n0782,n0648,blocks/protects,normal,SG12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact fulfilled quantity and numeric warehouse validation
+r0983,n0783,n0652,blocks/protects,normal,SG13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Completion tombstone and epoch receipt
+r0984,n0783,n0655,blocks/protects,normal,SG13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Completion tombstone and epoch receipt
+r0985,n0784,n0651,blocks/protects,normal,SG14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown/sent/manual-review retention
+r0986,n0784,n0652,blocks/protects,normal,SG14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown/sent/manual-review retention
+r0987,n0784,n0655,blocks/protects,normal,SG14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown/sent/manual-review retention
+r0988,n0785,n0651,blocks/protects,normal,SG15,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Explicit trusted-no-send retry boundary
+r0989,n0785,n0652,blocks/protects,normal,SG15,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Explicit trusted-no-send retry boundary
+r0990,n0786,n0649,blocks/protects,normal,SG16,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Processing KV compatibility reader and merged safety flags
+r0991,n0787,n0650,blocks/protects,normal,SG17,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Status cursor capture handoff distinct from task completion
+r0992,n0787,n0653,blocks/protects,normal,SG17,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Status cursor capture handoff distinct from task completion
+r0993,n0788,n0661,blocks/protects,normal,SG18,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle rule document validation and fail-closed expansion
+r0994,n0789,n0661,blocks/protects,normal,SG19,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Separate live KV authority from snapshot/cache/reference
+r0995,n0789,n0670,blocks/protects,normal,SG19,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Separate live KV authority from snapshot/cache/reference
+r0996,n0790,n0659,blocks/protects,normal,SG20,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Yellow staging/hash validation before publication
+r0997,n0791,n0659,blocks/protects,normal,SG21,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Yellow CURRENT_RUN atomic presentation checkpoint
+r0998,n0792,n0664,blocks/protects,normal,SG22,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact bundle command persistence and version/hash ACK
+r0999,n0793,n0666,blocks/protects,normal,SG23,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Complete outbox attention-set identity and reconciliation
+r1000,n0794,n0667,blocks/protects,normal,SG24,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Independent snapshot publish-on-complete
+r1001,n0795,n0657,blocks/protects,normal,SG25,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Cron budget reservation, deadline watchdog and Retry-After"
+r1002,n0795,n0658,blocks/protects,normal,SG25,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Cron budget reservation, deadline watchdog and Retry-After"
+r1003,n0796,n0647,blocks/protects,normal,SG26,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Freshness checks for source, CRM, and warehouse before transition"
+r1004,n0796,n0648,blocks/protects,normal,SG26,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Freshness checks for source, CRM, and warehouse before transition"
+r1005,n0796,n0652,blocks/protects,normal,SG26,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Freshness checks for source, CRM, and warehouse before transition"
+r1006,n0797,n0676,blocks/protects,normal,SG27,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Hash-pinned exact-version build and reverse-diff gate
+r1007,n0798,n0655,blocks/protects,normal,SG28,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Upload, activation, traffic and RUN evidence separation"
+r1008,n0798,n0676,blocks/protects,normal,SG28,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Upload, activation, traffic and RUN evidence separation"
+r1009,n0647,n0648,transitions/interacts_with,normal,SI06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Source eligibility plans status transition
+r1010,n0648,n0348,fails_as,failure,SI05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,False/stale receipt must revalidate
+r1011,n0648,n0349,fails_as,failure,SI06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Uncertain refund/quantity/shipping holds
+r1012,n0648,n0353,fails_as,failure,SI10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bounded polls only; permanent lag stays fenced
+r1013,n0649,n0347,fails_as,failure,SI04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Missing warehouse remains pending, no new CREATE"
+r1014,n0649,n0648,transitions/interacts_with,normal,SI05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Reserved/completed receipt follows fresh warehouse proof
+r1015,n0650,n0358,fails_as,failure,SI15,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Restart reads frozen window/saved tasks
+r1016,n0650,n0653,transitions/interacts_with,normal,SI01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Page IDs captured durably before cursor advance
+r1017,n0651,n0345,fails_as,failure,SI02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing source journal/exact CRM check still block repeated POST
+r1018,n0651,n0649,transitions/interacts_with,normal,SI04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Confirmed identity returns to processing validation
+r1019,n0652,n0346,fails_as,failure,SI03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown per-order fence survives task retry/expiry
+r1020,n0652,n0351,fails_as,failure,SI08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Hold/tombstone/fresh conflict still blocks
+r1021,n0652,n0377,fails_as,failure,SI34,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Never bare legacy/stale state rewind
+r1022,n0652,n0648,transitions/interacts_with,normal,SI10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,200/202 candidate acceptance -> fresh exact GET
+r1023,n0652,n0653,transitions/interacts_with,normal,SI11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Verified outcome then own-lease task finish
+r1024,n0652,n0655,transitions/interacts_with,normal,SI09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Pending then immediate sent marker precede provider fetch
+r1025,n0653,n0344,fails_as,failure,SI01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Capture/save failure leaves reread coverage
+r1026,n0653,n0354,fails_as,failure,SI11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Read last_finished_lease; never replay PUT
+r1027,n0653,n0356,fails_as,failure,SI13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Actual sent/unknown and protected sources excluded
+r1028,n0653,n0651,transitions/interacts_with,normal,SI02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Claimed import task requests CREATE processing
+r1029,n0653,n0652,transitions/interacts_with,normal,SI03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Claimed status task requests existing-order processing
+r1030,n0654,n0376,fails_as,failure,SI33,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact current recipe/compatible successor needed
+r1031,n0654,n0655,transitions/interacts_with,normal,SI07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,RUN/epoch admits active dispatch
+r1032,n0655,n0350,fails_as,failure,SI07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown sent row remains active or quarantined
+r1033,n0655,n0352,fails_as,failure,SI09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Lost RPC ACK conservative unknown, no unlock/re-PUT"
+r1034,n0655,n0652,transitions/interacts_with,normal,SI08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Epoch begin wraps fresh per-order guard
+r1035,n0655,n0656,transitions/interacts_with,normal,SI12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown quarantine -> hold+immutable mutation receipt
+r1036,n0656,n0355,fails_as,failure,SI12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No generic sent/unknown release
+r1037,n0656,n0375,fails_as,failure,SI32,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Linked ledger/approval still required
+r1038,n0656,n0653,transitions/interacts_with,normal,SI13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Narrow reviewed release_legacy -> pending status task
+r1039,n0657,n0658,transitions/interacts_with,normal,SI14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Provider pause intersects remaining deadline/budget
+r1040,n0658,n0357,fails_as,failure,SI14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Defer and persist progress without consuming finish tail
+r1041,n0658,n0650,transitions/interacts_with,normal,SI15,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget/deadline exhaustion checkpoints admitted prefix
+r1042,n0659,n0363,fails_as,failure,SI20,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No automatic CURRENT_RUN rollback
+r1043,n0659,n0368,fails_as,failure,SI25,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unsafe fallback blocks inference
+r1044,n0659,n0661,transitions/interacts_with,normal,SI16,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,CURRENT_RUN verified publication feeds bundle intent
+r1045,n0659,n0663,transitions/interacts_with,normal,SI17,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Current plan feeds new settings intent
+r1046,n0660,n0367,fails_as,failure,SI24,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Old/duplicate/stale cache leaves pending
+r1047,n0660,n0663,transitions/interacts_with,normal,SI18,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Product reference and threshold reference share workbook
+r1048,n0661,n0359,fails_as,failure,SI16,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Recheck hashes/source before exclusive pending save
+r1049,n0661,n0662,transitions/interacts_with,normal,SI19,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Saved exact command dispatched to bundle server
+r1050,n0662,n0362,fails_as,failure,SI19,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Lost ACK remains pending, no new command"
+r1051,n0662,n0373,fails_as,failure,SI30,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Consumed matching receipt returns result only
+r1052,n0662,n0374,fails_as,failure,SI31,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Whole-protocol acceptance gap remains
+r1053,n0662,n0659,transitions/interacts_with,normal,SI20,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Positive bundle version/hash result becomes local report
+r1054,n0663,n0360,fails_as,failure,SI17,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Changed new workbook cannot erase committed receipt
+r1055,n0663,n0361,fails_as,failure,SI18,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Product reconcile never overwrites five settings columns
+r1056,n0663,n0664,transitions/interacts_with,normal,SI21,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Settings intent crosses live KV authority
+r1057,n0663,n0665,transitions/interacts_with,normal,SI22,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Receipt retrieval conditional on genuine durable authority
+r1058,n0664,n0364,fails_as,failure,SI21,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown same ID still cannot replay
+r1059,n0665,n0365,fails_as,failure,SI22,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Old KV unknown is not reclassified safe after migration
+r1060,n0665,n0666,transitions/interacts_with,normal,SI23,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Committed authority records immutable mirror intent
+r1061,n0666,n0366,fails_as,failure,SI23,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Identical immutable-copy retry cannot touch active pointer
+r1062,n0667,n0659,transitions/interacts_with,normal,SI25,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Validated catalog cache supplies workbook plan
+r1063,n0667,n0660,transitions/interacts_with,normal,SI24,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Fresh unique newer snapshot confirms local proposal
+r1064,n0668,n0669,transitions/interacts_with,normal,SI26,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Successful enqueue precedes last_alert_at
+r1065,n0669,n0369,fails_as,failure,SI26,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failed enqueue cannot mark all attention sent
+r1066,n0669,n0371,fails_as,failure,SI28,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bounded failure scheduling preserves queue
+r1067,n0669,n0670,transitions/interacts_with,normal,SI27,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Claimed report invokes delivery dedupe
+r1068,n0670,n0370,fails_as,failure,SI27,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost Telegram ACK not exactly-once certified
+r1069,n0670,n0669,transitions/interacts_with,normal,SI28,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Provider result/verification settles matching claim
+r1070,n0671,n0372,fails_as,failure,SI29,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost reply cannot retarget; revoke remains serialized
+r1071,n0672,n0671,transitions/interacts_with,normal,SI29,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,First-target enrollment initializes registered device
+r1072,n0673,n0662,transitions/interacts_with,normal,SI30,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,One-time claim guards bundle command
+r1073,n0674,n0662,transitions/interacts_with,normal,SI31,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Fixed patch/rollback nonce guards specific CAS path
+r1074,n0675,n0656,transitions/interacts_with,normal,SI32,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Repair observation updates own journal only
+r1075,n0676,n0652,transitions/interacts_with,normal,SI34,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Forward recovery must preserve pending/completion records
+r1076,n0676,n0654,transitions/interacts_with,normal,SI33,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Checkpoint/build/seal/journal precede STOP/attest/RUN
+r1077,n0211,n0182,depends_on/invokes,normal,DG108,support,explicit source/artifact/fixture target
+r1078,n0748,n0145,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1079,n0748,n0147,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1080,n0748,n0150,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1081,n0748,n0151,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1082,n0748,n0152,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1083,n0748,n0153,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1084,n0748,n0154,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1085,n0748,n0155,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1086,n0748,n0156,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1087,n0748,n0157,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1088,n0748,n0158,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1089,n0748,n0159,traces_through,normal,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,New eBay order -> CREATE -> reserve
+r1090,n0748,n0734,recovers/contains,recovery,T01,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Missing catalog/partial binding stays pending/review. No second CREATE after possible send. Optional later fulfillment is separate T02.
+r1091,n0749,n0143,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1092,n0749,n0144,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1093,n0749,n0145,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1094,n0749,n0147,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1095,n0749,n0150,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1096,n0749,n0155,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1097,n0749,n0160,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1098,n0749,n0162,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1099,n0749,n0163,traces_through,normal,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Existing order -> fulfillment -> DONE -> deduction
+r1100,n0749,n0735,recovers/contains,recovery,T02,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Unknown/mismatch retains fence/review; lost finish never re-PUT. Retained natural2417/[historical case] results are prior evidence, not a new run."
+r1101,n0750,n0150,traces_through,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost CREATE response
+r1102,n0750,n0156,traces_through,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost CREATE response
+r1103,n0750,n0157,traces_through,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost CREATE response
+r1104,n0750,n0158,traces_through,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost CREATE response
+r1105,n0750,n0162,traces_through,normal,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost CREATE response
+r1106,n0750,n0736,recovers/contains,recovery,T03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No-send proven preflight can retry; possible-send unknown remains fenced/manual. Serving RPC flag-loss defect B3-02 remains distinct from preserved durable safety.
+r1107,n0751,n0143,traces_through,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost PUT response or settlement ACK
+r1108,n0751,n0144,traces_through,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost PUT response or settlement ACK
+r1109,n0751,n0145,traces_through,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost PUT response or settlement ACK
+r1110,n0751,n0150,traces_through,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost PUT response or settlement ACK
+r1111,n0751,n0155,traces_through,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost PUT response or settlement ACK
+r1112,n0751,n0162,traces_through,normal,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost PUT response or settlement ACK
+r1113,n0751,n0737,recovers/contains,recovery,T04,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Current DONE alone cannot prove late old request finality. Generic sent/unknown resolver is not implemented; keep evidence-specific review.
+r1114,n0752,n0144,traces_through,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget exhaustion / partial page / restart
+r1115,n0752,n0149,traces_through,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget exhaustion / partial page / restart
+r1116,n0752,n0158,traces_through,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget exhaustion / partial page / restart
+r1117,n0752,n0159,traces_through,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget exhaustion / partial page / restart
+r1118,n0752,n0160,traces_through,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget exhaustion / partial page / restart
+r1119,n0752,n0162,traces_through,normal,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Budget exhaustion / partial page / restart
+r1120,n0752,n0738,recovers/contains,recovery,T05,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Current local B1/B8 fixes are not serving identity. App48 is not verified platform entitlement; no global rate/fairness SLA inferred.
+r1121,n0753,n0143,traces_through,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Manual review / unknown hold
+r1122,n0753,n0145,traces_through,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Manual review / unknown hold
+r1123,n0753,n0157,traces_through,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Manual review / unknown hold
+r1124,n0753,n0162,traces_through,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Manual review / unknown hold
+r1125,n0753,n0177,traces_through,normal,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Manual review / unknown hold
+r1126,n0753,n0739,recovers/contains,recovery,T06,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,No generic auto-reopen. Independent safe orders may continue; missing historical effects are explicitly FAC-U18.
+r1127,n0754,n0151,traces_through,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle SKU -> components -> warehouse lines
+r1128,n0754,n0152,traces_through,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle SKU -> components -> warehouse lines
+r1129,n0754,n0153,traces_through,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle SKU -> components -> warehouse lines
+r1130,n0754,n0154,traces_through,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle SKU -> components -> warehouse lines
+r1131,n0754,n0155,traces_through,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle SKU -> components -> warehouse lines
+r1132,n0754,n0156,traces_through,normal,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle SKU -> components -> warehouse lines
+r1133,n0754,n0740,recovers/contains,recovery,T07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Changed rules for an existing order do not append/replace lines. Current96 matches retained comparisons; local conditional malformed/deletion fixes remain undeployed.
+r1134,n0755,n0741,recovers/contains,recovery,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"Earlier reference/cache changes are not rolled back; crash can leave orphan. Selected seven scripts are source-only, not installed acceptance."
+r1135,n0755,n0185,traces_through,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Yellow workbook -> CURRENT_RUN
+r1136,n0755,n0186,traces_through,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Yellow workbook -> CURRENT_RUN
+r1137,n0755,n0187,traces_through,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Yellow workbook -> CURRENT_RUN
+r1138,n0755,n0188,traces_through,normal,T08,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Yellow workbook -> CURRENT_RUN
+r1139,n0756,n0139,traces_through,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle APPLY
+r1140,n0756,n0142,traces_through,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle APPLY
+r1141,n0756,n0153,traces_through,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle APPLY
+r1142,n0756,n0742,recovers/contains,recovery,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Lost ACK remains pending; equal active hash is not original receipt. KV+DO write is not atomic; no automatic repeat APPLY.
+r1143,n0756,n0187,traces_through,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle APPLY
+r1144,n0756,n0189,traces_through,normal,T09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Bundle APPLY
+r1145,n0757,n0140,traces_through,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Stock-settings APPLY -> local cache
+r1146,n0757,n0141,traces_through,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Stock-settings APPLY -> local cache
+r1147,n0757,n0743,recovers/contains,recovery,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Legacy unknown held. New input/drift/local error cannot erase positive receipt or issue another command.
+r1148,n0757,n0190,traces_through,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Stock-settings APPLY -> local cache
+r1149,n0757,n0191,traces_through,normal,T10,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Stock-settings APPLY -> local cache
+r1150,n0758,n0140,traces_through,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Replenishment -> XLSX -> outbox -> Telegram
+r1151,n0758,n0150,traces_through,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Replenishment -> XLSX -> outbox -> Telegram
+r1152,n0758,n0175,traces_through,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Replenishment -> XLSX -> outbox -> Telegram
+r1153,n0758,n0176,traces_through,normal,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Replenishment -> XLSX -> outbox -> Telegram
+r1154,n0758,n0744,recovers/contains,recovery,T11,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unknown notification not certified exactly-once. Serving B7-06 clipping/collision persists in retained code; local fix is not deployed.
+r1155,n0759,n0745,recovers/contains,recovery,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failure retains complete old cache; safe fallback24h differs from stale2h. Wire hash does not validate arbitrary edited transformed JSON.
+r1156,n0759,n0186,traces_through,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Snapshot refresh -> Yellow cache
+r1157,n0759,n0187,traces_through,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Snapshot refresh -> Yellow cache
+r1158,n0759,n0188,traces_through,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Snapshot refresh -> Yellow cache
+r1159,n0759,n0192,traces_through,normal,T12,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Snapshot refresh -> Yellow cache
+r1160,n0760,n0143,traces_through,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact build -> checkpoint -> deploy -> attest -> RUN
+r1161,n0760,n0144,traces_through,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact build -> checkpoint -> deploy -> attest -> RUN
+r1162,n0760,n0145,traces_through,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact build -> checkpoint -> deploy -> attest -> RUN
+r1163,n0760,n0146,traces_through,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact build -> checkpoint -> deploy -> attest -> RUN
+r1164,n0760,n0178,traces_through,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact build -> checkpoint -> deploy -> attest -> RUN
+r1165,n0760,n0179,traces_through,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact build -> checkpoint -> deploy -> attest -> RUN
+r1166,n0760,n0180,traces_through,normal,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact build -> checkpoint -> deploy -> attest -> RUN
+r1167,n0760,n0746,recovers/contains,recovery,T13,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,NOT executed and not a currently ready command: S1 numeric proof/quarantine defects and recipe/companion/tuple limitations remain. No release GO.
+r1168,n0761,n0143,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1169,n0761,n0144,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1170,n0761,n0145,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1171,n0761,n0158,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1172,n0761,n0162,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1173,n0761,n0168,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1174,n0761,n0172,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1175,n0761,n0178,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1176,n0761,n0183,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1177,n0761,n0184,traces_through,normal,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Historical / mixed-version recovery
+r1178,n0761,n0747,recovers/contains,recovery,T14,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,"[historical case] prior natural completion never repeat.[historical case]/[historical case]/[historical case] owner bindings fixed but missing safe receipts/linked historical movements remain FAC-U18, not new missing-binding claims."
+r1179,n0185,n0277,fails_as,failure,DG057,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Selected sources are not a runnable installed distribution.
+r1180,n0185,n0379,depends_on/invokes,normal,DG062,selected client,staging/runs/SUCCESS/hash/pointer
+r1181,n0185,n0186,depends_on/invokes,normal,DG060,selected client,input/options/new staging output
+r1182,n0185,n0187,depends_on/invokes,normal,DG058,selected client,refresh request
+r1183,n0185,n0188,depends_on/invokes,normal,DG059,selected client,pending product proposals
+r1184,n0186,n0220,external_operation,normal,API09,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,bounded HEAD/metadata reads
+r1185,n0186,n0280,fails_as,failure,DG060,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Previous pointer survives generator/publish failure.
+r1186,n0186,n0340,fails_as,failure,DG120,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unique algorithms/package roots retained.
+r1187,n0186,n0379,depends_on/invokes,normal,DG063,selected client,OOXML/reference/rules/proposals
+r1188,n0186,n0187,depends_on/invokes,normal,DG061,selected client,catalog dependency
+r1189,n0187,n0218,external_operation,normal,API07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET health/catalog; authenticated catalog GET may warm cache
+r1190,n0187,n0278,fails_as,failure,DG058,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Later run failure does not rewind cache.
+r1191,n0187,n0281,fails_as,failure,DG061,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Unsafe fallback blocks new-product inference.
+r1192,n0187,n0379,depends_on/invokes,normal,DG067,selected client,validated wire -> renamed local offers
+r1193,n0187,n0192,depends_on/invokes,normal,DG064,selected client+snapshot,authenticated snapshot GET
+r1194,n0188,n0279,fails_as,failure,DG059,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Later staging failure does not undo confirmed reference.
+r1195,n0188,n0379,depends_on/invokes,normal,DG068,selected client,proposal+newer unique snapshot
+r1196,n0189,n0139,depends_on/invokes,normal,DG069,selected client+serving,CURRENT_RUN exact command+CAS+device
+r1197,n0189,n0142,depends_on/invokes,normal,DG070,selected client+serving,device/enrollment/capability
+r1198,n0190,n0140,depends_on/invokes,normal,DG071,selected client+serving,exact threshold command/request/version/hash
+r1199,n0190,n0141,depends_on/invokes,normal,DG072,RC-only branch,positively reported durable command receipt lookup
+r1200,n0190,n0191,depends_on/invokes,normal,DG073,selected client,confirmed cache recovery input
+r1201,n0191,n0293,fails_as,failure,DG073,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Continuation exits without new APPLY.
+r1202,n0191,n0379,depends_on/invokes,normal,DG074,selected client,confirmed min/target/monitoring
+r1203,n0192,n0214,external_operation,normal,API03,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET sources/offers/products/detailed stocks
+r1204,n0192,n0218,external_operation,normal,API07,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,GET health/catalog; authenticated catalog GET may warm cache
+r1205,n0192,n0681,depends_on/invokes,normal,DG065,snapshot,offer pages
+r1206,n0192,n0223,fails_as,failure,DG003,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Failed page keeps prior complete snapshot.
+r1207,n0192,n0284,fails_as,failure,DG064,SOURCE/RETAINED ARCHITECTURE INVENTORY; not invocation telemetry,Exact schema/hash/time required; no redirects.
+r1208,n0192,n0644,depends_on/invokes,normal,DG066,snapshot,complete canonical catalog

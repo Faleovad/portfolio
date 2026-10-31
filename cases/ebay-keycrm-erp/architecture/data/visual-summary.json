@@ -1,0 +1,33 @@
+{
+  "snapshot": "2026-10-31",
+  "counts": {
+    "graph_nodes": 805,
+    "components": 54,
+    "logical_state_entities": 40,
+    "state_labels_listed": 147,
+    "distinct_state_labels": 136,
+    "runtime_entrypoints": 7,
+    "external_operations": 9,
+    "normal_path_edges": 981,
+    "failure_path_edges": 157,
+    "recovery_path_edges": 65,
+    "release_operations_edges": 134,
+    "scheduled_edges": 5,
+    "yellow_edges": 60,
+    "total_unique_relationships": 1208,
+    "safeguards": 28,
+    "known_failure_states": 157,
+    "known_recovery_paths": 65,
+    "authority_relationships": 24
+  },
+  "chains": {
+    "normal": 16,
+    "failure": 14,
+    "recovery": 13,
+    "release/operations": 7
+  },
+  "chains_total": 50,
+  "dangling_edges": 0,
+  "private_source_sha256": "510208bb16b50b3ed29b9678390054915add2ca9d6ea123d8f243cd74c0207d5",
+  "sanitization": "one-to-one opaque IDs; route paths/security predicates/source paths/actor templates and operational payloads omitted"
+}

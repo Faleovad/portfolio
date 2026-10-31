@@ -1,0 +1,588 @@
+{
+  "classification": "PUBLIC DEMO",
+  "implementation_commit": "1e1e923e4a160d47bea0c08645dc64e612a00186",
+  "captures": [
+    {
+      "file": "lab-normal.png",
+      "scenario": "happy",
+      "actions": [
+        "Reset / seed",
+        "Run"
+      ],
+      "sha256": "e9515481b217550278205c1b5035900bbf29a4c305e54610a92d7535447ab1b9",
+      "erp_state": "DONE",
+      "external_identity": "SYNTHETIC-ORDER-001",
+      "provider_state": "DONE",
+      "create_calls": 1,
+      "fulfill_calls": 1,
+      "fence_state": "CONFIRMED",
+      "journal_state": "CONFIRMED",
+      "task_state": null,
+      "reservations": [
+        {
+          "sku": "CABLE",
+          "quantity": 3,
+          "state": "FULFILLED"
+        },
+        {
+          "sku": "SENSOR",
+          "quantity": 2,
+          "state": "FULFILLED"
+        }
+      ],
+      "receipt_kinds": [
+        "CREATE",
+        "FULFILL"
+      ],
+      "event_sequence": [
+        {
+          "sequence": 58,
+          "event": "scenario_seeded",
+          "state": "DISCOVERED"
+        },
+        {
+          "sequence": 59,
+          "event": "state_transition",
+          "state": "VALIDATED"
+        },
+        {
+          "sequence": 60,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 61,
+          "event": "external_create_dispatched",
+          "state": null
+        },
+        {
+          "sequence": 62,
+          "event": "effect_confirmed",
+          "state": null
+        },
+        {
+          "sequence": 63,
+          "event": "receipt_retained",
+          "state": null
+        },
+        {
+          "sequence": 64,
+          "event": "state_transition",
+          "state": "CREATED"
+        },
+        {
+          "sequence": 65,
+          "event": "components_reserved",
+          "state": null
+        },
+        {
+          "sequence": 66,
+          "event": "state_transition",
+          "state": "RESERVED"
+        },
+        {
+          "sequence": 67,
+          "event": "state_transition",
+          "state": "MUTATION_PENDING"
+        },
+        {
+          "sequence": 68,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 69,
+          "event": "external_mutation_dispatched",
+          "state": "MUTATION_PENDING"
+        },
+        {
+          "sequence": 70,
+          "event": "state_transition",
+          "state": "CONFIRMING"
+        },
+        {
+          "sequence": 71,
+          "event": "effect_confirmed",
+          "state": null
+        },
+        {
+          "sequence": 72,
+          "event": "receipt_retained",
+          "state": null
+        },
+        {
+          "sequence": 73,
+          "event": "state_transition",
+          "state": "CONFIRMED"
+        },
+        {
+          "sequence": 74,
+          "event": "local_stock_settled",
+          "state": null
+        },
+        {
+          "sequence": 75,
+          "event": "state_transition",
+          "state": "DONE"
+        }
+      ],
+      "captured_at": "2026-10-31T18:17:01.175Z"
+    },
+    {
+      "file": "lab-timeout.png",
+      "scenario": "completion_lost",
+      "actions": [
+        "Reset / seed",
+        "Step x5"
+      ],
+      "sha256": "08a7f088299c81be5e7f5d8b9f09e786dfed944f8e19401aa6cd04b09cb13573",
+      "erp_state": "UNKNOWN",
+      "external_identity": "SYNTHETIC-ORDER-001",
+      "provider_state": "DONE",
+      "create_calls": 1,
+      "fulfill_calls": 1,
+      "fence_state": "UNKNOWN",
+      "journal_state": "CONFIRMED",
+      "task_state": "PENDING",
+      "reservations": [
+        {
+          "sku": "CABLE",
+          "quantity": 3,
+          "state": "RESERVED"
+        },
+        {
+          "sku": "SENSOR",
+          "quantity": 2,
+          "state": "RESERVED"
+        }
+      ],
+      "receipt_kinds": [
+        "CREATE"
+      ],
+      "event_sequence": [
+        {
+          "sequence": 76,
+          "event": "scenario_seeded",
+          "state": "DISCOVERED"
+        },
+        {
+          "sequence": 77,
+          "event": "state_transition",
+          "state": "VALIDATED"
+        },
+        {
+          "sequence": 78,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 79,
+          "event": "external_create_dispatched",
+          "state": null
+        },
+        {
+          "sequence": 80,
+          "event": "effect_confirmed",
+          "state": null
+        },
+        {
+          "sequence": 81,
+          "event": "receipt_retained",
+          "state": null
+        },
+        {
+          "sequence": 82,
+          "event": "state_transition",
+          "state": "CREATED"
+        },
+        {
+          "sequence": 83,
+          "event": "components_reserved",
+          "state": null
+        },
+        {
+          "sequence": 84,
+          "event": "state_transition",
+          "state": "RESERVED"
+        },
+        {
+          "sequence": 85,
+          "event": "state_transition",
+          "state": "MUTATION_PENDING"
+        },
+        {
+          "sequence": 86,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 87,
+          "event": "external_mutation_dispatched",
+          "state": "MUTATION_PENDING"
+        },
+        {
+          "sequence": 88,
+          "event": "fault_consumed",
+          "state": null
+        },
+        {
+          "sequence": 89,
+          "event": "state_transition",
+          "state": "UNKNOWN"
+        },
+        {
+          "sequence": 90,
+          "event": "task_enqueued",
+          "state": null
+        }
+      ],
+      "captured_at": "2026-10-31T18:17:02.273Z"
+    },
+    {
+      "file": "lab-recovered.png",
+      "scenario": "completion_lost",
+      "actions": [
+        "Continue same timeout run",
+        "Recover"
+      ],
+      "sha256": "2e5e89a65eb5b9719c1a9c7b003a9aa759f92aa1ef298bc84feb215884a33a87",
+      "erp_state": "DONE",
+      "external_identity": "SYNTHETIC-ORDER-001",
+      "provider_state": "DONE",
+      "create_calls": 1,
+      "fulfill_calls": 1,
+      "fence_state": "CONFIRMED",
+      "journal_state": "CONFIRMED",
+      "task_state": "COMPLETE",
+      "reservations": [
+        {
+          "sku": "CABLE",
+          "quantity": 3,
+          "state": "FULFILLED"
+        },
+        {
+          "sku": "SENSOR",
+          "quantity": 2,
+          "state": "FULFILLED"
+        }
+      ],
+      "receipt_kinds": [
+        "CREATE",
+        "FULFILL"
+      ],
+      "event_sequence": [
+        {
+          "sequence": 76,
+          "event": "scenario_seeded",
+          "state": "DISCOVERED"
+        },
+        {
+          "sequence": 77,
+          "event": "state_transition",
+          "state": "VALIDATED"
+        },
+        {
+          "sequence": 78,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 79,
+          "event": "external_create_dispatched",
+          "state": null
+        },
+        {
+          "sequence": 80,
+          "event": "effect_confirmed",
+          "state": null
+        },
+        {
+          "sequence": 81,
+          "event": "receipt_retained",
+          "state": null
+        },
+        {
+          "sequence": 82,
+          "event": "state_transition",
+          "state": "CREATED"
+        },
+        {
+          "sequence": 83,
+          "event": "components_reserved",
+          "state": null
+        },
+        {
+          "sequence": 84,
+          "event": "state_transition",
+          "state": "RESERVED"
+        },
+        {
+          "sequence": 85,
+          "event": "state_transition",
+          "state": "MUTATION_PENDING"
+        },
+        {
+          "sequence": 86,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 87,
+          "event": "external_mutation_dispatched",
+          "state": "MUTATION_PENDING"
+        },
+        {
+          "sequence": 88,
+          "event": "fault_consumed",
+          "state": null
+        },
+        {
+          "sequence": 89,
+          "event": "state_transition",
+          "state": "UNKNOWN"
+        },
+        {
+          "sequence": 90,
+          "event": "task_enqueued",
+          "state": null
+        },
+        {
+          "sequence": 91,
+          "event": "state_transition",
+          "state": "RECONCILING"
+        },
+        {
+          "sequence": 92,
+          "event": "effect_confirmed",
+          "state": null
+        },
+        {
+          "sequence": 93,
+          "event": "receipt_retained",
+          "state": null
+        },
+        {
+          "sequence": 94,
+          "event": "state_transition",
+          "state": "CONFIRMED"
+        },
+        {
+          "sequence": 95,
+          "event": "task_finished",
+          "state": null
+        },
+        {
+          "sequence": 96,
+          "event": "local_stock_settled",
+          "state": null
+        },
+        {
+          "sequence": 97,
+          "event": "state_transition",
+          "state": "DONE"
+        }
+      ],
+      "captured_at": "2026-10-31T18:17:02.747Z"
+    },
+    {
+      "file": "lab-duplicate.png",
+      "scenario": "interrupt_create",
+      "actions": [
+        "Reset / seed",
+        "Run: interruption after CREATE",
+        "Step: journal lookup blocks second CREATE"
+      ],
+      "sha256": "9ae11d7162bdee85db57757d4d03f91251c9553ee7b94717d675e7aedc5f7453",
+      "erp_state": "UNKNOWN",
+      "external_identity": "SYNTHETIC-ORDER-001",
+      "provider_state": "NEW",
+      "create_calls": 1,
+      "fulfill_calls": 0,
+      "fence_state": null,
+      "journal_state": "SENT",
+      "task_state": "PENDING",
+      "reservations": [],
+      "receipt_kinds": [],
+      "event_sequence": [
+        {
+          "sequence": 98,
+          "event": "scenario_seeded",
+          "state": "DISCOVERED"
+        },
+        {
+          "sequence": 99,
+          "event": "state_transition",
+          "state": "VALIDATED"
+        },
+        {
+          "sequence": 100,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 101,
+          "event": "external_create_dispatched",
+          "state": null
+        },
+        {
+          "sequence": 102,
+          "event": "fault_consumed",
+          "state": null
+        },
+        {
+          "sequence": 103,
+          "event": "state_transition",
+          "state": "UNKNOWN"
+        },
+        {
+          "sequence": 104,
+          "event": "task_enqueued",
+          "state": null
+        }
+      ],
+      "captured_at": "2026-10-31T18:17:03.471Z"
+    },
+    {
+      "file": "lab-bundle.png",
+      "scenario": "happy",
+      "actions": [
+        "Reset / seed",
+        "Step x3"
+      ],
+      "sha256": "47d54d726c06ec8f2d8cfabe7cea86cd7f20356f2592c74b548016068037e6b2",
+      "erp_state": "RESERVED",
+      "external_identity": "SYNTHETIC-ORDER-001",
+      "provider_state": "NEW",
+      "create_calls": 1,
+      "fulfill_calls": 0,
+      "fence_state": null,
+      "journal_state": "CONFIRMED",
+      "task_state": null,
+      "reservations": [
+        {
+          "sku": "CABLE",
+          "quantity": 3,
+          "state": "RESERVED"
+        },
+        {
+          "sku": "SENSOR",
+          "quantity": 2,
+          "state": "RESERVED"
+        }
+      ],
+      "receipt_kinds": [
+        "CREATE"
+      ],
+      "event_sequence": [
+        {
+          "sequence": 105,
+          "event": "scenario_seeded",
+          "state": "DISCOVERED"
+        },
+        {
+          "sequence": 106,
+          "event": "state_transition",
+          "state": "VALIDATED"
+        },
+        {
+          "sequence": 107,
+          "event": "intent_prepared",
+          "state": null
+        },
+        {
+          "sequence": 108,
+          "event": "external_create_dispatched",
+          "state": null
+        },
+        {
+          "sequence": 109,
+          "event": "effect_confirmed",
+          "state": null
+        },
+        {
+          "sequence": 110,
+          "event": "receipt_retained",
+          "state": null
+        },
+        {
+          "sequence": 111,
+          "event": "state_transition",
+          "state": "CREATED"
+        },
+        {
+          "sequence": 112,
+          "event": "components_reserved",
+          "state": null
+        },
+        {
+          "sequence": 113,
+          "event": "state_transition",
+          "state": "RESERVED"
+        }
+      ],
+      "captured_at": "2026-10-31T18:17:04.214Z"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "architecture-overview.svg",
+      "source": "assets/architecture-overview.mmd",
+      "type": "flowchart"
+    },
+    {
+      "file": "readme-1.svg",
+      "source": "README.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "failure-recovery-map-1.svg",
+      "source": "architecture/failure-recovery-map.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "failure-recovery-map-2.svg",
+      "source": "architecture/failure-recovery-map.md",
+      "type": "stateDiagram-v2"
+    },
+    {
+      "file": "full-system-map-1.svg",
+      "source": "architecture/full-system-map.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "full-system-map-2.svg",
+      "source": "architecture/full-system-map.md",
+      "type": "sequenceDiagram"
+    },
+    {
+      "file": "full-system-map-3.svg",
+      "source": "architecture/full-system-map.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "full-system-map-4.svg",
+      "source": "architecture/full-system-map.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "order-lost-diagnostic-1.svg",
+      "source": "architecture/order-lost-diagnostic.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "order-lost-diagnostic-2.svg",
+      "source": "architecture/order-lost-diagnostic.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "safeguards-1.svg",
+      "source": "architecture/safeguards.md",
+      "type": "flowchart"
+    },
+    {
+      "file": "state-authority-map-1.svg",
+      "source": "architecture/state-authority-map.md",
+      "type": "flowchart"
+    }
+  ]
+}

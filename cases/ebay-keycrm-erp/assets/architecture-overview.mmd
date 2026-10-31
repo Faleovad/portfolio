@@ -1,0 +1,41 @@
+flowchart LR
+  subgraph ebayZone["eBay — marketplace source"]
+    eb["Order / selected lines / payment / refund / fulfillment / tracking"]
+  end
+  subgraph cloudZone["Cloudflare Runtime — execution and coordination"]
+    worker["Scheduling / discovery / import / status"]
+    durable["Durable journals / fences / tasks / epochs"]
+    kv["KV progress / active rules / thresholds"]
+    recovery["Recovery and reconciliation"]
+    snapshot["Catalog Snapshot Worker"]
+    replenishment["Replenishment / notification outbox"]
+  end
+  subgraph crmZone["KeyCRM — business and warehouse observations"]
+    orders["Orders / status / tracking"]
+    catalog["Offers / product catalog"]
+    warehouse["Warehouse / reserve / fulfilled stock"]
+  end
+  subgraph yellowZone["Yellow Client — separate local program; installed version UNKNOWN"]
+    refresh["Catalog refresh / local reference"]
+    workbook["XLSX / OOXML processing"]
+    publication["Staging / validation / hashes / CURRENT_RUN"]
+    proposals["Bundle and threshold proposals"]
+    pending["Pending commands / guarded APPLY / reconciliation"]
+  end
+  eb --> worker
+  worker <--> durable
+  worker <--> kv
+  worker --> orders
+  orders --> warehouse
+  orders -->|"Fresh readback"| worker
+  durable --> recovery
+  recovery -->|"Observe; never blind replay"| orders
+  catalog --> snapshot
+  snapshot --> refresh
+  refresh --> workbook
+  workbook --> publication
+  publication --> proposals
+  proposals --> pending
+  pending -->|"Guarded server command"| worker
+  kv --> replenishment
+  warehouse -->|"Stock observations"| replenishment

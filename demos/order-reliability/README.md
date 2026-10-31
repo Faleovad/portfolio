@@ -1,5 +1,9 @@
 # Order Reliability Lab
 
+[![Order reliability lab CI](https://github.com/Faleovad/portfolio/actions/workflows/order-reliability.yml/badge.svg)](https://github.com/Faleovad/portfolio/actions/workflows/order-reliability.yml)
+
+[Actual console gallery](../../cases/ebay-keycrm-erp/architecture/demo-gallery.md) · [Commercial architecture → lab mapping](../../cases/ebay-keycrm-erp/README.md#executable-reliability-model)
+
 An executable clean-room distributed-state simulation: a small ERP, an independent mock CRM, persistent reliability mechanisms, and an operational console.
 
 **Technologies:** Python / FastAPI · SQLite · React / TypeScript · pytest · Playwright
@@ -35,6 +39,19 @@ Open [the local console](http://127.0.0.1:5173). API documentation is available 
 Use **Reset / seed** to load the selected scenario, **Step** for one application stage, **Run** for bounded step playback, and **Recover** to reconcile an UNKNOWN order. Run renders committed backend responses; there are no independently animated business events. Injected interruptions intentionally pause execution: inspect state, then press Run again or restart the backend.
 
 SQLite files live in `backend/.data` by default. Restarting the process preserves journals, inventory, tasks, receipts, events, and consumed faults. `LAB_DATA_DIR` may select a different local directory. Reset is intentionally destructive to this synthetic session only; there is no automatic reset on restart.
+
+## Optional Docker Compose
+
+The manual launch above is the established locally verified path. Docker is not installed in the visual-authoring environment, so no local Compose runtime result is claimed. The workflow validates Compose configuration, builds both containers, and tests persisted UNKNOWN across a backend restart; check its current result rather than inferring success from these files.
+
+```sh
+docker compose config
+docker compose up --build --wait
+# Open http://127.0.0.1:5173
+docker compose down
+```
+
+The `lab-state` named volume stores both SQLite files. `down` retains it; explicit `down -v` destroys synthetic session state. Only frontend port 5173 is published, bound to loopback. Backend stays on the Compose network; nginx proxies the API. This remains a local unauthenticated lab, not a hosted production service.
 
 ## Architecture
 

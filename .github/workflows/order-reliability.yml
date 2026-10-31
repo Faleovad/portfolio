@@ -2,9 +2,9 @@ name: Order reliability lab
 
 on:
   push:
-    paths: ['demos/order-reliability/**', '.github/workflows/order-reliability.yml']
+    paths: ['cases/ebay-keycrm-erp/**', 'demos/order-reliability/**', '.github/workflows/order-reliability.yml']
   pull_request:
-    paths: ['demos/order-reliability/**', '.github/workflows/order-reliability.yml']
+    paths: ['cases/ebay-keycrm-erp/**', 'demos/order-reliability/**', '.github/workflows/order-reliability.yml']
 
 permissions:
   contents: read
@@ -44,6 +44,19 @@ jobs:
           npm run build
           npx playwright install --with-deps chromium
           npm test
+      - name: Validate public architecture and screenshot proofs
+        working-directory: .
+        run: python cases/ebay-keycrm-erp/architecture/verify_visuals.py
+      - name: Compose configuration and persisted restart smoke
+        run: |
+          docker compose config --quiet
+          docker compose up --build --detach --wait --wait-timeout 120
+          .venv/bin/python tools/compose_smoke.py
+          docker compose restart backend
+          .venv/bin/python tools/compose_smoke.py --recover
+      - name: Stop local lab containers
+        if: always()
+        run: docker compose down
       - name: Measure tested project
         run: .venv/bin/python tools/metrics.py
       - uses: actions/upload-artifact@v4
@@ -54,3 +67,4 @@ jobs:
             demos/order-reliability/backend/test-results/
             demos/order-reliability/frontend/test-results/
             demos/order-reliability/metrics.json
+
