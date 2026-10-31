@@ -1,0 +1,111 @@
+{
+  "measured_at_utc": "2026-10-31T17:58:06.602409+00:00",
+  "backend": {
+    "files": 33,
+    "physical_loc": 1613
+  },
+  "frontend": {
+    "files": 13,
+    "physical_loc": 1130
+  },
+  "tests": {
+    "files": 9,
+    "physical_loc": 561
+  },
+  "meaningful_backend_modules": 30,
+  "backend_test_modules": 7,
+  "pytest_collected_cases": 61,
+  "backend_executed": {
+    "tests": 61,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browser_executed": {
+    "startTime": "2026-10-31T17:56:43.794Z",
+    "duration": 16849.717,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "api_endpoints": 13,
+  "persisted_entity_types": 12,
+  "persisted_tables": {
+    "erp": [
+      "create_journal",
+      "events",
+      "fault_plans",
+      "inventory",
+      "mutation_fences",
+      "orders",
+      "recovery_tasks",
+      "reservations",
+      "terminal_receipts"
+    ],
+    "provider": [
+      "crm_calls",
+      "crm_inventory",
+      "crm_orders"
+    ]
+  },
+  "fault_modes": 8,
+  "executable_scenarios": 15,
+  "source_sha256": {
+    "backend/app/__init__.py": "6c1d5b4de6c73537d7b3560fffdbdca720986c1be4947f77db3e764d92d993c4",
+    "backend/app/api/dependencies.py": "736f2c4c35892513bfbb224586a549479f3edc7b17da4e4147ab9029378c84cc",
+    "backend/app/api/mutations.py": "83c8a9df07b96a6e40db6a42529362a461414343246c512194abd567dcb9fb88",
+    "backend/app/api/orders.py": "823db6c408f341fb0e26f04bef988be5862f9770f67e60d66e7e982a44c0a8cf",
+    "backend/app/api/scenarios.py": "cab388a4223eed87ec23ffc809fe4a26560ff071520b8873d1a5a0cc4035d869",
+    "backend/app/api/system.py": "8e67cc0cdcb122135c52b533a681f7ecf3b7452082b5f2d68c08879e6d0f2848",
+    "backend/app/api/warehouse.py": "5ac02f6cec9d33a9b1c6ec3e3bedd017346b0292dbf499fc30669155e25da206",
+    "backend/app/container.py": "84a5bc19218fdfa689ee35c60cc93db44a41d25e2ac1900a105f17f2ec7b3069",
+    "backend/app/domain/errors.py": "7223f0a9b6eba07924e1f6bdcb6619d9c182429e53dd37f1e9abe9a768f69c92",
+    "backend/app/domain/models.py": "aa658c30315166a9205c71022090a2dbdbdd67df2c298d6da846260e9bff3434",
+    "backend/app/domain/ports.py": "d3ecab3215df2f28de2ce5f8791ebaf425257f7bf04f801bba2a3f65836bed40",
+    "backend/app/domain/transitions.py": "0dfe4753f73e837e978c4ff7ff4456101ddf68165f8bd8091bfcad9a84777fb8",
+    "backend/app/infrastructure/database.py": "8cb235cb65fa54de9f5662f18df216a5d9db53a4b8b28b37b23d66c1818e5ca3",
+    "backend/app/infrastructure/events.py": "aad32bda45091012fd89120f1eb683cd25bf0dc761ba64fc4906bd869e6c3a1f",
+    "backend/app/infrastructure/mock_crm.py": "2278dc7700b1926e304ca9352f330542ebf15e3174e91b62195e18af4532db12",
+    "backend/app/infrastructure/orders.py": "418df1b9a3d6a6f6a990f9a1241aa1aa27f3b2ad249ee8a2fa998d79328d5bda",
+    "backend/app/infrastructure/provider_schema.sql": "aff3ed1f2708828e44a40c09fc27c5ffe1ae3415e3dfa5cc07f1079b4025b9ab",
+    "backend/app/infrastructure/schema.sql": "59f3216ebe50f78c9c39d817e91c8620a5ddb77e586f1d5d39af33a49b056c59",
+    "backend/app/main.py": "c236f5d081033b390957632460f0d229db9de25ca3d727c4f445066fd59ad874",
+    "backend/app/reliability/faults.py": "09c2e1ad5e1b27158d5ae53fd74e695d69369a4e67495dec1f82a7cc6063dc4e",
+    "backend/app/reliability/journals.py": "dbd22fa621bc81e3b8effb9d09e6de0fbabb6ae33f65c19bf79d4c6eab524122",
+    "backend/app/reliability/policy.py": "9aa8086c1d716d0787271f99366705b1b228ac5f84d095ba7a3d033297e7f3e0",
+    "backend/app/reliability/receipts.py": "4616a6e4ae4293d22affa69d376f64c0a3d6aca37691c2dddf6c766970f8ac7e",
+    "backend/app/reliability/tasks.py": "f8d727db57b7cdc682479f35a48c7a0d547e3274b6be1d655d793450e1f10497",
+    "backend/app/scenarios/catalog.py": "5d5866f46a3a4181f3b5aee729a6fd6a4411c9cd37d4322934f78745260bd3b4",
+    "backend/app/services/bundles.py": "bada2c437232972f3b81f413eb16892431d71eb9e9546f0779d21f34416dffb9",
+    "backend/app/services/engine.py": "5d09d80db4198c97a9e24bc3c3973adc6d8f10fa63db98610797e787c7e9da0e",
+    "backend/app/services/importer.py": "ac12b6241c43e25282c00f1de632a357845977374684b026dc679774634d7fb5",
+    "backend/app/services/mutations.py": "85b2c8df37772fe24ad28c0d05755b94fab513177ce1ccf6018a78615e2dda8d",
+    "backend/app/services/readback.py": "acc1bd7a331cd75792c4b71f7f27fcaadf5ec2df7b29cce28a47c8656649846f",
+    "backend/app/services/recovery.py": "7bc339d6250b74ea23b34d68715e902cb8ff8f20507016a905cf83d2cef8e972",
+    "backend/app/services/reservations.py": "c7a8d92adf654e7b45c5ffb863647156a5833a7a2ae302ebc75ff4d2c573917c",
+    "backend/app/services/scenarios.py": "7048e044023102c94ae7bceb9728f8d5c99a5bf47cb6154e05cdfd963654d27e",
+    "backend/tests/conftest.py": "89180e1f4753847a88061625f2fba9f8af49c89b94277d4fe3226765d651c8a6",
+    "backend/tests/test_api.py": "407ce95fc3dfbc8de89994bf76e1379cdfd1beaaeaede242b1df8aac8fa4cf1f",
+    "backend/tests/test_domain.py": "553423cd3cc00c5ee62eadefb95c39c60ce244da9b0ad53695abaf085f54b4b9",
+    "backend/tests/test_failure_semantics.py": "f47e23d9757d386bfe0e80123c149d2912e7dfe0cef372e0105e3ca1c3ea3004",
+    "backend/tests/test_fences.py": "2d6f429cc382e3248af190b985e5fcccbb9d5d09e3800455622a8b40288d5e9f",
+    "backend/tests/test_inventory_transactions.py": "37d81060f88802ca9967d1e0f8a8702826b7bba65390d373fd96790c62c8f95e",
+    "backend/tests/test_restart.py": "2627a732bc112869a08d0ce77591078bb55ad60317a9183e05675fbc53e990f9",
+    "backend/tests/test_scenarios.py": "3547b95ff797c58abbdb806bc56baf8c94efb55d0650d22682d6170253436e44",
+    "frontend/index.html": "5f9d78a70d0a5a658eb0da8f83c2645d3a23e64165fecc2541814dac233e129e",
+    "frontend/src/api.ts": "a750f73acdb36c775788ec36c50e08871465b38d9341980c9c6c0b08e20f5aa4",
+    "frontend/src/App.tsx": "0d67b724baa82d0eea20590eaf241f84f00744e54d43cb300be92e2647ab20e6",
+    "frontend/src/components/Controls.tsx": "97ba3d54c0df7e17ff89e2e7da5aa5924d4e44c9672870a53297fa5bb31f4844",
+    "frontend/src/components/OrderPanels.tsx": "26a21547762645f95b6621dc5d223c7de334f91ffcfcf3591abe53e63900c71e",
+    "frontend/src/components/primitives.tsx": "caa4add33526d211a0a75062c5993a40813155234ce8b351a5d70259f542de81",
+    "frontend/src/components/Reliability.tsx": "f214eb818c2d72fa477276ed4a78549fd187c41e735c3acdbee6c1b6a05162a7",
+    "frontend/src/components/Timeline.tsx": "68a68328820a7a1e2f2868a8c0c61af7f031fc5b5867f979bc134cc9b732ce0b",
+    "frontend/src/components/Warehouse.tsx": "2860ae43b8f19813265159b1ab591c1a0f81166de8a67db453d47960fb496199",
+    "frontend/src/main.tsx": "35f6687f0047963874af0e81a5f450fd4c7508e519c9e1d8558c9b88ca5568a0",
+    "frontend/src/styles.css": "9e15929466265b67655dc5ab2e8b4624b0050906ed45cf145457ad6e4adedad3",
+    "frontend/src/types.ts": "7c950592036c988fc9de2754a84d8e3ac2f8ed883ff070aefd88b064341ca86a",
+    "frontend/src/useLab.ts": "2395716bd626b26cde0fb9b58d0c0871be9bab4a9639af86dcc6dc9e6a556554",
+    "frontend/tests/console.spec.ts": "00e2b5a706c4e65e591825ad28148630e1329f0877d2c31f52ac9cb4137d9785"
+  }
+}

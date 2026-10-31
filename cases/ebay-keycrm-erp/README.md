@@ -6,6 +6,10 @@
 **Environment:** Existing commercial system  
 **Technologies:** JavaScript, Cloudflare Workers, Durable Objects, SQLite-backed storage, KV, REST APIs, OAuth, PowerShell, XLSX / OOXML, workerd
 
+## Explore the engineering model
+
+[Run the clean-room Order Reliability Lab](../../demos/order-reliability/README.md) to inspect separate ERP/provider state, inject lost responses, and step through persisted recovery. Its public source and automated tests demonstrate a standalone model; they are not production code or additional proof of this commercial system's behavior.
+
 ## Overview
 
 I investigated and hardened an existing order-processing system around eBay and KeyCRM. The system connected order import, bundle decomposition, warehouse reservations, fulfillment and tracking synchronization, replenishment reporting, and catalog distribution.

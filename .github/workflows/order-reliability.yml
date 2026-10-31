@@ -1,0 +1,56 @@
+name: Order reliability lab
+
+on:
+  push:
+    paths: ['demos/order-reliability/**', '.github/workflows/order-reliability.yml']
+  pull_request:
+    paths: ['demos/order-reliability/**', '.github/workflows/order-reliability.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: demos/order-reliability
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: demos/order-reliability/frontend/package-lock.json
+      - name: Install isolated backend
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -r backend/requirements-dev.lock
+          .venv/bin/python -m pip install --no-deps -e backend
+      - name: Lint and backend tests
+        run: |
+          .venv/bin/ruff check --config backend/pyproject.toml backend tools
+          .venv/bin/ruff format --check --config backend/pyproject.toml backend tools
+          cd backend
+          ../.venv/bin/python -m pytest -q --junitxml=test-results/backend.xml
+      - name: Build and browser tests
+        run: |
+          cd frontend
+          npm ci
+          npm run format:check
+          npm run build
+          npx playwright install --with-deps chromium
+          npm test
+      - name: Measure tested project
+        run: .venv/bin/python tools/metrics.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: synthetic-lab-verification
+          path: |
+            demos/order-reliability/backend/test-results/
+            demos/order-reliability/frontend/test-results/
+            demos/order-reliability/metrics.json

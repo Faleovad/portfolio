@@ -12,6 +12,10 @@ I build and extend integrations between business systems, CRMs, marketplaces, an
 
 These are my working areas and stack. Each case below identifies the technologies and responsibilities specific to that engagement.
 
+## Executable Engineering Lab
+
+[Order Reliability Lab](demos/order-reliability/README.md) — clean-room FastAPI / SQLite / React simulation with persisted journals, mutation fences, read-only recovery, deterministic failure scenarios, and automated backend/browser tests. This is independently runnable demo code, separate from the private commercial implementation.
+
 ## Featured Case Studies
 
 | Case | Work | Read |
