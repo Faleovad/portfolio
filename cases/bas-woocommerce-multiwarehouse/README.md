@@ -1,7 +1,10 @@
+[← Portfolio](../../README.md) · [eBay / KeyCRM case](../ebay-keycrm-erp/README.md)
+
 # BAS / 1C → WooCommerce: Multi-Warehouse Stock Extension
 
 **Type:** Enhancement / E-commerce Integration  
-**Environment:** Existing commercial exchange
+**Environment:** Existing commercial exchange  
+**Technologies:** BAS / 1C, WooCommerce, CML / XML
 
 ## Overview
 
@@ -60,12 +63,15 @@ flowchart LR
 ## Key Engineering Challenges
 
 ### Extending an existing exchange
+
 The goal was not to redesign a working integration. The new warehouse data had to fit into the existing flow with minimal disruption.
 
 ### Multi-warehouse semantics
+
 Stock had to remain associated with the correct warehouse instead of being flattened into one total quantity.
 
 ### Compatibility
+
 Changes to CML/XML structures can affect downstream import logic, so the extension had to be validated against the existing WooCommerce exchange behaviour.
 
 ## Result
@@ -89,3 +95,5 @@ The modified export was validated on a separate test database before use.
 ## Privacy
 
 This case describes work on an existing commercial integration. Client identity, credentials, internal business data, and other sensitive information are intentionally omitted.
+
+[← Back to portfolio](../../README.md)
