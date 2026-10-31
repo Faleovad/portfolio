@@ -1,150 +1,104 @@
-# eBay → KeyCRM Order, Warehouse and Bundle Integration
+# eBay → KeyCRM: Order, Warehouse & Bundle Reliability
 
-**Type:** Integration / CRM Automation / Debugging & Reliability
+**Type:** Integration / CRM Automation / Debugging & Reliability  
+**Environment:** Existing commercial integration
 
-## Executive Summary
+## Overview
 
-This work focused on the operational behaviour of an existing eBay → KeyCRM order-processing flow.
+I worked on an existing eBay → KeyCRM order-processing flow where order state, warehouse stock, reservations, bundles, and SKU-level inventory had to remain consistent across real operational scenarios.
 
-My responsibility was to analyse how real orders moved through the integration and verify the operational logic around warehouse stock, reservations, bundles, SKU handling, order statuses, and stock deduction.
-
-The work was not a greenfield implementation. The integration already existed and required investigation, validation, correction, and reliability improvements for real operational scenarios.
+This was not a greenfield build. My role was to trace the existing flow, diagnose failures, validate business logic, and harden the integration without replacing the surrounding system.
 
 ## Problem
 
-The integration had to correctly process eBay orders inside KeyCRM while keeping order state and inventory state consistent.
-
-The main complexity was around:
+The integration already imported eBay orders into KeyCRM, but reliability depended on several connected parts working correctly:
 
 - warehouse-specific stock;
-- product reservations;
-- bundle and SKU handling;
+- reservation logic;
+- bundle-to-SKU decomposition;
 - order status transitions;
 - stock deduction;
-- failure scenarios and inconsistent order states.
+- recovery after partial or failed processing.
 
-Errors in any of these areas could create a mismatch between what KeyCRM showed and what was actually available or reserved in the warehouse.
-
-## Existing System / Starting Point
-
-The eBay → KeyCRM integration was already operational.
-
-Orders were already entering KeyCRM, but the existing flow required deeper validation under real warehouse and bundle scenarios.
-
-The task was to understand the existing behaviour, identify problematic paths, and improve the logic without treating the system as a new implementation from scratch.
+A failure in one stage could leave KeyCRM order state and actual inventory state out of sync.
 
 ## My Responsibility
 
-My work included:
-
-- tracing the order flow from eBay to KeyCRM;
-- validating reservation logic;
-- checking warehouse stock state;
-- investigating bundle and SKU edge cases;
-- analysing order status transitions;
-- checking stock deduction behaviour;
-- diagnosing failure scenarios;
-- reviewing problematic real-world orders;
-- identifying recovery gaps;
-- improving validation and recovery logic.
+- traced order flow from eBay into KeyCRM;
+- analysed reservations and warehouse stock behaviour;
+- investigated bundle/SKU edge cases;
+- validated status transitions and stock deduction;
+- reproduced problematic real-world order scenarios;
+- diagnosed failure paths and recovery gaps;
+- added and regression-tested reliability safeguards;
+- kept production changes gated until the available evidence was sufficient.
 
 ## Technical Approach
 
-I started by mapping the order-processing flow through the existing integration.
+The work was performed as a reliability investigation rather than a rewrite.
 
-The main areas analysed were:
-
-1. order import and mapping;
-2. KeyCRM order creation;
-3. reservation logic;
-4. warehouse stock state;
-5. bundle and SKU interpretation;
-6. order status transitions;
-7. final stock deduction;
-8. failure and recovery behaviour.
-
-Problematic scenarios were reproduced and compared against the expected operational flow.
-
-The goal was not to replace the existing integration, but to make its behaviour more predictable and reliable under real-world conditions.
+1. Map the existing order-processing flow.
+2. Compare expected and actual behaviour on problematic orders.
+3. Inspect reservation, warehouse, bundle, and status logic independently.
+4. Reproduce failure scenarios and isolate the stage where state diverged.
+5. Validate corrective/recovery behaviour with regression checks.
+6. Avoid unsafe production changes when the source evidence was incomplete.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
     A[eBay Order] --> B[Import / Mapping Layer]
-    B --> C[KeyCRM Order Creation]
+    B --> C[KeyCRM Order]
 
     C --> D[Reservation Logic]
-    C --> E[Warehouse Stock Checks]
-    C --> F[Bundle / SKU Validation]
+    C --> E[Warehouse Stock]
+    C --> F[Bundle / SKU Rules]
 
-    D --> G[Order Status Handling]
+    D --> G[Order Status Flow]
     E --> G
     F --> G
 
-    G --> H[Stock Deduction / Inventory State]
-    H --> I[Operational Validation]
+    G --> H[Stock Deduction]
+    H --> I[Inventory State]
 
-    I --> J[Failure Diagnosis]
-    J --> K[Recovery / Corrective Logic]
+    I --> J[Validation / Diagnostics]
+    J --> K[Recovery Safeguards]
 ```
 
 ## Key Engineering Challenges
 
-### Warehouse State
+### Bundle and SKU consistency
+One commercial item could map to multiple underlying SKUs. Partial processing could therefore produce an apparently valid order while leaving inventory incomplete.
 
-The integration had to operate correctly when stock was distributed across different warehouse states rather than treated as one abstract inventory value.
+### Warehouse-aware stock
+Reservations and deductions had to reflect the correct warehouse state rather than a single abstract stock value.
 
-### Reservations
+### Failure recovery
+The difficult cases were not normal successful orders, but partial and interrupted flows where the system had to avoid duplicate writes or inconsistent inventory.
 
-Reservation logic had to remain consistent with current stock availability and order processing.
-
-### Bundles and SKUs
-
-Bundle products introduced additional complexity because a single commercial item could depend on multiple underlying SKU positions.
-
-### Order Statuses
-
-Stock behaviour depended on the order lifecycle, so incorrect or inconsistent status transitions could affect reservations or deduction.
-
-### Failure Recovery
-
-Some scenarios required analysing what happened when an order path failed or stopped before reaching its expected final state.
-
-The work therefore included not only normal-flow validation, but also investigation of abnormal and recovery scenarios.
+### Safe production changes
+Where the available evidence was insufficient to prove a production-safe fix, the release remained blocked rather than forcing a speculative change.
 
 ## Result
 
-The existing integration behaviour was analysed and improved around its most operationally sensitive areas.
+The integration was analysed at the order, warehouse, bundle, and stock-state levels. Problematic scenarios were reproduced, reliability safeguards were tested, and unsafe changes were kept out of production until the remaining evidence gaps could be resolved.
 
-The work provided:
+The value of the work was not a rewrite of the system, but a clearer and safer operational model for diagnosing and handling failure cases.
 
-- validated order-processing logic;
-- improved understanding of warehouse and reservation behaviour;
-- better handling of bundle/SKU scenarios;
-- more consistent stock deduction logic;
-- improved diagnosis of problematic orders;
-- stronger failure and recovery handling.
-
-No artificial performance metrics are included because the work was focused on correctness, operational reliability, and edge-case handling rather than synthetic benchmark improvements.
-
-## Technology / Domain Stack
+## Technology / Domain
 
 - eBay order integration
 - KeyCRM
-- CRM order processing
-- API integration
-- warehouse stock logic
-- product reservations
+- REST/API integration
+- warehouse and reservation logic
 - bundle / SKU processing
 - order status workflows
-- debugging and validation
-- application and integration diagnostics
+- inventory consistency
+- regression testing
+- production diagnostics
+- recovery design
 
-## Privacy / NDA
+## Privacy
 
-This case is based on a live commercial integration.
-
-Client identity, credentials, private order/customer data, API secrets, and confidential infrastructure details are intentionally excluded.
-
-The case describes only the engineering process, system behaviour, and my responsibility within the project.
+This case is based on a live commercial integration. Client identity, credentials, customer/order data, API secrets, and confidential infrastructure details are intentionally omitted.
