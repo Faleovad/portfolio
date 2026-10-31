@@ -21,10 +21,9 @@ These are my working areas and stack. Each case below identifies the technologie
 | Case | Work | Read |
 | --- | --- | --- |
 | **eBay / KeyCRM — Production Order & Warehouse Reliability** | Reliability engineering around an existing ERP / OMS integration: bundles, reservations, fulfillment, durable recovery, and external side effects. | [Case study](cases/ebay-keycrm-erp/README.md) · [Evidence & limits](cases/ebay-keycrm-erp/architecture/evidence.md) |
-| **BAS / 1C → WooCommerce — Multi-Warehouse Stock Extension** | Enhancement of an operating CML/XML exchange to preserve warehouse-level stock quantities. | [Case study](cases/bas-woocommerce-multiwarehouse/README.md) |
 
 These cases describe real commercial work. They distinguish production observations from local implementation and test results. Client identities, customer data, credentials, and confidential infrastructure are omitted; private implementation and operational records are not published here.
 
-For the flagship case, the evidence section explains what the retained reports establish, which regression gates passed, and what remained unresolved. The BAS case preserves the scope of an enhancement to an existing exchange.
+For the flagship case, the evidence section explains what the retained reports establish, which regression gates passed, and what remained unresolved.
 
 [GitHub profile](https://github.com/Faleovad)

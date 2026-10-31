@@ -1,4 +1,4 @@
-[← Portfolio](../../README.md) · [BAS / WooCommerce case](../bas-woocommerce-multiwarehouse/README.md)
+[← Portfolio](../../README.md)
 
 # eBay / KeyCRM — Production ERP / OMS Reliability
 
