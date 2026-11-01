@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "commands": [
+    {
+      "command": [
+        "-m",
+        "ruff",
+        "check",
+        "backend",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "backend",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "-m",
+        "mypy",
+        "backend"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        ".",
+        "--wheel-dir",
+        "build/wheels"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "tools/build_architecture.py",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

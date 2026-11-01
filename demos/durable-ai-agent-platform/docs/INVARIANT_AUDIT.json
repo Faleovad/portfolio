@@ -1,0 +1,202 @@
+{
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "rows": [
+    {
+      "id": "INV01",
+      "claim": "One logical step has at most one valid owner",
+      "implementation": "repository.py:claim",
+      "tests": [
+        "test_competing_claims_have_one_owner"
+      ],
+      "scenarios": [
+        "S08"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV02",
+      "claim": "Stale ownership cannot persist after transfer",
+      "implementation": "repository.py:check_claim",
+      "tests": [
+        "test_expired_owner_cannot_prepare_or_heartbeat"
+      ],
+      "scenarios": [
+        "S09"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV03",
+      "claim": "UNKNOWN mutation is never blindly dispatched again",
+      "implementation": "repository.py:prepare",
+      "tests": [
+        "test_unknown_database_fence_blocks_reprepare"
+      ],
+      "scenarios": [
+        "S04",
+        "S06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV04",
+      "claim": "Recovery has only a read-only provider capability",
+      "implementation": "recovery.py:RecoveryService",
+      "tests": [
+        "test_recovery_worker_has_no_mutating_provider_import",
+        "test_provider_reader_database_role_cannot_insert",
+        "test_provider_reader_role_has_no_domain_mutation_permission"
+      ],
+      "scenarios": [
+        "S06",
+        "S24"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV05",
+      "claim": "An immutable terminal receipt blocks replay",
+      "implementation": "recovery.py:reconcile",
+      "tests": [
+        "test_confirmation_and_terminal_receipt_short_circuit"
+      ],
+      "scenarios": [
+        "S25"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV06",
+      "claim": "API, service and repository preserve tenant boundaries",
+      "implementation": "application_repository.py:get",
+      "tests": [
+        "test_tenant_api_denies_all_foreign_resources_and_actions",
+        "test_cross_tenant_foreign_keys_reject_version_reference"
+      ],
+      "scenarios": [
+        "S15"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV07",
+      "claim": "Task pins an immutable AgentVersion",
+      "implementation": "application_repository.py:create_task",
+      "tests": [
+        "test_version_pin_survives_publish_and_continuation",
+        "test_published_version_database_immutable"
+      ],
+      "scenarios": [
+        "S20"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV08",
+      "claim": "Tool allowlist and persisted plan precede dispatch",
+      "implementation": "repository.py:prepare",
+      "tests": [
+        "test_tool_permission_denied_before_any_intent",
+        "test_model_cannot_switch_to_another_allowed_but_unplanned_tool"
+      ],
+      "scenarios": [
+        "S16"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV09",
+      "claim": "Retries and recovery do not bypass durable budgets",
+      "implementation": "policy.py:reserve",
+      "tests": [
+        "test_retry_cannot_bypass_each_budget_dimension",
+        "test_operator_reconcile_cannot_reopen_budget_terminal"
+      ],
+      "scenarios": [
+        "S36",
+        "S37",
+        "S38",
+        "S39"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV10",
+      "claim": "Cancellation cannot erase unresolved mutation identity",
+      "implementation": "application_repository.py:cancel",
+      "tests": [
+        "test_cancel_unknown_reconciles_before_final_cancellation",
+        "test_cancel_race_after_sent_preserves_cancel_request"
+      ],
+      "scenarios": [
+        "S18",
+        "S19",
+        "S40"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV11",
+      "claim": "Malformed model output cannot advance to a tool mutation",
+      "implementation": "executor.py:_model",
+      "tests": [
+        "test_malformed_model_output_is_bounded_then_reviewed"
+      ],
+      "scenarios": [
+        "S11"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV12",
+      "claim": "Final answer retains source document/chunk/hit provenance",
+      "implementation": "executor.py:_finalize",
+      "tests": [
+        "test_research_materializes_all_six_entities_and_provenance",
+        "test_synthetic_evaluation_dataset"
+      ],
+      "scenarios": [
+        "S02"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV13",
+      "claim": "Duplicate enqueue does not create another execution",
+      "implementation": "application_repository.py:create_task",
+      "tests": [
+        "test_concurrent_duplicate_enqueue_creates_one_task"
+      ],
+      "scenarios": [
+        "S07"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV14",
+      "claim": "Commit-before-ACK is represented as UNKNOWN until proof",
+      "implementation": "worker.py:dispatch_once",
+      "tests": [
+        "test_real_process_death_unknown_readonly_recovery_one_effect",
+        "test_normal_ack_still_requires_readback"
+      ],
+      "scenarios": [
+        "S04",
+        "S06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "INV15",
+      "claim": "Manual review never releases mutation safety",
+      "implementation": "application.py:resolve_review",
+      "tests": [
+        "test_manual_review_acknowledgement_does_not_release_intent_fence"
+      ],
+      "scenarios": [
+        "S21"
+      ],
+      "status": "PASS"
+    }
+  ]
+}

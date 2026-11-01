@@ -1,0 +1,22 @@
+
+> durable-agent-console@0.1.0 test
+> playwright test
+
+
+Running 13 tests using 1 worker
+
+  ✓   1 tests/operations.spec.ts:36:1 › normal execution with persisted evaluations (2.7s)
+  ✓   2 tests/operations.spec.ts:45:1 › commit then timeout exposes three separate truth layers (2.8s)
+  ✓   3 tests/operations.spec.ts:64:1 › OS worker kill and separate recovery process (4.2s)
+  ✓   4 tests/operations.spec.ts:79:1 › foreign task UUID denied by real backend (1.5s)
+  ✓   5 tests/operations.spec.ts:103:1 › artifact provenance reaches source document (2.9s)
+  ✓   6 tests/operations.spec.ts:127:1 › manual review actions preserve mutation fence (4.4s)
+  ✓   7 tests/operations.spec.ts:144:1 › stale worker rejected while new owner completes (2.3s)
+  ✓   8 tests/operations.spec.ts:157:1 › budget exhaustion is visible and persisted (2.2s)
+  ✓   9 tests/operations.spec.ts:168:1 › cancellation during UNKNOWN reconciles before cancellation (2.7s)
+  ✓  10 tests/operations.spec.ts:181:1 › AgentVersion remains pinned after publishing v2 (3.7s)
+  ✓  11 tests/operations.spec.ts:193:1 › quota lost ACK retains one adjustment after recovery (3.4s)
+  ✓  12 tests/operations.spec.ts:212:1 › external Search persists observation without a mutation receipt (2.9s)
+  ✓  13 tests/operations.spec.ts:227:1 › mobile console executes a real task without horizontal overflow (2.2s)
+
+  13 passed (38.9s)

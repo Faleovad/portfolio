@@ -12,7 +12,26 @@ I build and extend integrations between business systems, CRMs, marketplaces, an
 
 These are my working areas and stack. Each case below identifies the technologies and responsibilities specific to that engagement.
 
-## Executable Engineering Lab
+## Executable Engineering Labs
+
+### Durable AI Agent Platform
+
+**ENGINEERING LAB / CLEAN-ROOM REFERENCE IMPLEMENTATION**
+
+[Durable AI Agent Platform](demos/durable-ai-agent-platform/README.md) is a published Stage 1 synthetic engineering lab for durable, tenant-scoped agent execution, tool mutations, read-only reconciliation and persisted recovery. **This is not a production or commercial case.**
+
+**Stage 1 — RELEASE PASS.** The project and its evidence are published as the exact verified snapshot; snapshot documents retain the status recorded at verification.
+
+- **9 794 authored LOC**.
+- **519/519 tests PASS** and **53/53 executable scenarios PASS**.
+- **13/13 browser flows PASS** in both native and Docker Compose environments.
+- **Docker Compose runtime PASS** and **persisted restart/recovery PASS**.
+- Verified recovery path: `commit → lost ACK → UNKNOWN → restart → recovery → receipt → COMPLETED`.
+- Restart gate: **1 external mutation / 1 dispatch attempt / 1 receipt**, with an actual dispatcher process kill inside a container, a replacement dispatcher and a separate read-only recovery process.
+
+[Canonical verification](demos/durable-ai-agent-platform/docs/VERIFICATION.json) · [Requirement audit](demos/durable-ai-agent-platform/docs/REQUIREMENT_AUDIT.md) · [Measured metrics](demos/durable-ai-agent-platform/docs/METRICS.json) · [A1–A8 architecture views](demos/durable-ai-agent-platform/docs/ARCHITECTURE_VIEWS.md) · [Real browser captures](demos/durable-ai-agent-platform/docs/SCREENSHOTS.json)
+
+### Order Reliability Lab
 
 [Order Reliability Lab](demos/order-reliability/README.md) — clean-room FastAPI / SQLite / React simulation with persisted journals, mutation fences, read-only recovery, deterministic failure scenarios, and automated backend/browser tests. This is independently runnable demo code, separate from the private commercial implementation.
 

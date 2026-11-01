@@ -1,0 +1,20 @@
+digraph A6 {
+graph [bgcolor="#0b1120",pad="0.45",nodesep="0.55",ranksep="0.9",fontname="Arial",fontsize=22,fontcolor="#e3ecf7",labelloc=t];
+node [shape=box,style="rounded,filled",fillcolor="#15253b",color="#4d6786",fontname="Arial",fontcolor="#dce7f5",fontsize=15,margin="0.20,0.14"];
+edge [color="#8ba4be",fontname="Arial",fontcolor="#a4b9cf",fontsize=12,arrowsize=0.75];
+label="A6 · Tenant isolation";
+rankdir=LR;
+tokenA[label="Tenant A bearer"];
+auth[label="API authentication\nSHA256 lookup → tenant scope"];
+service[label="Tenant-scoped service"];
+repo[label="Repository predicates / joins\ntenant_id + resource ID"];
+tenantA[label="A: tasks / versions / documents\nartifacts / events / recovery",color="#91c6a3"];
+tenantB[label="B: private resources",color="#e0b06b"];
+deny[label="Foreign UUID → 404\nforeign lists remain empty",color="#e0b06b"];
+tokenA->auth;auth->service;service->repo;repo->tenantA[label="authorized"];
+repo->deny[label="scope mismatch"];deny->tenantB[arrowhead=tee,style=dashed];
+fk[label="Composite tenant foreign keys\nprevent cross-tenant references",shape=note];fk->repo[arrowhead=none,style=dashed];
+catalog[label="Public synthetic Search catalog\nfixed shared reference facts\nnot tenant-private RAG documents",shape=note];
+service->catalog[label="explicit read-only external tool"];
+
+}

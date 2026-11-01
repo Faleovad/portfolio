@@ -1,0 +1,73 @@
+{
+  "runtime_source_sha256": "9953bb2bbf0feb6ebec19d48c54585dac3b38b1dbc468e8ee7db89b87632eb70",
+  "tool": "crm",
+  "provider_fixture": {},
+  "provider_outcomes": [
+    {
+      "name": "Synthetic S10",
+      "revision": 1,
+      "operation": "create",
+      "entity_key": "synthetic-crm:c6525e8b-5bef-450e-b6a8-4e196e23b765"
+    }
+  ],
+  "scenario": "S10",
+  "title": "Lost tool acknowledgement",
+  "status": "PASS",
+  "task_id": "8b028465-076a-4728-a3b4-e19eff029ad1",
+  "state": "COMPLETED",
+  "state_path": [
+    "CREATED",
+    "QUEUED",
+    "RUNNING",
+    "WAITING_TOOL",
+    "UNKNOWN",
+    "RECOVERING",
+    "RUNNING",
+    "COMPLETED"
+  ],
+  "event_order": [
+    "task_created",
+    "state_transition",
+    "scenario_started",
+    "state_transition",
+    "budget_reserved",
+    "worker_claimed",
+    "tool_intent_prepared",
+    "tool_dispatched",
+    "state_transition",
+    "fault_consumed",
+    "state_transition",
+    "state_unknown",
+    "state_transition",
+    "recovery_claimed",
+    "external_observation",
+    "state_transition",
+    "state_transition",
+    "effect_confirmed",
+    "task_completed"
+  ],
+  "provider_mutation_count": 1,
+  "dispatch_attempts": 1,
+  "receipts": 1,
+  "recovery_result": [
+    {
+      "state": "CONFIRMED",
+      "attempts": 1,
+      "reason": null
+    }
+  ],
+  "invariant_assertions": {
+    "assert_unknown": true,
+    "expected terminal state": true,
+    "exact external mutations": true,
+    "exact terminal receipts": true,
+    "receipt follows committed readback evidence": true,
+    "no blind redispatch": true,
+    "exact dispatch count": true,
+    "expected state path": true,
+    "durable faults consumed": true,
+    "budget bounds": true,
+    "unresolved intent not silently completed": true
+  },
+  "process_evidence": []
+}

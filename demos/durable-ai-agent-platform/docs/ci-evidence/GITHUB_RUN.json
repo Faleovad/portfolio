@@ -1,0 +1,186 @@
+{
+  "repository": "Faleovad/portfolio-verification",
+  "private_commit_sha": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+  "run_id": 41341505800,
+  "run_url": "https://github.com/Faleovad/portfolio-verification/actions/runs/41341505800",
+  "conclusion": "success",
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "local_candidate_commit": "bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e",
+  "private_tree_sha": "84a767e445c5f65e0db7f439628349cd26e3a5e9",
+  "source_tree_parity": true,
+  "artifact": {
+    "id": 13097856281,
+    "name": "durable-agent-verification",
+    "size_in_bytes": 1015946,
+    "url": "https://api.github.com/repos/Faleovad/portfolio-verification/actions/artifacts/13097856281",
+    "archive_download_url": "https://api.github.com/repos/Faleovad/portfolio-verification/actions/artifacts/13097856281/zip",
+    "expired": false,
+    "created_at": "2026-11-01T19:29:49Z",
+    "expires_at": "2027-01-30T19:23:41Z",
+    "updated_at": "2026-11-01T19:29:49Z",
+    "digest": "sha256:e7b78b935a7c86889a62358ea112add289cbf8300e57cbbca6f947df9418cdb3",
+    "workflow_run": {
+      "id": 41341505800,
+      "repository_id": 1441914237,
+      "head_repository_id": 1441914237,
+      "head_branch": "codex/durable-ai-agent-platform",
+      "head_sha": "73717f1abb7046a1be9f496244bb29e2004ae6e9"
+    }
+  },
+  "jobs": [
+    {
+      "id": 124952311721,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41341505800,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m venv .venv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run .venv/bin/python -m pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Verify candidate source parity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Lint, formatting, typing, wheel and frontend build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Initialize isolated persistent databases",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Unit and PostgreSQL integration tests including permanent OS-kill gate",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Executable scenario catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Native browser verification",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Compose build and runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "In-container persisted process restart",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Browser verification through Compose frontend",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "LOC and basic credential scan; generate honest release gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Run docker compose down",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 38
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 39
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 40
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 41
+        }
+      ]
+    }
+  ]
+}

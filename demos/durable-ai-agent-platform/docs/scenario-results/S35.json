@@ -1,0 +1,48 @@
+{
+  "runtime_source_sha256": "9953bb2bbf0feb6ebec19d48c54585dac3b38b1dbc468e8ee7db89b87632eb70",
+  "tool": "crm",
+  "provider_fixture": {},
+  "provider_outcomes": [],
+  "scenario": "S35",
+  "title": "Estimated cost admission",
+  "status": "PASS",
+  "task_id": "c46b7909-8f50-47f9-a4b6-20c93609c44a",
+  "state": "BUDGET_EXHAUSTED",
+  "state_path": [
+    "CREATED",
+    "QUEUED",
+    "RUNNING",
+    "BUDGET_EXHAUSTED"
+  ],
+  "event_order": [
+    "task_created",
+    "plan_persisted",
+    "state_transition",
+    "scenario_started",
+    "state_transition",
+    "budget_reserved",
+    "worker_claimed",
+    "retrieval_completed",
+    "step_completed",
+    "budget_reserved",
+    "worker_claimed",
+    "state_transition",
+    "budget_exhausted"
+  ],
+  "provider_mutation_count": 0,
+  "dispatch_attempts": 0,
+  "receipts": 0,
+  "recovery_result": [],
+  "invariant_assertions": {
+    "expected terminal state": true,
+    "exact external mutations": true,
+    "exact terminal receipts": true,
+    "no blind redispatch": true,
+    "exact dispatch count": true,
+    "expected state path": true,
+    "durable faults consumed": true,
+    "budget bounds": true,
+    "unresolved intent not silently completed": true
+  },
+  "process_evidence": []
+}

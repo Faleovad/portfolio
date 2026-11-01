@@ -1,0 +1,80 @@
+{
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "api_operations": 40,
+  "domain_tables": 17,
+  "provider_tables": 7,
+  "backend_modules": {
+    "total_including_package_init": 40,
+    "code_bearing": 39
+  },
+  "state_machines": {
+    "task": {
+      "states": 15,
+      "edges": 40
+    },
+    "step": {
+      "states": 8,
+      "edges": 14
+    },
+    "intent": {
+      "states": 6,
+      "edges": 8
+    },
+    "recovery": {
+      "states": 5,
+      "edges": 6
+    }
+  },
+  "fault_mode_count": 26,
+  "executable_scenario_catalog": 53,
+  "scenario_results_current_runtime": 53,
+  "loc": {
+    "categories": {
+      "backend": 4500,
+      "frontend": 1827,
+      "tests": 1582,
+      "sql_tooling": 1885
+    },
+    "total_authored_code_loc": 9794,
+    "minimum": 5000,
+    "size_gate": true
+  },
+  "tests": {
+    "functions_total": 110,
+    "functions_by_file": {
+      "test_application_api.py": 28,
+      "test_domain.py": 11,
+      "test_postgres_backbone.py": 18,
+      "test_rag_models.py": 20,
+      "test_recovery.py": 4,
+      "test_scenario_contracts.py": 2,
+      "test_state.py": 7,
+      "test_telemetry.py": 3,
+      "test_tools.py": 17
+    },
+    "collected_cases": 519,
+    "parameterized_cases": 426,
+    "integration_functions": 66,
+    "integration_cases": 115,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "scenario_pass": 53,
+    "browser": {
+      "startTime": "2026-11-01T19:29:06.008Z",
+      "duration": 38939.976,
+      "expected": 13,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "evaluation_dataset": {
+    "samples": 27,
+    "executable_tasks": 26
+  },
+  "evaluators": 5,
+  "invariants": 15,
+  "diagrams": 8,
+  "screenshots": 7
+}

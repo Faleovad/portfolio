@@ -1,0 +1,1093 @@
+{
+  "status": "INCOMPLETE_UNPUBLISHED",
+  "scope": "Exact project source/config/docs/SVG + its workflow; generated verification/run outputs are excluded",
+  "source_commit": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "encoding": "UTF-8/LF canonical Git blob bytes",
+  "files": [
+    {
+      "path": ".github/workflows/durable-agent-platform.yml",
+      "mode": "100644",
+      "sha256": "f1917ef59a62b9384a0397f3c2f34bb6157b79e78bdae5386ba9dbb50dfd979e",
+      "git_blob_sha": "0202c4ea020ac02aa73f2e5429857b037141637e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/.dockerignore",
+      "mode": "100644",
+      "sha256": "8071cda061e3b2e54f489c510ff1f895c1151d2d54692f3f7829702145b14e7f",
+      "git_blob_sha": "8659d762d336850e5e408d801dc126cccacece82"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/.gitignore",
+      "mode": "100644",
+      "sha256": "254485d23b6d8384928767533f1389e2886f5b3b6240c6c364dc21f55a22ce6b",
+      "git_blob_sha": "7de169bd6a747046910e57cfe32d13034dd256f2"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/Dockerfile",
+      "mode": "100644",
+      "sha256": "b245cacecfe728b83a4c4cffb2c928413db287125ef422dcd724e4a394960b09",
+      "git_blob_sha": "62ccfc689aef7d0cfa65813bf1b71ec33c92f6e6"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/README.md",
+      "mode": "100644",
+      "sha256": "5bc46020fea4275ef2467db723661beb0090b44d51401a4b39216187086db20b",
+      "git_blob_sha": "c521ae525a15ce3c38504424d26a991a2e505928"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/__init__.py",
+      "mode": "100644",
+      "sha256": "e544c9fc870556613a08972971370377b4c1e5bf97a6d647b760401172e158c1",
+      "git_blob_sha": "1513310931826c1f756d1ac7cef077ac99137e75"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/api.py",
+      "mode": "100644",
+      "sha256": "ff782d789ded3a353b622416cea577838f1effa86f9da70c3db656d80aa24d7c",
+      "git_blob_sha": "6b1a6b69cb530eb1d7cfb02a83b868e33b538946"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/application.py",
+      "mode": "100644",
+      "sha256": "82c1f2693fcac887c08cb057bdb821885ac3861d4da9197ee00d0fae606293f6",
+      "git_blob_sha": "29f46a48eca272b7a4aefba2f05e91d2060b642f"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/application_repository.py",
+      "mode": "100644",
+      "sha256": "21ad3cf1e69614876cfb0e574ffd0b66ef49b96cac4b4c967b8ad7c9c2347a4d",
+      "git_blob_sha": "d28df4960d0cf94e773da3a836fcdcda21f895c7"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/budgets.py",
+      "mode": "100644",
+      "sha256": "24b9ac7b29c7178c6d5ed164a388893bfc0b1d12b025b5339e780d5ffa0b87ec",
+      "git_blob_sha": "06eaa14778aa7bccd20d695e25bc0c5def2f6a76"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/control_api.py",
+      "mode": "100644",
+      "sha256": "e521b186b697ca2cb7daa98726b23345f7f5058cc7b0eaff1627978114e2b16f",
+      "git_blob_sha": "53c569003f64bf5ab52aefe830a3814780be24a6"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/crm_tool.py",
+      "mode": "100644",
+      "sha256": "43d4bd258f7fff3f7bf907ea244f83cc70e007d4ea4ceff125ba3869ec9aea37",
+      "git_blob_sha": "35d1b5736c2305a3fa8e960bf74dc89bc85a92f5"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/database.py",
+      "mode": "100644",
+      "sha256": "872b1302ddd0f9859bf5c68be0fb6f8789b90b328eb315896082ab69cfc1ec2b",
+      "git_blob_sha": "9e3be7e7cdd94534c00e22f009eefeda738274a3"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/email_tool.py",
+      "mode": "100644",
+      "sha256": "c9982c0674f76565a47450107d5c41a43e9a7f0479ac7c745ad73078e023050a",
+      "git_blob_sha": "bdbd89b348d826b1dc74861b34ff40ff85e671f3"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/errors.py",
+      "mode": "100644",
+      "sha256": "af872ebd922c629b8ea752dabd76805fb0a0eb261d2ae80a0a8240bea618ca44",
+      "git_blob_sha": "530f4ddf2864478c447065104fa695ad9ffad56b"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/evaluators.py",
+      "mode": "100644",
+      "sha256": "b498129862ff1e3a8baa815a61c868683f7ba92c14553d1bcff05114e2440b38",
+      "git_blob_sha": "86351fb82f0fa58814c813c229cb287f51ea06e3"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/evidence.py",
+      "mode": "100644",
+      "sha256": "8f3cc4769fd73001dd84435691196996967d75fd1d14480c57d3ee60f711ee64",
+      "git_blob_sha": "ae706bc9480667c007d35e2ac5bb5ad8fd329501"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/executor.py",
+      "mode": "100644",
+      "sha256": "b5b76cb5bce541294f7e2cb87dab3d12196ce40207760eacd87ca5fba3c9b3ff",
+      "git_blob_sha": "4f981b856418feff69afb275aa9fc58729618042"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/fault_reader.py",
+      "mode": "100644",
+      "sha256": "fbe407906a501dc4b3a7a9c37a92c658fc735b44d118882c8448b3ef48bca104",
+      "git_blob_sha": "8a3d49aa381eac7a3309b3ae9bb4c638049641b2"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/faults.py",
+      "mode": "100644",
+      "sha256": "06788df6a03e013da7f8f28ec3cd8433f3b266c123388d10737236f1f48f6467",
+      "git_blob_sha": "e4582a9df72c8d7ff3fcf0f49baaa3feaf9adfa9"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/http_tool.py",
+      "mode": "100644",
+      "sha256": "d73c50bd944f49ffb32a6c473f5f1803f7437069eeb7f9db2a7e7ed388d8c640",
+      "git_blob_sha": "f824fbf11d323ef4f9a0be274f6f90e4687d1d83"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/identity.py",
+      "mode": "100644",
+      "sha256": "a6b0f61b473a34dd1e33812eedcc9559def8ce561fb10a1d5d2b8bb24f06daa7",
+      "git_blob_sha": "7ea7e40b90b612538747e37ff66ecc5c78f71de0"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/inspection.py",
+      "mode": "100644",
+      "sha256": "0f48c8b2cf4ba63ef99336aff35030a894595ebca5626c3ef637177b066ad845",
+      "git_blob_sha": "1cc10e49903433c0cc0eb5674e185b8fda5e3c72"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/models.py",
+      "mode": "100644",
+      "sha256": "d5bbd779378cddb3ccb31d148c83ffc8bfccb3c1476ef3e590406f43835cbec2",
+      "git_blob_sha": "2f12d45cdd7f4b6b51f6907eb58ae43e18f6c4ef"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/ownership.py",
+      "mode": "100644",
+      "sha256": "1e56290cf6802ba967c862dcdaf81fd73ec884115bb5c74a1ef50bbb50ff7bd2",
+      "git_blob_sha": "578272a0d2465ac53ab63dc79d401da57eb74d69"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/policy.py",
+      "mode": "100644",
+      "sha256": "e73a2a2c4fda954e5a3ecc3411f8d25892af98944331cab67de2efa3f9c050d4",
+      "git_blob_sha": "458493fc67721dd140f39136071826b2fb23e4c9"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/ports.py",
+      "mode": "100644",
+      "sha256": "a9a38aa969d484b1d1a582508f1170ae45bbc48e1e85b8086a690827f6ef5507",
+      "git_blob_sha": "baa27e371b27d7982f4c209bc2be729839cbec48"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/proof.py",
+      "mode": "100644",
+      "sha256": "0fc2158a394a12359a622935045f29976dcaebbed45a536c86d85031a9c62ee2",
+      "git_blob_sha": "088e0ea6cbff23716b5794e389cf216ba703406e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/provider.py",
+      "mode": "100644",
+      "sha256": "bba4b0d4f240395808790e6a562777de63d3fab2d734cd15f80a7a27e31ba859",
+      "git_blob_sha": "2b81da8745886bd760c77d30d646ebcb355275c6"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/provider_api.py",
+      "mode": "100644",
+      "sha256": "7c9db665a59416afb8e46a8dd36f1abbc0d1a8e3125d2e864aeb6e97c5adcc42",
+      "git_blob_sha": "6038ac0138a4e6f5f63c2f93f2922c6d9ed32e63"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/provider_http.py",
+      "mode": "100644",
+      "sha256": "7da36c3d44063d7c91a72f1ba028c2b2fb6f8d16d72b2162ecab9406d888ede2",
+      "git_blob_sha": "0366b8ac5f2ef651bc4dcef1ca7e7cf6a1b5c11f"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/provider_reader.py",
+      "mode": "100644",
+      "sha256": "7efe92b8ce4437dde439d79270e62e09be3bafe5f55a0822ffc75f3d55918f8d",
+      "git_blob_sha": "f4cf52ae40c8494fbf18158544325e4ea0054dca"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/quota_tool.py",
+      "mode": "100644",
+      "sha256": "e3a8687a844fa813478f316e0545ce1e8620ac0001c944e27b3d56a275f7c9ff",
+      "git_blob_sha": "01128579c2145c1b3a038e3eb15d8ed1cb21e2e3"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/rag.py",
+      "mode": "100644",
+      "sha256": "e84e87109b447663507ac8b888062e5df66a812435f93a8809ec82e9d2961e2e",
+      "git_blob_sha": "114c339f4e18c872ae748b5612253edb005e23b6"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/recovery.py",
+      "mode": "100644",
+      "sha256": "6123795f7e7f08ac9df0fe1f646c91442ff382a7767e4d5780ffbb6624188a82",
+      "git_blob_sha": "4d2137e6c0a3b355c33df67e838b30b39794d1a4"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/recovery_worker.py",
+      "mode": "100644",
+      "sha256": "eb2f1482b381278c0d9ef805a27bdc845f2722e9989626b7fc70ea9ff9bde60d",
+      "git_blob_sha": "41a3e5792470d3999ca93769b9a93204730caa87"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/repository.py",
+      "mode": "100644",
+      "sha256": "82ced45b135dfd66592ac788468799161bce5c5a7a7be3f6a8c718746e2bf563",
+      "git_blob_sha": "e81ced78cb8326910c93bca468b10b283254a848"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/scenario_catalog.py",
+      "mode": "100644",
+      "sha256": "cb0c52d401b461d1445521b7444977386c64fb6039405b231585565706a78197",
+      "git_blob_sha": "44f9e8a0c7bebff6e93e870edf16e71fe068bd28"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/scenarios.py",
+      "mode": "100644",
+      "sha256": "d83fa27a553889a187f8db80704e1974f952208344245bf41390e68adb07da88",
+      "git_blob_sha": "3e4d4c55f17eaf5ba96282e30c0fabe9deb93fee"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/schemas.py",
+      "mode": "100644",
+      "sha256": "fe7b0b7b6b35aaafd5ec6d7035e31562d46ffe8f7c64b9398a55ff409648092e",
+      "git_blob_sha": "29b4a7e72d2657e91d8e2f09e2eb9a48d49c90f9"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/search_tool.py",
+      "mode": "100644",
+      "sha256": "8a252fef0722dc01c6d9c05ee7d5180799eeeb9d6c6b0b15caf3f4e2f7cb0860",
+      "git_blob_sha": "813f6b8bf2e95d2c64961176329fff1a78e2612c"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/state.py",
+      "mode": "100644",
+      "sha256": "975c259160317748087882038a71e085506db1ea6e55e8ece3020505dde86f4b",
+      "git_blob_sha": "b3d978fc2344de54ce68c5b815c0ec8e0ddc38e8"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/telemetry.py",
+      "mode": "100644",
+      "sha256": "07e6620a86e26a6a938ade40ffbdd95c3b278c0b85a2c99cbf556c28b08add87",
+      "git_blob_sha": "124e5b85f12a50c00e7dc4e4c58c3813fee9bdfa"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/tool_contracts.py",
+      "mode": "100644",
+      "sha256": "9f7084a846b95c0f3471d8c23b30ece79cdea89ba173a11a13f42d928e8be5d5",
+      "git_blob_sha": "a4e428c2edad754a9bb44668a66ef3b25acd714f"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/backend/platform_core/worker.py",
+      "mode": "100644",
+      "sha256": "166c05ae872c2553f807e3382d0f3dacd3c89ab0a5ba674eaf72399995dce3f9",
+      "git_blob_sha": "bd54db7334628fc2c1edc82192b2ec2fad53b85e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/compose.yaml",
+      "mode": "100644",
+      "sha256": "b43a2a018feea710fbaa2f6632c0b37d376679485bf1fc776244245be8f49210",
+      "git_blob_sha": "044387aafcde7717502eb350697607bb5001bb71"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/ARCHITECTURE.md",
+      "mode": "100644",
+      "sha256": "828691e1716183cab1749f7337a000fd5427db2f5c89a3c34ed1ad99c2c3801e",
+      "git_blob_sha": "450ca0ee5e6aa4e91d9377a5fda8d1c0ee859255"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/ARCHITECTURE_VIEWS.md",
+      "mode": "100644",
+      "sha256": "23239a7bb42bc35653903c3ddc2db390e0a3f5dcb8c83df6f20d7f2bcac62b5d",
+      "git_blob_sha": "c333a496c0ad03cf7db59490a66779b003714e01"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/CONSOLE.md",
+      "mode": "100644",
+      "sha256": "9de573161f18adf097989a63becd06b6ee7fd021887dd78152d71e95e52f055c",
+      "git_blob_sha": "aeb83bae8b541d1014c6d07fe79446987edaece2"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/EVALUATIONS.md",
+      "mode": "100644",
+      "sha256": "ad6dd9aac8c8bb04a8fe8e655fa06feed1327f0d1330e3ece418b31ed7a0e158",
+      "git_blob_sha": "210f9a4bc8cf629aaec73406b2b467194246f0d2"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/FAILURE_MODEL.md",
+      "mode": "100644",
+      "sha256": "91e7aff189a22509010d5f6a7261a2ea060191ccb086d8d3b1dd74f864c175ba",
+      "git_blob_sha": "6bdd2e2fddec6e6ad19b04f2e85c74a9bad69f28"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/IMPLEMENTATION_STATUS.md",
+      "mode": "100644",
+      "sha256": "cae92b4ee75aa7c6796a2dd995fa8f26ac6c4e41ab81ec77b15014ec48668c8e",
+      "git_blob_sha": "7fe1091ff9b07038b615424313afce2471090d4f"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/INVARIANTS.json",
+      "mode": "100644",
+      "sha256": "64d9677b986672dbc16b7df2c7a006870a7fc91db4b24664a980ba8ecdc1b83d",
+      "git_blob_sha": "00e9d03434744e1088fbb8ceccbab0fc219ab857"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/MILESTONE_FIXES.md",
+      "mode": "100644",
+      "sha256": "c7d1e829f9cae0859e30eca8fc585ec401e9f9b014c5b1239257c9c8d2c4b437",
+      "git_blob_sha": "e5f43e4da31042e328f09024faf6346de32b54e3"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/ORIGINAL_REQUIREMENTS.md",
+      "mode": "100644",
+      "sha256": "16c6efecf4bf00cf06795eb5c44d0b3cbe2559faa82387b39aed87e4297fc5fe",
+      "git_blob_sha": "81826fc2e5fa048d6e15105a85a15959451995b3"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/POLICIES.md",
+      "mode": "100644",
+      "sha256": "3e9d14c975f25ccad61edf227c9d4c9b3edd8f30e2e985b7f6184d76ce7e9a5c",
+      "git_blob_sha": "b32093ec66a25cc2ca7fd6e3a1d67cfa3ea4786e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/SCENARIOS.md",
+      "mode": "100644",
+      "sha256": "2b2637bb23592834981c4517e496c6e9caa6526807c442ab4735c687d6ae2123",
+      "git_blob_sha": "6ac0ad29c78b45baa51263a2007ec99c716deea9"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/SECURITY_MODEL.md",
+      "mode": "100644",
+      "sha256": "ac4687ec3dee5fa9a98eb6cb2aa3c444ab304dab7d7115c981c3814f1aecc1d4",
+      "git_blob_sha": "5743b8b23bab8ca455a6f39abc27a4008eaf3c52"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/STATE_MACHINES.md",
+      "mode": "100644",
+      "sha256": "61c445d3ffeef9487a912a54947881644f4ada01ad49068b9d35602e57a2eddc",
+      "git_blob_sha": "c5111c560b5f84e83f06616ce1e7e2057034d685"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/TOOL_REQUIREMENTS.json",
+      "mode": "100644",
+      "sha256": "2ace0df0e057f754cf203b2e098b020c7b26f680e7b82b6f0d6d137f51a60071",
+      "git_blob_sha": "ca2bf3e404dde045304e38eda08bb614e0af037e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A1.dot",
+      "mode": "100644",
+      "sha256": "310b50f3612015cd4d5fd0c0b13230f4458c53e6dad95ac5b5b3829bb93c72e5",
+      "git_blob_sha": "2c1fad30c610ad3f3f67ff471d1ed11acdc546da"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A1.svg",
+      "mode": "100644",
+      "sha256": "449e8543185245d54115dd914ea841add31b531d1af0560e1659b0f422686bce",
+      "git_blob_sha": "58fe26a16eb77c88a662473fa5bc4424bb2c6502"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A2.dot",
+      "mode": "100644",
+      "sha256": "ee16e23f3f5817c2eebe24e3b32f3fa809e04611b030b2e2c127c4585e97112a",
+      "git_blob_sha": "f0d4948e96d301fd17c189a0b7a66a068f365396"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A2.svg",
+      "mode": "100644",
+      "sha256": "fc94a02fffba2930782eb424468c04415980334356ae56b0efc3f1d9c66d2e23",
+      "git_blob_sha": "465f0f100b6baa847fe52f7012dfe0bd71faf420"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A3.dot",
+      "mode": "100644",
+      "sha256": "6a3dfa8f2bcad88a1572e47945566460d189c3c2159ce5b96ef1b24513754039",
+      "git_blob_sha": "6690e246b29c1ce37a34d5b8efef872567849a07"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A3.svg",
+      "mode": "100644",
+      "sha256": "4d066b093fd75775a6ed0f08501a1b8b0447ab00a232be6a1e2a620903b2911a",
+      "git_blob_sha": "ee691e27237ede70b0dac3e2a77ce62cc2a7a146"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A4.dot",
+      "mode": "100644",
+      "sha256": "4cd46ba26cc98d12d62aa10edeb6a25cbd858b9da30cbe25e987d1187aa79f8e",
+      "git_blob_sha": "7933b52f580c5ee7e506731f1863da9d414cfbee"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A4.svg",
+      "mode": "100644",
+      "sha256": "8d99a5bcef5bff9d67d1c768291393b3bb41f0b3a61f340e8e4025d83b829ab8",
+      "git_blob_sha": "90d202f115192c96652dce35b65ec83f56c76699"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A5.dot",
+      "mode": "100644",
+      "sha256": "0f2b31073ea161c674c9216089aa3456fb38605fd428bfb0dca3ad60b508dccc",
+      "git_blob_sha": "1bb53e01b2abbb7a642551bd696a36f548774db8"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A5.svg",
+      "mode": "100644",
+      "sha256": "25804e4162cc8e26f9507d83dd60adb2b90aab5b07fda2d056bb393e0d756e00",
+      "git_blob_sha": "2c72291f2b1f6b6d10d64f7d5eed7aff0d5557cf"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A6.dot",
+      "mode": "100644",
+      "sha256": "fc2dd38d1d4e2476eec2831cff823e0a5c21d259a434c23cc9890bd1c0867abb",
+      "git_blob_sha": "3cd9076db62874c08f6a2f00829b12ea6c95d631"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A6.svg",
+      "mode": "100644",
+      "sha256": "1ffa8224a35fb4f842455e754e45063908b690209c4bd2ce25481c97f8a01090",
+      "git_blob_sha": "e1d89af1b36502af145b95f87cb66493e6718661"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A7.dot",
+      "mode": "100644",
+      "sha256": "66a269172f88b724e7844ff9386bad97cc9ea03deb826c8ccfa64c932b021b7e",
+      "git_blob_sha": "d589580d62020cd24c8dd71143ce501961b8f71e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A7.svg",
+      "mode": "100644",
+      "sha256": "5832dc0cdcab1ddbedee310cd97f49a4a670dfead24fab82e740fa717b03fa1f",
+      "git_blob_sha": "78df60b617fa441bdc0f8e4ba037a5b52a02db19"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A8.dot",
+      "mode": "100644",
+      "sha256": "65cfee33fa9f4de0519451d9f47b22e7f2dec78e0b6cf5ffd842ad21c26bc7f9",
+      "git_blob_sha": "7b704c4e21682a1f59d72ef41cb890415c376dd7"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/docs/diagrams/A8.svg",
+      "mode": "100644",
+      "sha256": "8949b143599d5d7353eb6afccbaed9b5bac7f6fe233a6095f5f5e0896005a1b1",
+      "git_blob_sha": "87522ccb9141d59b60d3815c81d6a18c7aea90f9"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/.dockerignore",
+      "mode": "100644",
+      "sha256": "236c5a49e0b294291399deb704c61c144e75eb30cea725c5fd7f7f1e0d87e92b",
+      "git_blob_sha": "5bb1c7684c2fe7da3763dea1a4affa4d5942c832"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/Dockerfile",
+      "mode": "100644",
+      "sha256": "6d9400d1e261ebafd349989dd6a9cfcb5a9bf748e398e856f28b68c17a26a3df",
+      "git_blob_sha": "b704a800adee026c3c26749255346f5ed6b15a3e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/eslint.config.mjs",
+      "mode": "100644",
+      "sha256": "a6eb27189cff59f1b81c121cd337fa9011e64fcc87c16e827c8d5d216142ad22",
+      "git_blob_sha": "45d7babee77fe223077bc09d021cdf62ef11dd29"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/index.html",
+      "mode": "100644",
+      "sha256": "5cd802a9f7b2d432cb79aa3aa69f6e0e296b73b30a9400613935500cc8058343",
+      "git_blob_sha": "0c9d66b7593a1709e912bd180ee9d406c9729cc4"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/nginx.conf",
+      "mode": "100644",
+      "sha256": "f28e48a01d8324e12a24679f401b8e02823ef66869c1be46178e144b085d0934",
+      "git_blob_sha": "829453ed51e8f0b190d4b0405cc2e77f08d98582"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/package-lock.json",
+      "mode": "100644",
+      "sha256": "f5f86312bf6b5a24bad0eebc275da49d4160b7bf3d5b139791843b4511d269fc",
+      "git_blob_sha": "f21430835d19fb46959a571d48c455a2821f216b"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/package.json",
+      "mode": "100644",
+      "sha256": "f5f2274f4772454920d1827c37a10377b6c068cc2590095d3f171f3e95014832",
+      "git_blob_sha": "01a4a0fdbb478cd0f9ce4a7e2846dfda079e54fc"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/playwright.config.ts",
+      "mode": "100644",
+      "sha256": "e333a114957ca9b8bbefa55b1840a288d344d64d79e78b2aee5375e2b3e4b707",
+      "git_blob_sha": "d8025fc024ca5132f5d5576543907c1192444f9e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/src/client.ts",
+      "mode": "100644",
+      "sha256": "88459a85b75f1e9f4a0f610759931c0c76a2677bc0c070cf7cc3cb37ae6017ba",
+      "git_blob_sha": "2893d8d5976e45535ee830382d5efecab07c23d8"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/src/main.tsx",
+      "mode": "100644",
+      "sha256": "b5f5784997f429b0befb9e408b206a9ab01a251cda3144566260c363b6b3c684",
+      "git_blob_sha": "949bfbe011678561457ad80088d1bb9771294eda"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/src/style.css",
+      "mode": "100644",
+      "sha256": "91c938de275e054899de539e8e694ca0c1817bf4f386d3c7eae6de110bdc82a9",
+      "git_blob_sha": "8e9456d113ebcbafa385cde59334e898d58f44aa"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/tests/operations.spec.ts",
+      "mode": "100644",
+      "sha256": "2b1fe2951e92f5d4ca03af432c936072aca8963b2cfba5f594fc2468ff78a739",
+      "git_blob_sha": "369c5c0260c395718d1f09b8adc31304c2bfc2c0"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/tsconfig.json",
+      "mode": "100644",
+      "sha256": "8ffb4d0714505bdeeb1c4ce6191982e7333063f06c5239d24c56e144159e0855",
+      "git_blob_sha": "3e9aed0c39c69fa3d068f4dd7518105e1924c631"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/frontend/vite.config.ts",
+      "mode": "100644",
+      "sha256": "4c9bda4b80655f172f5a03a41b8438f546945e25179878bfda8bdd2e8b5fb761",
+      "git_blob_sha": "bf524ba6178672a7bae49161ef4e35b43f95c660"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/pyproject.toml",
+      "mode": "100644",
+      "sha256": "4e8397899c064c5197cff8f35110ff0c5eff6a10b84e7b3c23ed59d60ee0c677",
+      "git_blob_sha": "cda12abec4ff73e29d78b4149663c2c3cc7226ee"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/001_orchestrator.sql",
+      "mode": "100644",
+      "sha256": "3484e1a5afc404502fe7f72c343122e13a070b08c3339e72a78236e274d1769f",
+      "git_blob_sha": "4a09808bc3319cef2bade2528024c54fbee5dd2f"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/001_provider.sql",
+      "mode": "100644",
+      "sha256": "fde1c947ec227b4b1176b8af4304b0a9f89301eb0231d81595188d66b3ab75a4",
+      "git_blob_sha": "dc1f308d06f665d5ad57883f141cf136e480e911"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/002_application.sql",
+      "mode": "100644",
+      "sha256": "48bde0243c14b6068e0b9af2f3be2634f282db18623f60965a8ce34b817a5b4d",
+      "git_blob_sha": "a6783017647e1321dae3a1f4c6b542c7b81427bf"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/002_provider_tools.sql",
+      "mode": "100644",
+      "sha256": "fad0d9c1f72f40d834a4cac93868784a052685c741accfb5ceba09d060f792bd",
+      "git_blob_sha": "eba2ffb1059edaddd1278dabe3622233ebb6d7a2"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/003_policies.sql",
+      "mode": "100644",
+      "sha256": "35561aa87597dab68c9778d263f8dd13d04942d9ba695774a9acb46e71d1934d",
+      "git_blob_sha": "9148fc9606b382a4e266c6eec542f65d8ff19901"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/004_laboratory.sql",
+      "mode": "100644",
+      "sha256": "c53c540e936b95d76b6986cc88531ac234431f73178be31704b1ea2429572604",
+      "git_blob_sha": "1a986316a5f47db7d1bba50899b7d93d6faa4cf9"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/005_tools.sql",
+      "mode": "100644",
+      "sha256": "19b30b1d3e958fe51a66aeda3d2ef9109196d72d784b5fa22f173bfc06102ca9",
+      "git_blob_sha": "2b643095f7f822f238eeecd7c301547e47cb5ff0"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/sql/006_task_bootstrap.sql",
+      "mode": "100644",
+      "sha256": "0b9c78f1221d6b2c44c88d01337e04c8951a812ea9bbda5a4a54db0da412228b",
+      "git_blob_sha": "da0743e0014df0ab48852470b7ef84a336f957d1"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/conftest.py",
+      "mode": "100644",
+      "sha256": "68ab32233a6af1daeda3c8f0941230e3d1d3e81240f0e926581d5f78b04e311a",
+      "git_blob_sha": "c265905bf96bf0b5d4d98f72b562fcface6ce223"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/data/evaluation_tasks.json",
+      "mode": "100644",
+      "sha256": "abcd86e53d93f8290b98cbf2935d913d93d2f5614c4dd25c6d3d3429bf6181fe",
+      "git_blob_sha": "4ced01211b655fe1313ed43a1d26d238b10887b8"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_application_api.py",
+      "mode": "100644",
+      "sha256": "00b26498450eae19208dcbd59d251b070fd1bb7040c05ad94910ca48378c5c0a",
+      "git_blob_sha": "d6d32bd5129c603208ff335894b19e9441448d01"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_domain.py",
+      "mode": "100644",
+      "sha256": "0860747aebe2bf1f32f70699366eaabd15a8fd7eefe131e0d401c596a834996d",
+      "git_blob_sha": "8de376acf41b548a9fe2bebf6ab1c1b563d96a3e"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_postgres_backbone.py",
+      "mode": "100644",
+      "sha256": "9bdf518a35eeaad6968eaee2d25fc76f30e07283b8eb02f4c3ea3e277714f904",
+      "git_blob_sha": "3de74dd1dc4f06d23bd5ea8c7af403de7392fdab"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_rag_models.py",
+      "mode": "100644",
+      "sha256": "5b282d386c74fd962c09d59f014de80a93f93ff0424eff09e383e6c0c627807a",
+      "git_blob_sha": "727c91e8df66779dd226deeffad6532c54f47b3c"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_recovery.py",
+      "mode": "100644",
+      "sha256": "a200a09da811cd0f5d1dcd5170d245573635433e9ff6eddfbaf09054a1ed45d3",
+      "git_blob_sha": "6890442dfd893217c4721665b91681f2c2186428"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_scenario_contracts.py",
+      "mode": "100644",
+      "sha256": "f6a566215ddfa25d52c403a77c4659575698c0cfcd15087b778b6f7324a83345",
+      "git_blob_sha": "9036856447260ba808db6a6317f2eafa9ae1d9a3"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_state.py",
+      "mode": "100644",
+      "sha256": "9cae63e29f2f6a6b373793dd25e8af20ee96d13833006bde03ac0d022e67d99d",
+      "git_blob_sha": "c8c0a3db05307f3c9119154b1eed6480d6e62d35"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_telemetry.py",
+      "mode": "100644",
+      "sha256": "9d1f7079f9cd73676b8e304ea87ec9a6bf8ddcd1b2ecca5ec75e5751efb5a53e",
+      "git_blob_sha": "5dd317219da78535581ab250a24ab9f3a4c6c445"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tests/test_tools.py",
+      "mode": "100644",
+      "sha256": "d42e69734b218cdcaef259dc45df02245352a437af872147e44ee357195527ea",
+      "git_blob_sha": "aef98a8613f7d135b18c3f1922566377164c6af4"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/bootstrap_local.py",
+      "mode": "100644",
+      "sha256": "ef416dc62c5eb18715b777bd70aea287996bee60fbc2ed766e5f91e50b668cdf",
+      "git_blob_sha": "aa80f65b71a46dcef763fb8c8d87c504383fecdd"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/build_architecture.py",
+      "mode": "100644",
+      "sha256": "71f346f6aaea8cdb337267553c565c3643505127e363f0db09ab855e27eaa4e2",
+      "git_blob_sha": "9a2b707f2825d546eb4fa3fe9130eff8f7dc20c2"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/metrics.py",
+      "mode": "100644",
+      "sha256": "e3d99035655219e3de76f9de4c79ed969c95537213844d93bd36d8f9a819f1e1",
+      "git_blob_sha": "ee7c9bcd0cc12acf6f61dc1c432189ab9b1e1530"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/requirement_audit.py",
+      "mode": "100644",
+      "sha256": "297e4390e5b8b7da7add60e2afb72aba3a5a017ddd6a1e22215375a3297e5e4c",
+      "git_blob_sha": "e68452673cedf30f3fe2f0cb61e3e1989cba8610"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/source_manifest.py",
+      "mode": "100644",
+      "sha256": "3d49c4ba8ce5ace1998b59a967c7299c8ec987302c6457d5a3bedcac8e729b46",
+      "git_blob_sha": "c2914f3e506d47a335a0409235032201943b3e59"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/verify_application.py",
+      "mode": "100644",
+      "sha256": "cf501b0954b8cbca56b3b6d0561b5774f105a66c95b188998e3e2e39fa34a8a0",
+      "git_blob_sha": "135e7afcaa6b23b5cb4c4a916548276fb4d7bf74"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/verify_compose.py",
+      "mode": "100644",
+      "sha256": "5e3d30e5526ac1ac8274d511b6618fd0fd95f9b3377aa4672b7488dfcfa03cc6",
+      "git_blob_sha": "51182c6635e8da3919f962f92509c07892a44317"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/verify_compose_restart.py",
+      "mode": "100644",
+      "sha256": "f96d0ee996f170021aec0325196d01e9aeacb4f05b85060a3f9f52a547ec761b",
+      "git_blob_sha": "cf8db77c88ffcef3d6c091596492fe408ce20f3a"
+    },
+    {
+      "path": "demos/durable-ai-agent-platform/tools/verify_release.py",
+      "mode": "100644",
+      "sha256": "d3d642ea6206b68df4c3d5e3e0ac864b10e0dacc03f3badbb2334e5c35634cab",
+      "git_blob_sha": "3e10eb7a66bea3bdeab9676a83e7ab0c75fe9099"
+    }
+  ],
+  "api_operations": 40,
+  "domain_tables": 17,
+  "provider_tables": 7,
+  "backend_modules": {
+    "total_including_package_init": 40,
+    "code_bearing": 39
+  },
+  "state_machines": {
+    "task": {
+      "states": 15,
+      "edges": 40
+    },
+    "step": {
+      "states": 8,
+      "edges": 14
+    },
+    "intent": {
+      "states": 6,
+      "edges": 8
+    },
+    "recovery": {
+      "states": 5,
+      "edges": 6
+    }
+  },
+  "fault_modes": [
+    "tool_commit_then_timeout",
+    "worker_pause_after_unknown",
+    "model_timeout",
+    "malformed_model_output",
+    "retrieval_outage",
+    "worker_crash_before_step_commit",
+    "worker_crash_after_step_commit",
+    "tool_timeout_before_commit",
+    "delayed_external_visibility",
+    "stale_readback",
+    "readback_outage",
+    "lost_acknowledgement",
+    "worker_lease_expiry",
+    "stale_worker_write",
+    "database_transaction_rollback",
+    "duplicate_enqueue",
+    "cancellation_during_unknown",
+    "malformed_retrieved_document",
+    "budget_exhaustion",
+    "competing_workers",
+    "manual_review_required",
+    "recovery_crash_after_observation",
+    "logical_duration_expiry",
+    "tool_error_before_commit",
+    "tool_error_after_commit",
+    "search_outage"
+  ],
+  "fault_mode_count": 26,
+  "executable_scenario_catalog": 53,
+  "scenario_results_current_runtime": 53,
+  "loc": {
+    "categories": {
+      "backend": 4500,
+      "frontend": 1827,
+      "tests": 1582,
+      "sql_tooling": 1885
+    },
+    "total_authored_code_loc": 9794,
+    "minimum": 5000,
+    "size_gate": true
+  },
+  "tests": {
+    "functions_total": 110,
+    "functions_by_file": {
+      "test_application_api.py": 28,
+      "test_domain.py": 11,
+      "test_postgres_backbone.py": 18,
+      "test_rag_models.py": 20,
+      "test_recovery.py": 4,
+      "test_scenario_contracts.py": 2,
+      "test_state.py": 7,
+      "test_telemetry.py": 3,
+      "test_tools.py": 17
+    },
+    "collected_cases": 519,
+    "parameterized_cases": 426,
+    "integration_functions": 66,
+    "integration_cases": 115,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "scenario_pass": 53,
+    "browser": {
+      "startTime": "2026-11-01T19:29:06.008Z",
+      "duration": 38939.976,
+      "expected": 13,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "evaluation_dataset": {
+    "samples": 27,
+    "executable_tasks": 26
+  },
+  "evaluators": 5,
+  "invariants": 15,
+  "diagrams": 8,
+  "screenshots": 7,
+  "executed_phases": {
+    "static": "PASS",
+    "python": "PASS",
+    "scenarios": "PASS",
+    "browser": "PASS",
+    "compose": "PASS",
+    "compose_restart": "PASS",
+    "compose_browser": "PASS",
+    "ci": "NOT_ATTESTED"
+  },
+  "credential_PII_pattern_scan": "PASS",
+  "pattern_scan_files": [],
+  "broken_documentation_links": [],
+  "restart_baseline": {
+    "scope": "single-tool PostgreSQL backbone, not complete AI platform",
+    "status": "PASS",
+    "dispatcher_pid": 6732,
+    "dispatcher_termination_code": -9,
+    "recovery_pid": 6752,
+    "recovery_exit_code": 0,
+    "persisted_unknown_before_termination": true,
+    "task_after_recovery": "COMPLETED",
+    "external_mutations": 1,
+    "dispatch_attempts": 1,
+    "terminal_receipt_count": 1,
+    "recovery_writer_credentials": false
+  },
+  "compose_result": {
+    "status": "PASS",
+    "running_services": [
+      "backend",
+      "control",
+      "executor",
+      "frontend",
+      "postgres",
+      "provider",
+      "recovery",
+      "worker"
+    ],
+    "migration_versions": {
+      "agent_orchestrator": [
+        "001_orchestrator",
+        "002_application",
+        "003_policies",
+        "004_laboratory",
+        "005_tools",
+        "006_task_bootstrap"
+      ],
+      "agent_provider": [
+        "001_provider",
+        "002_provider_tools"
+      ]
+    },
+    "automatic_HTTP_provider_task": "ad30d942-4698-44de-b716-ba121d1f2b7a",
+    "provider_mutation_count": 1,
+    "dispatch_attempts": 1,
+    "receipts": 1,
+    "RAG_provenance": "PASS",
+    "tenant_denial": "PASS",
+    "frontend_HTTP": "PASS",
+    "provider_health_and_search": "PASS"
+  },
+  "compose_restart": {
+    "runtime_source_sha256": "9953bb2bbf0feb6ebec19d48c54585dac3b38b1dbc468e8ee7db89b87632eb70",
+    "tool": "crm",
+    "provider_fixture": {},
+    "provider_outcomes": [
+      {
+        "name": "Synthetic S06",
+        "revision": 1,
+        "operation": "create",
+        "entity_key": "synthetic-crm:7ae2bd97-6b10-4267-9bc6-782eb181f2f3"
+      }
+    ],
+    "scenario": "S06",
+    "title": "Recovery after worker termination",
+    "status": "PASS",
+    "task_id": "e1c4f31e-ca96-4ca6-aa64-47aa464ee9d0",
+    "state": "COMPLETED",
+    "state_path": [
+      "CREATED",
+      "QUEUED",
+      "RUNNING",
+      "WAITING_TOOL",
+      "UNKNOWN",
+      "RECOVERING",
+      "RUNNING",
+      "COMPLETED"
+    ],
+    "event_order": [
+      "task_created",
+      "state_transition",
+      "scenario_started",
+      "state_transition",
+      "budget_reserved",
+      "worker_claimed",
+      "tool_intent_prepared",
+      "tool_dispatched",
+      "state_transition",
+      "fault_consumed",
+      "state_transition",
+      "state_unknown",
+      "fault_consumed",
+      "state_transition",
+      "recovery_claimed",
+      "external_observation",
+      "state_transition",
+      "state_transition",
+      "effect_confirmed",
+      "task_completed"
+    ],
+    "provider_mutation_count": 1,
+    "dispatch_attempts": 1,
+    "receipts": 1,
+    "recovery_result": [
+      {
+        "state": "CONFIRMED",
+        "attempts": 1,
+        "reason": null
+      }
+    ],
+    "invariant_assertions": {
+      "persisted UNKNOWN before OS termination": true,
+      "worker durable pause marker consumed before kill": true,
+      "no terminal receipt at UNKNOWN": true,
+      "process boundary worker0": true,
+      "process boundary worker1": true,
+      "UNKNOWN survives replacement dispatcher": true,
+      "process boundary recovery_worker2": true,
+      "expected terminal state": true,
+      "exact external mutations": true,
+      "exact terminal receipts": true,
+      "receipt follows committed readback evidence": true,
+      "no blind redispatch": true,
+      "exact dispatch count": true,
+      "expected state path": true,
+      "durable faults consumed": true,
+      "budget bounds": true,
+      "unresolved intent not silently completed": true
+    },
+    "process_evidence": [
+      {
+        "module": "worker",
+        "pid": 13,
+        "exit_code": -9,
+        "terminated_at_unknown": true,
+        "provider_write_dsn_supplied": true,
+        "provider_url_supplied": false,
+        "admin_credentials_supplied": false
+      },
+      {
+        "module": "worker",
+        "pid": 15,
+        "exit_code": 0,
+        "terminated_at_unknown": false,
+        "provider_write_dsn_supplied": true,
+        "provider_url_supplied": false,
+        "admin_credentials_supplied": false
+      },
+      {
+        "module": "recovery_worker",
+        "pid": 18,
+        "exit_code": 0,
+        "terminated_at_unknown": false,
+        "provider_write_dsn_supplied": false,
+        "provider_url_supplied": false,
+        "admin_credentials_supplied": false
+      }
+    ],
+    "boundary": "OS process kill inside running Docker Compose control container; persisted PostgreSQL state; replacement dispatcher and SELECT-only recovery subprocess"
+  },
+  "ci": null,
+  "requirement_audit": {
+    "status": "FAIL",
+    "sections_covered": 54,
+    "checklist_items_covered": 401,
+    "mandatory_open": [
+      "R39",
+      "R50",
+      "R54",
+      "R39.01",
+      "R39.02",
+      "R39.03",
+      "R39.04",
+      "R39.05",
+      "R39.06",
+      "R39.07",
+      "R39.08",
+      "R39.09",
+      "R39.10",
+      "R39.11",
+      "R39.12",
+      "R39.13",
+      "R39.14",
+      "R39.15",
+      "R50.01",
+      "R50.02",
+      "R50.03",
+      "R50.04",
+      "R50.05",
+      "R50.06",
+      "R50.07",
+      "R50.08",
+      "R50.09",
+      "R50.10",
+      "R50.11",
+      "R54.01",
+      "R54.02",
+      "R54.03",
+      "R54.04",
+      "R54.05",
+      "R54.06",
+      "R54.07",
+      "R54.08",
+      "R54.09",
+      "R54.10",
+      "R54.11",
+      "R54.12",
+      "R54.13",
+      "R54.14",
+      "R54.15",
+      "R54.16",
+      "R54.17",
+      "R54.18",
+      "R54.19",
+      "R54.20",
+      "R54.21",
+      "R54.22",
+      "R54.23",
+      "R54.24",
+      "R54.25",
+      "R54.26",
+      "R54.27",
+      "R54.28",
+      "R54.29",
+      "R54.30",
+      "R54.31",
+      "R54.32",
+      "R54.33",
+      "R54.34",
+      "R54.35",
+      "R54.36",
+      "R54.37",
+      "R54.38",
+      "R54.39",
+      "R54.40",
+      "R54.41",
+      "R54.42",
+      "R54.43",
+      "R54.44",
+      "R54.45",
+      "R54.46",
+      "R54.47",
+      "R54.48",
+      "R54.49",
+      "R54.50",
+      "R54.51",
+      "R54.52"
+    ]
+  },
+  "red_gates": [
+    "ci",
+    "original_requirement_audit"
+  ],
+  "release": "FAIL"
+}

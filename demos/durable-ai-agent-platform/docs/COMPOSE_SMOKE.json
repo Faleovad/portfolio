@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "running_services": [
+    "backend",
+    "control",
+    "executor",
+    "frontend",
+    "postgres",
+    "provider",
+    "recovery",
+    "worker"
+  ],
+  "migration_versions": {
+    "agent_orchestrator": [
+      "001_orchestrator",
+      "002_application",
+      "003_policies",
+      "004_laboratory",
+      "005_tools",
+      "006_task_bootstrap"
+    ],
+    "agent_provider": [
+      "001_provider",
+      "002_provider_tools"
+    ]
+  },
+  "automatic_HTTP_provider_task": "ad30d942-4698-44de-b716-ba121d1f2b7a",
+  "provider_mutation_count": 1,
+  "dispatch_attempts": 1,
+  "receipts": 1,
+  "RAG_provenance": "PASS",
+  "tenant_denial": "PASS",
+  "frontend_HTTP": "PASS",
+  "provider_health_and_search": "PASS"
+}

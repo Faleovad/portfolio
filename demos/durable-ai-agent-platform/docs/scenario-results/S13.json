@@ -1,0 +1,45 @@
+{
+  "runtime_source_sha256": "9953bb2bbf0feb6ebec19d48c54585dac3b38b1dbc468e8ee7db89b87632eb70",
+  "tool": "crm",
+  "provider_fixture": {},
+  "provider_outcomes": [],
+  "scenario": "S13",
+  "title": "Retrieval outage",
+  "status": "PASS",
+  "task_id": "7f01b74c-9068-4df5-ac97-3a7cbe3dcab4",
+  "state": "MANUAL_REVIEW",
+  "state_path": [
+    "CREATED",
+    "QUEUED",
+    "RUNNING",
+    "MANUAL_REVIEW"
+  ],
+  "event_order": [
+    "task_created",
+    "plan_persisted",
+    "state_transition",
+    "scenario_started",
+    "state_transition",
+    "budget_reserved",
+    "worker_claimed",
+    "fault_consumed",
+    "state_transition",
+    "manual_review"
+  ],
+  "provider_mutation_count": 0,
+  "dispatch_attempts": 0,
+  "receipts": 0,
+  "recovery_result": [],
+  "invariant_assertions": {
+    "expected terminal state": true,
+    "exact external mutations": true,
+    "exact terminal receipts": true,
+    "no blind redispatch": true,
+    "exact dispatch count": true,
+    "expected state path": true,
+    "durable faults consumed": true,
+    "budget bounds": true,
+    "unresolved intent not silently completed": true
+  },
+  "process_evidence": []
+}

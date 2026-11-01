@@ -1,0 +1,36 @@
+{
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "run_id": 41341505800,
+  "capture": "real Playwright browser against Docker Compose frontend; no mocked routes",
+  "browser_cases_passed": 13,
+  "files": [
+    {
+      "file": "docs/screenshots/01-normal-task.png",
+      "sha256": "455e827c199754c566d7c656593acd50bbbd86a2c334b934e30852aa8133a001"
+    },
+    {
+      "file": "docs/screenshots/02-commit-then-timeout.png",
+      "sha256": "31385a7173f0c11ea68ea0afc1c17ae2095ac6cc622130a9bac8d0d6f36aaeda"
+    },
+    {
+      "file": "docs/screenshots/03-recovery-after-restart.png",
+      "sha256": "b3b16e2a1de36431ef0afd6c004ee108ecb6320dac53a373e1782a3eb2834a7e"
+    },
+    {
+      "file": "docs/screenshots/04-tenant-access-denial.png",
+      "sha256": "65dd5dca2b29009a216683c77fc976cd54e296457cca0b1455e92180bfa3e1d5"
+    },
+    {
+      "file": "docs/screenshots/05-rag-provenance.png",
+      "sha256": "b14ab92f2a7f3d432d043a1616fac5355c5dfa65c78c95cf2dbf25e5950391c8"
+    },
+    {
+      "file": "docs/screenshots/06-manual-review.png",
+      "sha256": "8b5e65262090118704bb9e32b9f1cc62f15e1d43bdeb4de8b12f1f44c5edc881"
+    },
+    {
+      "file": "docs/screenshots/07-stale-worker-ownership.png",
+      "sha256": "7c760fbb58f7156e6301a2727215d8cf967093502f34bd80957ce58eca4173e7"
+    }
+  ]
+}

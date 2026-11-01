@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "local_candidate_commit": "bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e",
+  "private_commit_sha": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+  "private_tree_sha": "84a767e445c5f65e0db7f439628349cd26e3a5e9",
+  "files_compared": 119,
+  "artifact_zip_sha256": "e7b78b935a7c86889a62358ea112add289cbf8300e57cbbca6f947df9418cdb3"
+}

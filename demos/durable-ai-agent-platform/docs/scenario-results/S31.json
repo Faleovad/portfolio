@@ -1,0 +1,53 @@
+{
+  "runtime_source_sha256": "9953bb2bbf0feb6ebec19d48c54585dac3b38b1dbc468e8ee7db89b87632eb70",
+  "tool": "crm",
+  "provider_fixture": {},
+  "provider_outcomes": [],
+  "scenario": "S31",
+  "title": "Model requires manual review",
+  "status": "PASS",
+  "task_id": "ce2fcde2-3feb-45cb-b920-ad102efce583",
+  "state": "MANUAL_REVIEW",
+  "state_path": [
+    "CREATED",
+    "QUEUED",
+    "RUNNING",
+    "WAITING_MODEL",
+    "MANUAL_REVIEW"
+  ],
+  "event_order": [
+    "task_created",
+    "plan_persisted",
+    "state_transition",
+    "scenario_started",
+    "state_transition",
+    "budget_reserved",
+    "worker_claimed",
+    "retrieval_completed",
+    "step_completed",
+    "budget_reserved",
+    "worker_claimed",
+    "budget_reserved",
+    "state_transition",
+    "model_called",
+    "fault_consumed",
+    "state_transition",
+    "manual_review"
+  ],
+  "provider_mutation_count": 0,
+  "dispatch_attempts": 0,
+  "receipts": 0,
+  "recovery_result": [],
+  "invariant_assertions": {
+    "expected terminal state": true,
+    "exact external mutations": true,
+    "exact terminal receipts": true,
+    "no blind redispatch": true,
+    "exact dispatch count": true,
+    "expected state path": true,
+    "durable faults consumed": true,
+    "budget bounds": true,
+    "unresolved intent not silently completed": true
+  },
+  "process_evidence": []
+}

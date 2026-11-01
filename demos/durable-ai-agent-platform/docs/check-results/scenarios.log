@@ -1,0 +1,116 @@
+{"scenario": "S01", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S02", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S03", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "persisted_unknown", "task_id": "5f7a1ae4-5b17-4c20-a8c0-028dc805a482"}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S04", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "persisted_unknown", "task_id": "bf8c901a-1caf-4965-bde2-11d4dc46c867"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "MANUAL_REVIEW"}
+{"scenario": "S05", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 1}
+{"scenario": "S06", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S07", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S08", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S09", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S10", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S11", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S12", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S13", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S14", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S15", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S16", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S17", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S18", "status": "PASS", "state": "CANCELLED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "persisted_unknown", "task_id": "f0eecf7e-db74-4fe9-9621-fc0f31d22986"}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S19", "status": "PASS", "state": "CANCELLED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S20", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "persisted_unknown", "task_id": "99eb30bb-ceb8-4f94-adfb-bdf8b7c7f77a"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "MANUAL_REVIEW"}
+{"scenario": "S21", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S22", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "MANUAL_REVIEW"}
+{"scenario": "S23", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S24", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S25", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S26", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S27", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S28", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S29", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S30", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S31", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S32", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S33", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S34", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S35", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S36", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S37", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "MANUAL_REVIEW"}
+{"scenario": "S38", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S39", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "persisted_unknown", "task_id": "bd62ccdf-6fdd-4472-a813-6a5e7c553871"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "MANUAL_REVIEW"}
+{"scenario": "S40", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 1}
+{"scenario": "S41", "status": "PASS", "state": "BUDGET_EXHAUSTED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"scenario": "S42", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 0, "dispatch_attempts": 0}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S43", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S44", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "persisted_unknown", "task_id": "ac550e1c-7872-481f-9984-ec156bcc9c75"}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S45", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S46", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S47", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "persisted_unknown", "task_id": "eefba5d0-f019-487c-a5f1-844ddef6aa9c"}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S48", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S49", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S50", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"event": "persisted_unknown", "task_id": "2089c9a8-8754-49a5-9558-79a710e4c41d"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "DEFERRED"}
+{"event": "recovery_result", "outcome": "MANUAL_REVIEW"}
+{"scenario": "S51", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 1}
+{"event": "persisted_unknown", "task_id": "345cc02b-cb90-4aed-8c56-833c450a5c03"}
+{"event": "recovery_result", "outcome": "CONFIRMED"}
+{"scenario": "S52", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"scenario": "S53", "status": "PASS", "state": "MANUAL_REVIEW", "provider_mutation_count": 0, "dispatch_attempts": 0}

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "A1",
+    "title": "System topology",
+    "sources": [
+      "api.py",
+      "control_api.py",
+      "executor.py",
+      "worker.py",
+      "recovery_worker.py",
+      "provider_api.py"
+    ],
+    "svg_sha256": "449e8543185245d54115dd914ea841add31b531d1af0560e1659b0f422686bce"
+  },
+  {
+    "id": "A2",
+    "title": "Task lifecycle \u2014 complete durable state machine",
+    "sources": [
+      "state.py",
+      "repository.py",
+      "application_repository.py"
+    ],
+    "svg_sha256": "fc94a02fffba2930782eb424468c04415980334356ae56b0efc3f1d9c66d2e23"
+  },
+  {
+    "id": "A3",
+    "title": "Ambiguous tool mutation",
+    "sources": [
+      "repository.py",
+      "provider.py",
+      "recovery.py",
+      "proof.py"
+    ],
+    "svg_sha256": "4d066b093fd75775a6ed0f08501a1b8b0447ab00a232be6a1e2a620903b2911a"
+  },
+  {
+    "id": "A4",
+    "title": "Worker ownership",
+    "sources": [
+      "repository.py",
+      "ownership.py",
+      "state.py"
+    ],
+    "svg_sha256": "8d99a5bcef5bff9d67d1c768291393b3bb41f0b3a61f340e8e4025d83b829ab8"
+  },
+  {
+    "id": "A5",
+    "title": "Read-only recovery architecture",
+    "sources": [
+      "ports.py",
+      "recovery.py",
+      "recovery_worker.py",
+      "provider_reader.py"
+    ],
+    "svg_sha256": "25804e4162cc8e26f9507d83dd60adb2b90aab5b07fda2d056bb393e0d756e00"
+  },
+  {
+    "id": "A6",
+    "title": "Tenant isolation",
+    "sources": [
+      "api.py",
+      "application_repository.py",
+      "rag.py",
+      "inspection.py"
+    ],
+    "svg_sha256": "1ffa8224a35fb4f842455e754e45063908b690209c4bd2ce25481c97f8a01090"
+  },
+  {
+    "id": "A7",
+    "title": "RAG provenance",
+    "sources": [
+      "executor.py",
+      "rag.py",
+      "evaluators.py"
+    ],
+    "svg_sha256": "5832dc0cdcab1ddbedee310cd97f49a4a670dfead24fab82e740fa717b03fa1f"
+  },
+  {
+    "id": "A8",
+    "title": "Cancellation during UNKNOWN",
+    "sources": [
+      "application_repository.py",
+      "repository.py",
+      "recovery.py",
+      "policy.py"
+    ],
+    "svg_sha256": "8949b143599d5d7353eb6afccbaed9b5bac7f6fe233a6095f5f5e0896005a1b1"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "commands": [
+    {
+      "command": [
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=docs/application-tests.xml"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

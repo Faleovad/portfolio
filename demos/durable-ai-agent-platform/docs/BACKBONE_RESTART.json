@@ -1,0 +1,14 @@
+{
+  "scope": "single-tool PostgreSQL backbone, not complete AI platform",
+  "status": "PASS",
+  "dispatcher_pid": 6732,
+  "dispatcher_termination_code": -9,
+  "recovery_pid": 6752,
+  "recovery_exit_code": 0,
+  "persisted_unknown_before_termination": true,
+  "task_after_recovery": "COMPLETED",
+  "external_mutations": 1,
+  "dispatch_attempts": 1,
+  "terminal_receipt_count": 1,
+  "recovery_writer_credentials": false
+}

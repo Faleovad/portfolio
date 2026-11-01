@@ -1,0 +1,622 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/24.22.1/x64/bin/node",
+      "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/playwright.config.ts",
+    "rootDir": "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/Faleovad/portfolio-verification/commit/73717f1abb7046a1be9f496244bb29e2004ae6e9",
+        "commitHash": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+        "buildHref": "https://github.com/Faleovad/portfolio-verification/actions/runs/41341505800"
+      },
+      "gitCommit": {
+        "shortHash": "73717f1",
+        "hash": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+        "subject": "Verify release candidate bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e source 64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+        "body": "Verify release candidate bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e source 64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+        "author": {
+          "name": "Faleovad",
+          "email": "FaleovadYT@gmail.com",
+          "time": 1793561013000
+        },
+        "committer": {
+          "name": "Faleovad",
+          "email": "FaleovadYT@gmail.com",
+          "time": 1793561013000
+        },
+        "branch": "codex/durable-ai-agent-platform"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Faleovad/portfolio-verification/commit/73717f1abb7046a1be9f496244bb29e2004ae6e9",
+            "commitHash": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+            "buildHref": "https://github.com/Faleovad/portfolio-verification/actions/runs/41341505800"
+          },
+          "gitCommit": {
+            "shortHash": "73717f1",
+            "hash": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+            "subject": "Verify release candidate bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e source 64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+            "body": "Verify release candidate bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e source 64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+            "author": {
+              "name": "Faleovad",
+              "email": "FaleovadYT@gmail.com",
+              "time": 1793561013000
+            },
+            "committer": {
+              "name": "Faleovad",
+              "email": "FaleovadYT@gmail.com",
+              "time": 1793561013000
+            },
+            "branch": "codex/durable-ai-agent-platform"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Faleovad/portfolio-verification/commit/73717f1abb7046a1be9f496244bb29e2004ae6e9",
+            "commitHash": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+            "buildHref": "https://github.com/Faleovad/portfolio-verification/actions/runs/41341505800"
+          },
+          "gitCommit": {
+            "shortHash": "73717f1",
+            "hash": "73717f1abb7046a1be9f496244bb29e2004ae6e9",
+            "subject": "Verify release candidate bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e source 64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+            "body": "Verify release candidate bec110ab875d39ff3cb5c3f1975b02e5cb5ec12e source 64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+            "author": {
+              "name": "Faleovad",
+              "email": "FaleovadYT@gmail.com",
+              "time": 1793561013000
+            },
+            "committer": {
+              "name": "Faleovad",
+              "email": "FaleovadYT@gmail.com",
+              "time": 1793561013000
+            },
+            "branch": "codex/durable-ai-agent-platform"
+          },
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/tests",
+        "snapshotDir": "/home/runner/work/portfolio-verification/portfolio-verification/demos/durable-ai-agent-platform/frontend/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:58045",
+          "viewport": {
+            "width": 1480,
+            "height": 1120
+          },
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/browser.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "operations.spec.ts",
+      "file": "operations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "normal execution with persisted evaluations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2706,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:06.555Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-8efa46b84a263de2714d",
+          "file": "operations.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "commit then timeout exposes three separate truth layers",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2837,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:09.386Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-62c98fcf3c55db281d1c",
+          "file": "operations.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "OS worker kill and separate recovery process",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4225,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:12.236Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-7165f832a2d2cc8e6fe6",
+          "file": "operations.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "foreign task UUID denied by real backend",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1487,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:16.477Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-03477276065127e7711f",
+          "file": "operations.spec.ts",
+          "line": 79,
+          "column": 1
+        },
+        {
+          "title": "artifact provenance reaches source document",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2862,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:17.996Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-378e2c4cf444db554f77",
+          "file": "operations.spec.ts",
+          "line": 103,
+          "column": 1
+        },
+        {
+          "title": "manual review actions preserve mutation fence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4388,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:20.892Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-4b2e871de2bfc11ad422",
+          "file": "operations.spec.ts",
+          "line": 127,
+          "column": 1
+        },
+        {
+          "title": "stale worker rejected while new owner completes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2288,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:25.296Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-6fd0fe83f5800a7dc5a4",
+          "file": "operations.spec.ts",
+          "line": 144,
+          "column": 1
+        },
+        {
+          "title": "budget exhaustion is visible and persisted",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2199,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:27.597Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-d4b8479af4b399694813",
+          "file": "operations.spec.ts",
+          "line": 157,
+          "column": 1
+        },
+        {
+          "title": "cancellation during UNKNOWN reconciles before cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:29.811Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-b9260902a3c86e64211f",
+          "file": "operations.spec.ts",
+          "line": 168,
+          "column": 1
+        },
+        {
+          "title": "AgentVersion remains pinned after publishing v2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3719,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:32.539Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-67d545dfb9ca3cec9012",
+          "file": "operations.spec.ts",
+          "line": 181,
+          "column": 1
+        },
+        {
+          "title": "quota lost ACK retains one adjustment after recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3388,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:36.273Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-de50b15aa8c124d90fd2",
+          "file": "operations.spec.ts",
+          "line": 193,
+          "column": 1
+        },
+        {
+          "title": "external Search persists observation without a mutation receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:39.682Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-e200e4d1b18f6280473a",
+          "file": "operations.spec.ts",
+          "line": 212,
+          "column": 1
+        },
+        {
+          "title": "mobile console executes a real task without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2249,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-01T19:29:42.593Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4f8fd72df7d8ab107a64-de928b24dbc62c6d6681",
+          "file": "operations.spec.ts",
+          "line": 227,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-01T19:29:06.008Z",
+    "duration": 38939.976,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

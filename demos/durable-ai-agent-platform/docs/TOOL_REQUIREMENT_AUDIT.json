@@ -1,0 +1,182 @@
+{
+  "source_sha256": "64b76eb3a327b592a653f7f97fa35d2844cb92f5d95a10098ccf2f75410f38cf",
+  "rows": [
+    {
+      "tool": "search",
+      "read_only": true,
+      "implementation": [
+        "search_tool.py:search_step",
+        "provider_reader.py:search"
+      ],
+      "intent": "NOT APPLICABLE: no external mutation; Step and observation Artifact are persisted",
+      "proof": "Query fingerprint, immutable public catalog IDs and persisted observation artifact",
+      "provider_state": "Fixed public synthetic search_catalog; no private tenant corpus",
+      "permissions": "Pinned search allowlist; SELECT-only provider role",
+      "faults": [
+        "search_outage"
+      ],
+      "tests": [
+        "test_external_search_observation_and_final_artifact",
+        "test_external_search_outage_retains_no_mutation_authority",
+        "test_search_cannot_enter_mutating_port",
+        "test_tool_permission_denied_before_any_intent"
+      ],
+      "scenarios": [
+        "S42",
+        "S53"
+      ],
+      "events": [
+        "search_called",
+        "search_observation_persisted"
+      ],
+      "status": "PASS"
+    },
+    {
+      "tool": "crm",
+      "read_only": false,
+      "implementation": [
+        "crm_tool.py:apply_crm",
+        "repository.py:prepare"
+      ],
+      "intent": "PREPARED/SENT/UNKNOWN journal with immutable tool/tenant/payload identity",
+      "proof": "Independent identity-matched readback and immutable receipt",
+      "provider_state": "Tenant crm_entities create/update revision; same-transaction effects ledger",
+      "permissions": "Pinned crm allowlist before intent/dispatch",
+      "faults": [
+        "success",
+        "timeout_before_commit",
+        "commit_then_timeout",
+        "error_before_commit",
+        "error_after_commit",
+        "delayed_visibility",
+        "stale_readback",
+        "readback_outage",
+        "duplicate_request",
+        "lost_acknowledgement"
+      ],
+      "tests": [
+        "test_crm_update_changes_existing_entity_once",
+        "test_each_tool_HTTP_fault_and_readonly_recovery",
+        "test_provider_duplicate_is_idempotent_but_identity_conflict_rejected"
+      ],
+      "scenarios": [
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S22",
+        "S23",
+        "S43"
+      ],
+      "events": [
+        "tool_intent_prepared",
+        "tool_dispatched",
+        "state_unknown",
+        "external_observation",
+        "effect_confirmed"
+      ],
+      "status": "PASS"
+    },
+    {
+      "tool": "quota",
+      "read_only": false,
+      "implementation": [
+        "quota_tool.py:apply_quota",
+        "repository.py:prepare"
+      ],
+      "intent": "Stable intent/idempotency identity; no replay while unconfirmed",
+      "proof": "Receipt confirms an atomic integer adjustment; initial/current balance is separate state",
+      "provider_state": "Tenant quota_accounts integer balance; no real money; insufficient balance rolls back",
+      "permissions": "Pinned quota allowlist; recovery SELECT-only",
+      "faults": [
+        "shared mutation transport/visibility faults; exact per-tool tested coverage is listed below"
+      ],
+      "tests": [
+        "test_quota_credit_then_debit_exact_balance",
+        "test_quota_idempotency_does_not_apply_delta_twice",
+        "test_concurrent_quota_adjustments_are_atomic",
+        "test_insufficient_quota_rolls_back_domain_and_effect",
+        "test_each_tool_HTTP_fault_and_readonly_recovery"
+      ],
+      "scenarios": [
+        "S44",
+        "S45",
+        "S46",
+        "S51"
+      ],
+      "events": [
+        "tool_intent_prepared",
+        "tool_dispatched",
+        "state_unknown",
+        "external_observation",
+        "effect_confirmed"
+      ],
+      "status": "PASS"
+    },
+    {
+      "tool": "email",
+      "read_only": false,
+      "implementation": [
+        "email_tool.py:apply_email",
+        "repository.py:prepare"
+      ],
+      "intent": "Stable intent/idempotency identity plus synthetic message key",
+      "proof": "Readback receipt; recovery cannot deliver another message",
+      "provider_state": "Tenant email_deliveries, unique message identity, synthetic inbox only; no SMTP",
+      "permissions": "Pinned email allowlist; recipient IDs cannot be real Email addresses",
+      "faults": [
+        "shared mutation transport/visibility faults; exact per-tool tested coverage is listed below"
+      ],
+      "tests": [
+        "test_email_message_key_cannot_be_sent_by_another_intent",
+        "test_email_lost_response_recovery_creates_receipt_not_another_delivery",
+        "test_each_tool_HTTP_fault_and_readonly_recovery"
+      ],
+      "scenarios": [
+        "S47",
+        "S48",
+        "S52"
+      ],
+      "events": [
+        "tool_intent_prepared",
+        "tool_dispatched",
+        "state_unknown",
+        "external_observation",
+        "effect_confirmed"
+      ],
+      "status": "PASS"
+    },
+    {
+      "tool": "http",
+      "read_only": false,
+      "implementation": [
+        "http_tool.py:apply_http",
+        "repository.py:prepare"
+      ],
+      "intent": "Stable intent/idempotency identity for synthetic resource operation",
+      "proof": "Readback receipt, original operation outcome/status and resource revision",
+      "provider_state": "Tenant http_resources: synthetic POST create and PUT upsert; real URLs forbidden",
+      "permissions": "Pinned http allowlist; strict synthetic route pattern; no arbitrary outbound network",
+      "faults": [
+        "shared mutation transport/visibility faults; exact per-tool tested coverage is listed below"
+      ],
+      "tests": [
+        "test_generic_HTTP_POST_then_PUT_updates_virtual_resource",
+        "test_HTTP_tool_rejects_real_URL_or_arbitrary_route_before_dispatch",
+        "test_each_tool_HTTP_fault_and_readonly_recovery"
+      ],
+      "scenarios": [
+        "S49",
+        "S50"
+      ],
+      "events": [
+        "tool_intent_prepared",
+        "tool_dispatched",
+        "state_unknown",
+        "external_observation",
+        "effect_confirmed"
+      ],
+      "status": "PASS"
+    }
+  ]
+}

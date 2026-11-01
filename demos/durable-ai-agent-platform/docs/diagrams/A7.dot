@@ -1,0 +1,18 @@
+digraph A7 {
+graph [bgcolor="#0b1120",pad="0.45",nodesep="0.55",ranksep="0.9",fontname="Arial",fontsize=22,fontcolor="#e3ecf7",labelloc=t];
+node [shape=box,style="rounded,filled",fillcolor="#15253b",color="#4d6786",fontname="Arial",fontcolor="#dce7f5",fontsize=15,margin="0.20,0.14"];
+edge [color="#8ba4be",fontname="Arial",fontcolor="#a4b9cf",fontsize=12,arrowsize=0.75];
+label="A7 · RAG provenance";
+rankdir=LR;
+artifact[label="Final Artifact\nanswer + pinned version"];
+model[label="Validated ModelCall\nmodel step ID / citations"];
+hit[label="RetrievalHit\nquery hash / score / supports"];
+retrieve[label="Retrieval Step\ntenant / task identity"];
+chunk[label="Chunk\ncontent / embedding / ordinal"];
+doc[label="Document\nname / content hash / tenant"];
+span[label="Exact answer span when present\notherwise explicitly null",shape=note];
+artifact->model[label="model_step_id"];artifact->hit[label="provenance / citation ID"];
+artifact->span[style=dashed,arrowhead=none];hit->retrieve[label="step_id"];
+hit->chunk[label="chunk_id"];chunk->doc[label="document_id"];
+
+}

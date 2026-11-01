@@ -1,0 +1,45 @@
+{
+  "runtime_source_sha256": "9953bb2bbf0feb6ebec19d48c54585dac3b38b1dbc468e8ee7db89b87632eb70",
+  "tool": "crm",
+  "provider_fixture": {},
+  "provider_outcomes": [],
+  "scenario": "S39",
+  "title": "Tool retry denied at budget boundary",
+  "status": "PASS",
+  "task_id": "21985620-b06d-44fb-86a2-127c0df6f0da",
+  "state": "BUDGET_EXHAUSTED",
+  "state_path": [
+    "CREATED",
+    "QUEUED",
+    "RUNNING",
+    "BUDGET_EXHAUSTED"
+  ],
+  "event_order": [
+    "task_created",
+    "state_transition",
+    "scenario_started",
+    "state_transition",
+    "budget_reserved",
+    "worker_claimed",
+    "tool_intent_prepared",
+    "state_transition",
+    "budget_exhausted"
+  ],
+  "provider_mutation_count": 0,
+  "dispatch_attempts": 0,
+  "receipts": 0,
+  "recovery_result": [],
+  "invariant_assertions": {
+    "no external mutation": true,
+    "expected terminal state": true,
+    "exact external mutations": true,
+    "exact terminal receipts": true,
+    "no blind redispatch": true,
+    "exact dispatch count": true,
+    "expected state path": true,
+    "durable faults consumed": true,
+    "budget bounds": true,
+    "unresolved intent not silently completed": true
+  },
+  "process_evidence": []
+}

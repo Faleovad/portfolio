@@ -1,0 +1,93 @@
+# Synthetic laboratory only. No production credentials or customer data.
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: lab_admin
+      POSTGRES_PASSWORD: synthetic-only
+    volumes:
+      - lab_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:55439:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lab_admin"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  initialize:
+    build: .
+    command: ["python", "tools/bootstrap_local.py"]
+    environment:
+      LAB_ADMIN_DSN: postgresql://lab_admin:synthetic-only@postgres:5432/postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+  backend:
+    build: .
+    command: ["python", "-m", "uvicorn", "platform_core.api:from_environment", "--factory", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ORCHESTRATOR_DSN: postgresql://agent_lab_app:synthetic-only@postgres:5432/agent_orchestrator
+      PROVIDER_READ_DSN: postgresql://agent_lab_reader:synthetic-only@postgres:5432/agent_provider
+      ALLOW_SYNTHETIC_RESET: "1"
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
+  executor:
+    build: .
+    command: ["python", "-m", "platform_core.executor"]
+    environment:
+      ORCHESTRATOR_DSN: postgresql://agent_lab_app:synthetic-only@postgres:5432/agent_orchestrator
+      PROVIDER_READ_DSN: postgresql://agent_lab_reader:synthetic-only@postgres:5432/agent_provider
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
+  worker:
+    build: .
+    environment:
+      ORCHESTRATOR_DSN: postgresql://agent_lab_app:synthetic-only@postgres:5432/agent_orchestrator
+      PROVIDER_URL: http://provider:8002
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
+      provider:
+        condition: service_started
+  recovery:
+    build: .
+    command: ["python", "-m", "platform_core.recovery_worker"]
+    environment:
+      ORCHESTRATOR_DSN: postgresql://agent_lab_app:synthetic-only@postgres:5432/agent_orchestrator
+      PROVIDER_READ_DSN: postgresql://agent_lab_reader:synthetic-only@postgres:5432/agent_provider
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
+  provider:
+    build: .
+    command: ["python", "-m", "uvicorn", "platform_core.provider_api:from_environment", "--factory", "--host", "0.0.0.0", "--port", "8002"]
+    environment:
+      PROVIDER_WRITE_DSN: postgresql://agent_lab_writer:synthetic-only@postgres:5432/agent_provider
+      PROVIDER_READ_DSN: postgresql://agent_lab_reader:synthetic-only@postgres:5432/agent_provider
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
+  control:
+    build: .
+    command: ["python", "-m", "uvicorn", "platform_core.control_api:from_environment", "--factory", "--host", "0.0.0.0", "--port", "8001"]
+    environment:
+      ENABLE_LAB_CONTROLS: "1"
+      ORCHESTRATOR_DSN: postgresql://agent_lab_app:synthetic-only@postgres:5432/agent_orchestrator
+      PROVIDER_READ_DSN: postgresql://agent_lab_reader:synthetic-only@postgres:5432/agent_provider
+      PROVIDER_WRITE_DSN: postgresql://agent_lab_writer:synthetic-only@postgres:5432/agent_provider
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:58045:80"
+    depends_on:
+      - backend
+      - control
+volumes:
+  lab_data:

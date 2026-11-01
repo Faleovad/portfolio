@@ -1,0 +1,79 @@
+{
+  "runtime_source_sha256": "9953bb2bbf0feb6ebec19d48c54585dac3b38b1dbc468e8ee7db89b87632eb70",
+  "tool": "crm",
+  "provider_fixture": {},
+  "provider_outcomes": [
+    {
+      "name": "Synthetic S32",
+      "revision": 1,
+      "operation": "create",
+      "entity_key": "synthetic-crm:81143719-9c46-441c-94ff-ce82589f4313"
+    }
+  ],
+  "scenario": "S32",
+  "title": "Readback outage then recovery",
+  "status": "PASS",
+  "task_id": "9130f2c8-122f-43a0-82f6-bc2a3329feb1",
+  "state": "COMPLETED",
+  "state_path": [
+    "CREATED",
+    "QUEUED",
+    "RUNNING",
+    "WAITING_TOOL",
+    "WAITING_READBACK",
+    "RECOVERING",
+    "UNKNOWN",
+    "RECOVERING",
+    "RUNNING",
+    "COMPLETED"
+  ],
+  "event_order": [
+    "task_created",
+    "state_transition",
+    "scenario_started",
+    "state_transition",
+    "budget_reserved",
+    "worker_claimed",
+    "tool_intent_prepared",
+    "tool_dispatched",
+    "state_transition",
+    "state_transition",
+    "readback_scheduled",
+    "state_transition",
+    "recovery_claimed",
+    "fault_consumed",
+    "external_observation",
+    "state_transition",
+    "state_transition",
+    "recovery_claimed",
+    "external_observation",
+    "state_transition",
+    "state_transition",
+    "effect_confirmed",
+    "task_completed"
+  ],
+  "provider_mutation_count": 1,
+  "dispatch_attempts": 1,
+  "receipts": 1,
+  "recovery_result": [
+    {
+      "state": "CONFIRMED",
+      "attempts": 2,
+      "reason": "UNAVAILABLE"
+    }
+  ],
+  "invariant_assertions": {
+    "assert_deferred": true,
+    "expected terminal state": true,
+    "exact external mutations": true,
+    "exact terminal receipts": true,
+    "receipt follows committed readback evidence": true,
+    "no blind redispatch": true,
+    "exact dispatch count": true,
+    "expected state path": true,
+    "durable faults consumed": true,
+    "budget bounds": true,
+    "unresolved intent not silently completed": true
+  },
+  "process_evidence": []
+}

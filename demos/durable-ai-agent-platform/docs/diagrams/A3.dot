@@ -1,0 +1,20 @@
+digraph A3 {
+graph [bgcolor="#0b1120",pad="0.45",nodesep="0.55",ranksep="0.9",fontname="Arial",fontsize=22,fontcolor="#e3ecf7",labelloc=t];
+node [shape=box,style="rounded,filled",fillcolor="#15253b",color="#4d6786",fontname="Arial",fontcolor="#dce7f5",fontsize=15,margin="0.20,0.14"];
+edge [color="#8ba4be",fontname="Arial",fontcolor="#a4b9cf",fontsize=12,arrowsize=0.75];
+label="A3 · Ambiguous tool mutation";
+rankdir=LR;
+prepared[label="PREPARED\nidentity + payload fingerprint"];
+sent[label="SENT\ndurable dispatch fence"];
+commit[label="External COMMITTED\nindependent provider transaction",color="#91c6a3"];
+lost[label="Response lost",color="#e0b06b"];
+unknown[label="UNKNOWN\nno permission to replay",color="#e0b06b"];
+observe[label="Read-only reconciliation\nmatch tenant / tool / intent / payload"];
+receipt[label="Immutable receipt\nCONFIRMED",color="#91c6a3"];
+prepared->sent[label="persist before request"];sent->commit[label="non-atomic boundary"];
+commit->lost;lost->unknown;unknown->observe[label="fresh observation"];
+observe->receipt[label="exact committed proof"];
+review[label="MANUAL_REVIEW\nfence retained",color="#e0b06b"];
+observe->review[label="stale / missing / unavailable beyond bounds"];
+
+}

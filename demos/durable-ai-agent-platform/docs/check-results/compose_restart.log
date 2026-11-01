@@ -1,0 +1,2 @@
+{"scenario": "S06", "status": "PASS", "state": "COMPLETED", "provider_mutation_count": 1, "dispatch_attempts": 1}
+{"status": "PASS", "provider_mutation_count": 1, "dispatch_attempts": 1, "receipts": 1, "boundary": "OS process kill inside running Docker Compose control container; persisted PostgreSQL state; replacement dispatcher and SELECT-only recovery subprocess"}

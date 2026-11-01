@@ -1,0 +1,982 @@
+{
+  "categories": {
+    "backend": 4500,
+    "frontend": 1827,
+    "tests": 1582,
+    "sql_tooling": 1885
+  },
+  "total_authored_code_loc": 9794,
+  "files": [
+    {
+      "file": ".dockerignore",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": ".gitignore",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "backend/durable_ai_agent_platform.egg-info/dependency_links.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "backend/durable_ai_agent_platform.egg-info/PKG-INFO",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "backend/durable_ai_agent_platform.egg-info/requires.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "backend/durable_ai_agent_platform.egg-info/SOURCES.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "backend/durable_ai_agent_platform.egg-info/top_level.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "backend/platform_core/__init__.py",
+      "category": "backend",
+      "loc": 0
+    },
+    {
+      "file": "backend/platform_core/api.py",
+      "category": "backend",
+      "loc": 198
+    },
+    {
+      "file": "backend/platform_core/application.py",
+      "category": "backend",
+      "loc": 72
+    },
+    {
+      "file": "backend/platform_core/application_repository.py",
+      "category": "backend",
+      "loc": 342
+    },
+    {
+      "file": "backend/platform_core/budgets.py",
+      "category": "backend",
+      "loc": 34
+    },
+    {
+      "file": "backend/platform_core/control_api.py",
+      "category": "backend",
+      "loc": 108
+    },
+    {
+      "file": "backend/platform_core/crm_tool.py",
+      "category": "backend",
+      "loc": 33
+    },
+    {
+      "file": "backend/platform_core/database.py",
+      "category": "backend",
+      "loc": 88
+    },
+    {
+      "file": "backend/platform_core/email_tool.py",
+      "category": "backend",
+      "loc": 26
+    },
+    {
+      "file": "backend/platform_core/errors.py",
+      "category": "backend",
+      "loc": 13
+    },
+    {
+      "file": "backend/platform_core/evaluators.py",
+      "category": "backend",
+      "loc": 32
+    },
+    {
+      "file": "backend/platform_core/evidence.py",
+      "category": "backend",
+      "loc": 10
+    },
+    {
+      "file": "backend/platform_core/executor.py",
+      "category": "backend",
+      "loc": 386
+    },
+    {
+      "file": "backend/platform_core/fault_reader.py",
+      "category": "backend",
+      "loc": 35
+    },
+    {
+      "file": "backend/platform_core/faults.py",
+      "category": "backend",
+      "loc": 101
+    },
+    {
+      "file": "backend/platform_core/http_tool.py",
+      "category": "backend",
+      "loc": 34
+    },
+    {
+      "file": "backend/platform_core/identity.py",
+      "category": "backend",
+      "loc": 24
+    },
+    {
+      "file": "backend/platform_core/inspection.py",
+      "category": "backend",
+      "loc": 30
+    },
+    {
+      "file": "backend/platform_core/models.py",
+      "category": "backend",
+      "loc": 36
+    },
+    {
+      "file": "backend/platform_core/ownership.py",
+      "category": "backend",
+      "loc": 31
+    },
+    {
+      "file": "backend/platform_core/policy.py",
+      "category": "backend",
+      "loc": 73
+    },
+    {
+      "file": "backend/platform_core/ports.py",
+      "category": "backend",
+      "loc": 16
+    },
+    {
+      "file": "backend/platform_core/proof.py",
+      "category": "backend",
+      "loc": 37
+    },
+    {
+      "file": "backend/platform_core/provider.py",
+      "category": "backend",
+      "loc": 93
+    },
+    {
+      "file": "backend/platform_core/provider_api.py",
+      "category": "backend",
+      "loc": 68
+    },
+    {
+      "file": "backend/platform_core/provider_http.py",
+      "category": "backend",
+      "loc": 46
+    },
+    {
+      "file": "backend/platform_core/provider_reader.py",
+      "category": "backend",
+      "loc": 70
+    },
+    {
+      "file": "backend/platform_core/quota_tool.py",
+      "category": "backend",
+      "loc": 34
+    },
+    {
+      "file": "backend/platform_core/rag.py",
+      "category": "backend",
+      "loc": 115
+    },
+    {
+      "file": "backend/platform_core/recovery.py",
+      "category": "backend",
+      "loc": 62
+    },
+    {
+      "file": "backend/platform_core/recovery_worker.py",
+      "category": "backend",
+      "loc": 61
+    },
+    {
+      "file": "backend/platform_core/repository.py",
+      "category": "backend",
+      "loc": 652
+    },
+    {
+      "file": "backend/platform_core/scenario_catalog.py",
+      "category": "backend",
+      "loc": 451
+    },
+    {
+      "file": "backend/platform_core/scenarios.py",
+      "category": "backend",
+      "loc": 607
+    },
+    {
+      "file": "backend/platform_core/schemas.py",
+      "category": "backend",
+      "loc": 84
+    },
+    {
+      "file": "backend/platform_core/search_tool.py",
+      "category": "backend",
+      "loc": 62
+    },
+    {
+      "file": "backend/platform_core/state.py",
+      "category": "backend",
+      "loc": 175
+    },
+    {
+      "file": "backend/platform_core/telemetry.py",
+      "category": "backend",
+      "loc": 14
+    },
+    {
+      "file": "backend/platform_core/tool_contracts.py",
+      "category": "backend",
+      "loc": 49
+    },
+    {
+      "file": "backend/platform_core/worker.py",
+      "category": "backend",
+      "loc": 98
+    },
+    {
+      "file": "compose.yaml",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "Dockerfile",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/application-tests.xml",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/APPLICATION_SMOKE.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/ARCHITECTURE.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/ARCHITECTURE_VIEWS.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/backbone-tests.xml",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/BACKBONE_RESTART.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/browser.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/browser.log",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/compose.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/compose.log",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/compose_browser.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/compose_browser.log",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/compose_restart.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/compose_restart.log",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/python.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/python.log",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/scenarios.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/scenarios.log",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/static.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/check-results/static.log",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/ci-evidence/CI_PREVIEW.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/ci-evidence/GITHUB_RUN.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/ci-evidence/SOURCE_PARITY.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/CI_RUN.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/COMPOSE_RESTART.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/COMPOSE_SMOKE.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/CONSOLE.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A1.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A1.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A2.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A2.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A3.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A3.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A4.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A4.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A5.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A5.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A6.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A6.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A7.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A7.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A8.dot",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/A8.svg",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/diagrams/MANIFEST.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/EVALUATIONS.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/FAILURE_MODEL.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/IMPLEMENTATION_STATUS.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/INVARIANT_AUDIT.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/INVARIANTS.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/LOC_MANIFEST.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/MILESTONE_FIXES.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/ORIGINAL_REQUIREMENTS.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/POLICIES.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/policy-tests.xml",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/RELEASE_GATE.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/REQUIREMENT_AUDIT.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/REQUIREMENT_AUDIT.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S01.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S02.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S03.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S04.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S05.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S06.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S07.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S08.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S09.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S10.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S11.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S12.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S13.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S14.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S15.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S16.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S17.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S18.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S19.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S20.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S21.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S22.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S23.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S24.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S25.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S26.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S27.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S28.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S29.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S30.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S31.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S32.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S33.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S34.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S35.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S36.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S37.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S38.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S39.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S40.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S41.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S42.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S43.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S44.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S45.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S46.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S47.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S48.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S49.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S50.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S51.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S52.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/scenario-results/S53.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/SCENARIOS.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/screenshots/01-normal-task.png",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/screenshots/02-commit-then-timeout.png",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/screenshots/03-recovery-after-restart.png",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/screenshots/04-tenant-access-denial.png",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/screenshots/05-rag-provenance.png",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/screenshots/06-manual-review.png",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/screenshots/07-stale-worker-ownership.png",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/SCREENSHOTS.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/SECURITY_MODEL.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/STATE_MACHINES.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/TOOL_REQUIREMENT_AUDIT.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/TOOL_REQUIREMENTS.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "docs/VERIFICATION.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "durable_ai_agent_platform.egg-info/dependency_links.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "durable_ai_agent_platform.egg-info/PKG-INFO",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "durable_ai_agent_platform.egg-info/requires.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "durable_ai_agent_platform.egg-info/SOURCES.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "durable_ai_agent_platform.egg-info/top_level.txt",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/.dockerignore",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/Dockerfile",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/eslint.config.mjs",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/index.html",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/nginx.conf",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/package-lock.json",
+      "excluded_reason": "dependency lock"
+    },
+    {
+      "file": "frontend/package.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/playwright.config.ts",
+      "category": "frontend",
+      "loc": 67
+    },
+    {
+      "file": "frontend/src/client.ts",
+      "category": "frontend",
+      "loc": 50
+    },
+    {
+      "file": "frontend/src/main.tsx",
+      "category": "frontend",
+      "loc": 698
+    },
+    {
+      "file": "frontend/src/style.css",
+      "category": "frontend",
+      "loc": 760
+    },
+    {
+      "file": "frontend/test-results/.last-run.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/test-results/browser.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/tests/operations.spec.ts",
+      "category": "frontend",
+      "loc": 235
+    },
+    {
+      "file": "frontend/tsconfig.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "frontend/vite.config.ts",
+      "category": "frontend",
+      "loc": 17
+    },
+    {
+      "file": "pyproject.toml",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "README.md",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "sql/001_orchestrator.sql",
+      "category": "sql_tooling",
+      "loc": 172
+    },
+    {
+      "file": "sql/001_provider.sql",
+      "category": "sql_tooling",
+      "loc": 14
+    },
+    {
+      "file": "sql/002_application.sql",
+      "category": "sql_tooling",
+      "loc": 4
+    },
+    {
+      "file": "sql/002_provider_tools.sql",
+      "category": "sql_tooling",
+      "loc": 31
+    },
+    {
+      "file": "sql/003_policies.sql",
+      "category": "sql_tooling",
+      "loc": 5
+    },
+    {
+      "file": "sql/004_laboratory.sql",
+      "category": "sql_tooling",
+      "loc": 1
+    },
+    {
+      "file": "sql/005_tools.sql",
+      "category": "sql_tooling",
+      "loc": 18
+    },
+    {
+      "file": "sql/006_task_bootstrap.sql",
+      "category": "sql_tooling",
+      "loc": 1
+    },
+    {
+      "file": "tests/conftest.py",
+      "category": "tests",
+      "loc": 19
+    },
+    {
+      "file": "tests/data/evaluation_tasks.json",
+      "excluded_reason": "documentation/configuration/artifact, not authored source"
+    },
+    {
+      "file": "tests/test_application_api.py",
+      "category": "tests",
+      "loc": 574
+    },
+    {
+      "file": "tests/test_domain.py",
+      "category": "tests",
+      "loc": 90
+    },
+    {
+      "file": "tests/test_postgres_backbone.py",
+      "category": "tests",
+      "loc": 303
+    },
+    {
+      "file": "tests/test_rag_models.py",
+      "category": "tests",
+      "loc": 90
+    },
+    {
+      "file": "tests/test_recovery.py",
+      "category": "tests",
+      "loc": 78
+    },
+    {
+      "file": "tests/test_scenario_contracts.py",
+      "category": "tests",
+      "loc": 19
+    },
+    {
+      "file": "tests/test_state.py",
+      "category": "tests",
+      "loc": 54
+    },
+    {
+      "file": "tests/test_telemetry.py",
+      "category": "tests",
+      "loc": 58
+    },
+    {
+      "file": "tests/test_tools.py",
+      "category": "tests",
+      "loc": 297
+    },
+    {
+      "file": "tools/bootstrap_local.py",
+      "category": "sql_tooling",
+      "loc": 42
+    },
+    {
+      "file": "tools/build_architecture.py",
+      "category": "sql_tooling",
+      "loc": 147
+    },
+    {
+      "file": "tools/metrics.py",
+      "category": "sql_tooling",
+      "loc": 96
+    },
+    {
+      "file": "tools/requirement_audit.py",
+      "category": "sql_tooling",
+      "loc": 535
+    },
+    {
+      "file": "tools/source_manifest.py",
+      "category": "sql_tooling",
+      "loc": 151
+    },
+    {
+      "file": "tools/verify_application.py",
+      "category": "sql_tooling",
+      "loc": 140
+    },
+    {
+      "file": "tools/verify_compose.py",
+      "category": "sql_tooling",
+      "loc": 125
+    },
+    {
+      "file": "tools/verify_compose_restart.py",
+      "category": "sql_tooling",
+      "loc": 65
+    },
+    {
+      "file": "tools/verify_release.py",
+      "category": "sql_tooling",
+      "loc": 338
+    }
+  ],
+  "minimum": 5000,
+  "size_gate": true
+}

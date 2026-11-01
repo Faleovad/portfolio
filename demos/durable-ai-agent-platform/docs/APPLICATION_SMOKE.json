@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "transport": "real HTTP loopback",
+  "api_pid": 19012,
+  "executor_pids": [
+    14320,
+    18636,
+    6716
+  ],
+  "checks": {
+    "task_completed": true,
+    "pinned_v1": true,
+    "one_model_call": true,
+    "one_artifact": true,
+    "steps_not_rebuilt": true,
+    "source_document_matches": true,
+    "cross_language_evidence": true
+  },
+  "model": "deterministic lexical reference; not a semantic benchmark",
+  "paid_api_required": false
+}

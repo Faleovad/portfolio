@@ -1,0 +1,83 @@
+name: Durable agent platform verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/durable-ai-agent-platform]
+    paths: ['demos/durable-ai-agent-platform/**', '.github/workflows/durable-agent-platform.yml']
+  pull_request:
+    paths: ['demos/durable-ai-agent-platform/**', '.github/workflows/durable-agent-platform.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: demos/durable-ai-agent-platform
+    env:
+      PYTHONPATH: backend
+      LAB_ADMIN_DSN: postgresql://lab_admin:synthetic-only@127.0.0.1:55439/postgres
+      ORCHESTRATOR_DSN: postgresql://agent_lab_app:synthetic-only@127.0.0.1:55439/agent_orchestrator
+      ORCHESTRATOR_ADMIN_DSN: postgresql://lab_admin:synthetic-only@127.0.0.1:55439/agent_orchestrator
+      PROVIDER_ADMIN_DSN: postgresql://lab_admin:synthetic-only@127.0.0.1:55439/agent_provider
+      PROVIDER_WRITE_DSN: postgresql://agent_lab_writer:synthetic-only@127.0.0.1:55439/agent_provider
+      PROVIDER_READ_DSN: postgresql://agent_lab_reader:synthetic-only@127.0.0.1:55439/agent_provider
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: demos/durable-ai-agent-platform/frontend/package-lock.json
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -e '.[dev]'
+      - run: npm ci
+        working-directory: demos/durable-ai-agent-platform/frontend
+      - run: npx playwright install --with-deps chromium
+        working-directory: demos/durable-ai-agent-platform/frontend
+      - name: Verify candidate source parity
+        run: if [ -f ../../_candidate.json ]; then .venv/bin/python tools/source_manifest.py --compare ../../_candidate.json; else .venv/bin/python tools/source_manifest.py; fi
+      - name: Lint, formatting, typing, wheel and frontend build
+        run: .venv/bin/python tools/verify_release.py --phase static
+      - name: Initialize isolated persistent databases
+        run: |
+          docker compose up -d --wait postgres
+          .venv/bin/python tools/bootstrap_local.py
+      - name: Unit and PostgreSQL integration tests including permanent OS-kill gate
+        run: .venv/bin/python tools/verify_release.py --phase python
+      - name: Executable scenario catalog
+        run: .venv/bin/python tools/verify_release.py --phase scenarios
+      - name: Native browser verification
+        run: .venv/bin/python tools/verify_release.py --phase browser
+      - name: Compose build and runtime
+        run: .venv/bin/python tools/verify_release.py --phase compose
+      - name: In-container persisted process restart
+        run: .venv/bin/python tools/verify_release.py --phase compose_restart
+      - name: Browser verification through Compose frontend
+        run: .venv/bin/python tools/verify_release.py --phase compose_browser
+      - name: LOC and basic credential scan; generate honest release gates
+        run: |
+          .venv/bin/python tools/metrics.py --release
+          if [ -f ../../_candidate.json ]; then .venv/bin/python tools/source_manifest.py --compare ../../_candidate.json; else .venv/bin/python tools/source_manifest.py; fi
+          .venv/bin/python tools/verify_release.py --payload-gate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: durable-agent-verification
+          path: |
+            demos/durable-ai-agent-platform/docs/check-results
+            demos/durable-ai-agent-platform/docs/scenario-results
+            demos/durable-ai-agent-platform/docs/screenshots
+            demos/durable-ai-agent-platform/build/VERIFICATION_PREVIEW.json
+            demos/durable-ai-agent-platform/docs/COMPOSE_SMOKE.json
+            demos/durable-ai-agent-platform/docs/COMPOSE_RESTART.json
+            demos/durable-ai-agent-platform/docs/LOC_MANIFEST.json
+            demos/durable-ai-agent-platform/docs/BACKBONE_RESTART.json
+            demos/durable-ai-agent-platform/docs/application-tests.xml
+            demos/durable-ai-agent-platform/frontend/test-results
+      - run: docker compose down
+        if: always()
