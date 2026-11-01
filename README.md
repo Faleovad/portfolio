@@ -21,6 +21,7 @@ These are my working areas and stack. Each case below identifies the technologie
 | Case | Work | Read |
 | --- | --- | --- |
 | **eBay / KeyCRM — Production Order & Warehouse Reliability** | Reliability engineering around an existing ERP / OMS integration: bundles, reservations, fulfillment, durable recovery, and external side effects. | [Case study](cases/ebay-keycrm-erp/README.md) · [Evidence & limits](cases/ebay-keycrm-erp/architecture/evidence.md) |
+| **CoinAsk — SaaS Product & Marketing Analytics Infrastructure** | Browser/server analytics integration with identity, attribution, consent and data-quality debugging. | [Case study](cases/coinask-analytics/README.md) · [Evidence & limits](cases/coinask-analytics/evidence.md) |
 
 These cases describe real commercial work. They distinguish production observations from local implementation and test results. Client identities, customer data, credentials, and confidential infrastructure are omitted; private implementation and operational records are not published here.
 
