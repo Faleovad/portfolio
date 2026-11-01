@@ -1,8 +1,33 @@
 # Durable Multi-Tenant AI Agent Platform
 
-**ENGINEERING LAB / CLEAN-ROOM REFERENCE IMPLEMENTATION — UNPUBLISHED**
+**ENGINEERING LAB / CLEAN-ROOM REFERENCE IMPLEMENTATION**
 
-Release status is recorded in `docs/VERIFICATION.json` after all source-bound gates.
+**STAGE 1 — RELEASE PASS · PUBLICLY PUBLISHED**
+
+A synthetic engineering lab, not a production or commercial case.
+
+| Verified Stage 1 gate | Result |
+| --- | --- |
+| Private GitHub Actions [run #7](https://github.com/Faleovad/portfolio-verification/actions/runs/41341505800) | **SUCCESS** |
+| Python tests | **519/519 PASS** |
+| Executable CLI scenarios | **53/53 PASS** |
+| Native browser flows | **13/13 PASS** |
+| Compose browser flows | **13/13 PASS** |
+| Docker Compose runtime | **PASS** |
+| Persisted restart/recovery | **PASS** |
+| External mutation / dispatch attempt / receipt in the restart gate | **1 / 1 / 1** |
+| Mandatory FAIL/PARTIAL gates for the verified candidate | **None** |
+
+The private run requires repository access. Its retained results are available in
+[CI evidence](docs/CI_RUN.json), [canonical verification](docs/VERIFICATION.json) and
+[the requirement audit](docs/REQUIREMENT_AUDIT.md). [Measured size: 9,794 authored LOC](docs/METRICS.json).
+
+> Executable source remains unchanged from the verified release candidate. This post-release commit only updates public documentation/presentation.
+
+The canonical `VERIFICATION.json` is unchanged, point-in-time evidence for the exact
+verified candidate, before publication. Its recorded fingerprint includes that
+candidate's README; it does not identify this later documentation revision.
+This docs-only update is not a new verified executable candidate.
 
 A synthetic durable orchestration system. Current runnable flows cover a tenant-scoped
 research pipeline and side-effect-safe tool recovery. No commercial provenance or
@@ -82,8 +107,9 @@ and separate executor processes. Do not run it concurrently with database-reset 
 
 compose.yaml includes PostgreSQL with a persistent volume, initialization, API, executor,
 dispatcher, read-only recovery, independent HTTP provider, synthetic control service and
-React console. **Compose runtime is NOT RUN locally**. Public credentials named
-synthetic-only are intentionally synthetic defaults, never client credentials.
+React console. **Docker Compose runtime PASS** was established in private GitHub
+Actions run #7. Public credentials named synthetic-only are intentionally synthetic
+defaults, never client credentials.
 
 ## Executable reliability scenarios
 
@@ -141,34 +167,47 @@ Seven actual browser captures are in docs/screenshots/.
 
 ## Verification and Compose
 
+All seven executed phases below passed in the verified Stage 1 run. The commands are
+provided for independent reproduction; use the dedicated synthetic databases described
+above. Run pytest separately from scenarios and browser flows because its fixtures reset
+lab databases.
+
 ```sh
 python tools/verify_release.py --phase static
 python tools/verify_release.py --phase python
 python tools/verify_release.py --phase scenarios
 python tools/verify_release.py --phase browser
-python tools/verify_release.py --release
+# Docker is required for these three phases:
+python tools/verify_release.py --phase compose
+python tools/verify_release.py --phase compose_restart
+python tools/verify_release.py --phase compose_browser
 ```
 
-Each executed phase records its commands, exit codes and authored-source fingerprint.
-Missing or stale receipts fail closed. The release command remains nonzero while original
-gates are open. Python test functions, parameterized cases, PostgreSQL cases, scenarios
-and browser tests are reported separately.
+Each phase records commands, exit codes and the full authored snapshot fingerprint,
+including documentation. Missing or stale receipts fail closed. This documentation-only
+revision changes that full fingerprint; the retained receipts and canonical verification
+continue to describe the exact released executable candidate. They have not been
+rewritten or presented as a new verification run for this documentation commit.
+Python test functions, parameterized cases, PostgreSQL cases, scenarios and browser
+flows are counted separately.
 
-In an environment with Docker:
+For container startup:
 
 ```sh
 docker compose up --build -d
-python tools/verify_release.py --phase compose
-# Browser tests against the actual Compose/Nginx console:
-cd frontend
-BROWSER_EXTERNAL_SERVERS=1 npm test
+# Open http://127.0.0.1:58045
 ```
 
-The Compose smoke requires the automatically running dispatcher to call the HTTP provider,
-then checks read-only reconciliation, one effect, one dispatch, RAG and tenant denial.
-It also executes the persisted S06 OS-kill scenario inside the control container.
-The feature-branch GitHub Actions workflow runs these gates and uploads evidence; no
-Actions run or Docker runtime PASS is claimed until an execution receipt exists.
+The Compose smoke verified automatic background dispatch through the HTTP provider,
+read-only reconciliation, one effect, one dispatch, RAG and tenant denial. The separate
+restart gate executed S06 inside the control container: an actual dispatcher OS-process
+kill after persisted UNKNOWN, a replacement dispatcher and a new SELECT-only recovery
+process. It finished with one external mutation, one dispatch attempt and one receipt.
+This proves the recorded process-restart boundary; it is not a database-container
+restart or catastrophe-restore result.
+
+The GitHub Actions workflow executed these gates and uploaded the evidence. Private
+run #7 completed successfully; Docker runtime and persisted restart/recovery are **PASS**.
 
 ## Evidence and limits
 
@@ -189,8 +228,8 @@ Actions run or Docker runtime PASS is claimed until an execution receipt exists.
 The 27 evaluation samples (26 executable tasks and one rejected upload) are not the required 25 failure scenarios.
 Lexical hashing plus a small alias dictionary is not a semantic retrieval benchmark.
 The centralized fault engine has 26 executable durable modes, covered by the scenario
-catalog. Native verification status is recorded in VERIFICATION.json. Docker/CI runtime
-and external CI attestation remain separate release gates.
+catalog. Native, Docker and external CI results are retained in VERIFICATION.json
+and CI_RUN.json. All mandatory gates for the verified Stage 1 candidate passed.
 The size gate fails below 5,000 meaningful authored code LOC. No padding is permitted,
 and passing the size gate alone does not authorize release.
 
@@ -205,5 +244,6 @@ URL is used. See [tool matrix](docs/TOOL_REQUIREMENTS.json),
 For reproducible container startup: `docker compose up --build -d`, then open
 http://127.0.0.1:58045. Run `python tools/verify_compose.py` for runtime smoke and
 `python tools/verify_compose_restart.py` for the in-container process-restart gate.
-The private CI snapshot must match `python tools/source_manifest.py` before and after
-verification. Generated results are excluded from this authored-source fingerprint.
+The verified private CI snapshot was compared before and after execution. The
+retained manifest identifies that exact snapshot; the README change in this docs-only
+revision is intentional. Generated results are excluded from authored-source accounting.

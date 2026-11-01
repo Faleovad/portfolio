@@ -1,49 +1,58 @@
-# Backend / API / CRM / AI Automation Engineer
+# Yaroslav — Backend / Systems / AI Automation Engineer
 
-I build and extend integrations between business systems, CRMs, marketplaces, and online stores. My work includes tracing production failures, mapping data contracts, and making recovery safe when an external API response does not establish whether a change took effect.
+I build verifiable backend and integration systems — from investigation and architecture to implementation, recovery and operational verification.
 
-## Areas of work
+**Python · FastAPI · PostgreSQL · Distributed State · API Integrations · CRM / ERP · AI Systems · Reliability Engineering**
 
-- **Backend & APIs:** Python, FastAPI, Django, PostgreSQL / SQL, REST APIs, webhooks, OAuth.
-- **Business integrations:** CRM and ERP / OMS / WMS workflows; KeyCRM, Pipedrive, amoCRM.
-- **Automation & data:** n8n, Make, AI / LLM integrations, Playwright, scraping.
-- **E-commerce:** Shopify, WooCommerce, OpenCart, marketplace and inventory integrations.
-- **Production reliability:** debugging, idempotency, reconciliation, failure testing, and controlled releases.
+Production ERP / OMS reliability · SaaS analytics infrastructure · Durable AI platform · Failure recovery & reconciliation · Multi-tenant backend systems
 
-These are my working areas and stack. Each case below identifies the technologies and responsibilities specific to that engagement.
+[Engineering Labs](#engineering-labs) · [Commercial Cases](#commercial-case-studies) · [Architecture & Evidence](#evidence-first-engineering)
 
-## Executable Engineering Labs
+## Featured Engineering Work
 
-### Durable AI Agent Platform
-
-**ENGINEERING LAB / CLEAN-ROOM REFERENCE IMPLEMENTATION**
-
-[Durable AI Agent Platform](demos/durable-ai-agent-platform/README.md) is a published Stage 1 synthetic engineering lab for durable, tenant-scoped agent execution, tool mutations, read-only reconciliation and persisted recovery. **This is not a production or commercial case.**
-
-**Stage 1 — RELEASE PASS.** The project and its evidence are published as the exact verified snapshot; snapshot documents retain the status recorded at verification.
-
-- **9 794 authored LOC**.
-- **519/519 tests PASS** and **53/53 executable scenarios PASS**.
-- **13/13 browser flows PASS** in both native and Docker Compose environments.
-- **Docker Compose runtime PASS** and **persisted restart/recovery PASS**.
-- Verified recovery path: `commit → lost ACK → UNKNOWN → restart → recovery → receipt → COMPLETED`.
-- Restart gate: **1 external mutation / 1 dispatch attempt / 1 receipt**, with an actual dispatcher process kill inside a container, a replacement dispatcher and a separate read-only recovery process.
-
-[Canonical verification](demos/durable-ai-agent-platform/docs/VERIFICATION.json) · [Requirement audit](demos/durable-ai-agent-platform/docs/REQUIREMENT_AUDIT.md) · [Measured metrics](demos/durable-ai-agent-platform/docs/METRICS.json) · [A1–A8 architecture views](demos/durable-ai-agent-platform/docs/ARCHITECTURE_VIEWS.md) · [Real browser captures](demos/durable-ai-agent-platform/docs/SCREENSHOTS.json)
-
-### Order Reliability Lab
-
-[Order Reliability Lab](demos/order-reliability/README.md) — clean-room FastAPI / SQLite / React simulation with persisted journals, mutation fences, read-only recovery, deterministic failure scenarios, and automated backend/browser tests. This is independently runnable demo code, separate from the private commercial implementation.
-
-## Featured Case Studies
-
-| Case | Work | Read |
+| Project | Type | Key proof |
 | --- | --- | --- |
-| **eBay / KeyCRM — Production Order & Warehouse Reliability** | Reliability engineering around an existing ERP / OMS integration: bundles, reservations, fulfillment, durable recovery, and external side effects. | [Case study](cases/ebay-keycrm-erp/README.md) · [Evidence & limits](cases/ebay-keycrm-erp/architecture/evidence.md) |
-| **CoinAsk — SaaS Product & Marketing Analytics Infrastructure** | Browser/server analytics integration with identity, attribution, consent and data-quality debugging. | [Case study](cases/coinask-analytics/README.md) · [Evidence & limits](cases/coinask-analytics/evidence.md) |
+| **[Durable AI Agent Platform](demos/durable-ai-agent-platform/README.md)** | Engineering Lab | 9,794 authored LOC · 519 tests · 53 scenarios · persisted restart/recovery |
+| **[eBay → KeyCRM ERP/OMS Reliability](cases/ebay-keycrm-erp/README.md)** | Commercial Case | Production reliability · bundles · reservations · reconciliation |
+| **[CoinAsk Analytics Infrastructure](cases/coinask-analytics/README.md)** | Commercial Case | Browser/server analytics · identity · attribution · consent |
 
-These cases describe real commercial work. They distinguish production observations from local implementation and test results. Client identities, customer data, credentials, and confidential infrastructure are omitted; private implementation and operational records are not published here.
+**Durable · Verified Stage 1 — RELEASE PASS**
 
-For the flagship case, the evidence section explains what the retained reports establish, which regression gates passed, and what remained unresolved.
+519/519 tests · 53/53 scenarios · 13/13 browser flows in each of native and Compose. Docker Compose runtime **PASS** · persisted restart/recovery **PASS** · **1 mutation / 1 dispatch / 1 receipt**.
+
+[Verification](demos/durable-ai-agent-platform/docs/VERIFICATION.json) · [Requirement audit](demos/durable-ai-agent-platform/docs/REQUIREMENT_AUDIT.md) · [Architecture A1–A8](demos/durable-ai-agent-platform/docs/ARCHITECTURE_VIEWS.md)
+
+## What I do
+
+- **Backend & Distributed Systems:** FastAPI, PostgreSQL, durable workflows, concurrency, state machines and idempotency.
+- **Integrations & Automation:** CRM / ERP, marketplaces, APIs, webhooks, OAuth, n8n and Make.
+- **Reliability Engineering:** failure reconstruction, ambiguous external state, reconciliation, recovery and release verification.
+- **AI Systems:** LLM orchestration, tools, RAG, evaluations and multi-tenant agent infrastructure.
+
+## Commercial Case Studies
+
+Real engagements, with scoped production observations and explicit evidence limits.
+
+- **[eBay / KeyCRM](cases/ebay-keycrm-erp/README.md)** — ERP / OMS / warehouse reliability. [Evidence & limits](cases/ebay-keycrm-erp/architecture/evidence.md).
+- **[CoinAsk](cases/coinask-analytics/README.md)** — SaaS product and marketing analytics infrastructure. [Evidence & limits](cases/coinask-analytics/evidence.md).
+
+## Engineering Labs
+
+**ENGINEERING LAB / CLEAN-ROOM REFERENCE IMPLEMENTATION** — synthetic, independently reproducible projects. These are not production or commercial cases.
+
+- **[Durable AI Agent Platform](demos/durable-ai-agent-platform/README.md)** — published Stage 1: tenant-scoped execution, tool mutations, persisted workflows, RAG and read-only recovery. [Metrics](demos/durable-ai-agent-platform/docs/METRICS.json) · [Browser captures](demos/durable-ai-agent-platform/docs/SCREENSHOTS.json).
+- **[Order Reliability Lab](demos/order-reliability/README.md)** — FastAPI / SQLite / React simulation with persisted journals, mutation fences and deterministic failure scenarios.
+
+## How I work
+
+Investigate → model state and ownership → identify failure modes → define invariants → implement → test failure paths → verify runtime behavior.
+
+## Evidence-first engineering
+
+Each case distinguishes **production observations**, **implemented behavior**, **tested behavior**, **verified runtime evidence** and **unknowns**. Claims link to retained evidence where available; each result names its scope and environment.
+
+Client identities, customer data, credentials and confidential infrastructure are omitted from commercial cases. Lab data is synthetic.
+
+---
 
 [GitHub profile](https://github.com/Faleovad)
